@@ -9158,6 +9158,7 @@ const profile = {
   template: __webpack_require__(68),
   controller($cookies, $state) {
     const usuario = $cookies.getObject('session');
+    this.confYouSee = 'Mis compras';
     if (usuario) {
       this.usuario = usuario;
     } else {
@@ -9169,6 +9170,7 @@ const profile = {
       $state.go('main');
       location.reload();
     };
+    this.panelOptions = [{ nombre: 'Mis compras', icon: 'fa-shopping-basket', onclick: this.confYouSee }, { nombre: 'Modificar Datos personales', icon: 'fa-pencil' }, { nombre: 'Direcciones de envio', icon: 'fa-address-card-o' }];
   }
 };
 /* harmony export (immutable) */ __webpack_exports__["a"] = profile;
@@ -9313,11 +9315,34 @@ const signUpUser = {
 "use strict";
 const order = {
   template: __webpack_require__(71),
-  controller($state, API, $cookies) {
+  controller($state, API, $cookies, $document) {
     const session = $cookies.getObject('session');
+    const date = new Date();
+    this.fechaPedido = `${date.getDate()} / ${date.getMonth() + 1} / ${date.getFullYear()}`;
+    this.horaPedido = `${date.getHours()} : ${date.getMinutes()}`;
+    this.sendForm = () => {
+      $document[0].getElementById('cerre').click();
+      const props = {
+        nombreProducto: this.orderData[0].nombre,
+        categoria: this.orderData[0].codigoCategoria,
+        precio: this.orderData[0].precio,
+        cantidad: this.cantidad,
+        direccionEntrega: this.direccion,
+        fechaPedido: this.fechaPedido,
+        horaPedido: this.horaPedido,
+        codigoVendedor: this.orderData[0].codigoEstablecimiento,
+        codigoComprador: this.orderData[0].codigoUsuario
+      };
+      API.sendOrder(props);
+      $state.go('success', {
+        title: 'Se ha realizado tu pedido correctamente',
+        subtitle: `Recuerda calificar al vendedor una vez recibas tu producto`
+      });
+    };
     if (!session) {
       $state.go('main');
     }
+    this.session = session;
     API.getProduct($state.params.code).then(result => {
       this.orderData = result.data;
     }, error => {
@@ -9361,8 +9386,7 @@ const productDetail = {
 "use strict";
 const success = {
   template: __webpack_require__(73),
-  bindings: '=',
-  controller() {}
+  bindings: '='
 };
 /* harmony export (immutable) */ __webpack_exports__["a"] = success;
 
@@ -9399,6 +9423,9 @@ class API {
   }
   sendRecoveryEmail(email) {
     return this.$http.post(`https://todocondelivery.herokuapp.com/resetPassword`, { email });
+  }
+  sendOrder(obj) {
+    return this.$http.post(`https://todocondelivery.herokuapp.com/order/new`, obj);
   }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = API;
@@ -9460,6 +9487,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   }).state('setPassword', {
     url: '/setPassword?t=token&u=user',
     component: 'setPassword'
+  }).state('success', {
+    url: '/success',
+    component: 'success',
+    params: { title: null, subtitle: null }
   });
 }
 
@@ -44054,7 +44085,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, ".header {\n  font-family: 'Francois One', sans-serif; }\n  .header .btn-link {\n    color: #828282; }\n  .header button {\n    font-family: 'Francois One', sans-serif; }\n    .header button a {\n      color: #828282; }\n\n.footer {\n  background-color: #1f1f1f;\n  font-family: 'Francois One', sans-serif;\n  color: white; }\n  .footer .socials i {\n    font-size: 30px; }\n\n.promociones {\n  background-color: #f3f3f3; }\n  .promociones h3 {\n    font-family: 'Pacifico', cursive;\n    color: white; }\n  .promociones img {\n    border-radius: 5px; }\n  .promociones .maspedidos .list-group-item {\n    background-color: rgba(19, 5, 5, 0.51);\n    font-family: 'Source Sans Pro', sans-serif;\n    color: white;\n    margin-bottom: 0;\n    border: 0; }\n    .promociones .maspedidos .list-group-item img {\n      border-radius: 5px; }\n    .promociones .maspedidos .list-group-item button {\n      font-family: 'Francois One', sans-serif; }\n  .promociones .maspedidos li {\n    background-color: rgba(19, 5, 5, 0.51); }\n\nlogin nav {\n  margin-top: 5%;\n  margin-bottom: 5%; }\n\n.login {\n  background-color: white; }\n\n#mas {\n  background-color: #f7f7f7; }\n  #mas .btn-link {\n    font-family: 'Source Sans Pro', sans-serif;\n    color: black; }\n  #mas button {\n    font-family: raleway, arial; }\n\n.productos {\n  background-color: white;\n  font-family: 'Source Sans Pro', sans-serif; }\n  .productos img {\n    width: 100%;\n    border-radius: 5%; }\n  .productos .fa {\n    color: #f7f708; }\n  .productos .item {\n    border: 1px solid whitesmoke;\n    padding: 1em;\n    border-radius: 5px;\n    box-shadow: 1px 2px 4px #000000; }\n\n.dir-productos {\n  border-bottom: 2px solid #dedede; }\n\n.detalles img {\n  width: 100%; }\n\n.detalles .fa {\n  color: #f7f708; }\n\n.detalles .price {\n  color: green;\n  font-size: 3em; }\n\n.panel {\n  font-family: 'Francois One', sans-serif;\n  background-color: #f7f7f7; }\n  .panel .list-group-item:hover {\n    background-color: #f3f3f3; }\n\n#support {\n  background-color: #c9302c; }\n  #support .btn-link {\n    color: #ffffff;\n    font-family: 'Source Sans Pro', sans-serif; }\n\n.registro {\n  background-color: #fff; }\n  .registro .home {\n    padding: 2em; }\n    .registro .home h1 {\n      font-family: \"Trebuchet MS\", arial;\n      color: #2d2c5a; }\n    .registro .home div a {\n      text-decoration: none;\n      color: #4a5386;\n      font-size: 2em; }\n      .registro .home div a i {\n        font-size: 2em; }\n  .registro .modal-header {\n    border-bottom: 0; }\n    .registro .modal-header button {\n      visibility: hidden; }\n  .registro .modal-body button {\n    width: 65%; }\n\n.nuevo-exito {\n  background-color: #7dd280;\n  padding: 10em; }\n  .nuevo-exito i {\n    font-size: 6em; }\n  .nuevo-exito h1 {\n    color: #fdfdfd;\n    text-shadow: 1px 1px 1px black; }\n  .nuevo-exito h2 {\n    color: #1a4410; }\n  .nuevo-exito p {\n    background-color: #e8e86c; }\n\n.login-error {\n  background-color: #e91e63;\n  padding: 10em; }\n  .login-error i {\n    font-size: 6em; }\n  .login-error h1 {\n    color: #fdfdfd;\n    text-shadow: 1px 1px 1px black; }\n  .login-error h2 {\n    color: #1a4410; }\n\n.perfil {\n  background-color: #fff; }\n\n.forget {\n  background-color: white; }\n  .forget form {\n    width: 40%; }\n\n.info {\n  background-color: white; }\n", ""]);
+exports.push([module.i, ".header {\n  font-family: 'Francois One', sans-serif; }\n  .header .btn-link {\n    color: #828282; }\n  .header button {\n    font-family: 'Francois One', sans-serif; }\n    .header button a {\n      color: #828282; }\n\n.footer {\n  background-color: #1f1f1f;\n  font-family: 'Francois One', sans-serif;\n  color: white; }\n  .footer .socials i {\n    font-size: 30px; }\n\n.promociones {\n  background-color: #f3f3f3; }\n  .promociones h3 {\n    font-family: 'Pacifico', cursive;\n    color: white; }\n  .promociones img {\n    border-radius: 5px; }\n  .promociones .maspedidos .list-group-item {\n    background-color: rgba(19, 5, 5, 0.51);\n    font-family: 'Source Sans Pro', sans-serif;\n    color: white;\n    margin-bottom: 0;\n    border: 0; }\n    .promociones .maspedidos .list-group-item img {\n      border-radius: 5px; }\n    .promociones .maspedidos .list-group-item button {\n      font-family: 'Francois One', sans-serif; }\n  .promociones .maspedidos li {\n    background-color: rgba(19, 5, 5, 0.51); }\n\nlogin nav {\n  margin-top: 5%;\n  margin-bottom: 5%; }\n\n.login {\n  background-color: white; }\n\n#mas {\n  background-color: #f7f7f7; }\n  #mas .btn-link {\n    font-family: 'Source Sans Pro', sans-serif;\n    color: black; }\n  #mas button {\n    font-family: raleway, arial; }\n\n.productos {\n  background-color: white;\n  font-family: 'Source Sans Pro', sans-serif; }\n  .productos img {\n    width: 100%;\n    border-radius: 5%; }\n  .productos .fa {\n    color: #f7f708; }\n  .productos .item {\n    border: 1px solid whitesmoke;\n    padding: 1em;\n    border-radius: 5px;\n    box-shadow: 1px 2px 4px #000000; }\n\n.dir-productos {\n  border-bottom: 2px solid #dedede; }\n\n.detalles img {\n  width: 100%; }\n\n.detalles .fa {\n  color: #f7f708; }\n\n.detalles .price {\n  color: green;\n  font-size: 3em; }\n\n.panel {\n  font-family: 'Francois One', sans-serif;\n  background-color: #f7f7f7; }\n  .panel .list-group-item:hover {\n    background-color: #f3f3f3; }\n\n#support {\n  background-color: #c9302c; }\n  #support .btn-link {\n    color: #ffffff;\n    font-family: 'Source Sans Pro', sans-serif; }\n\n.registro {\n  background-color: #fff; }\n  .registro .home {\n    padding: 2em; }\n    .registro .home h1 {\n      font-family: \"Trebuchet MS\", arial;\n      color: #2d2c5a; }\n    .registro .home div a {\n      text-decoration: none;\n      color: #4a5386;\n      font-size: 2em; }\n      .registro .home div a i {\n        font-size: 2em; }\n  .registro .modal-header {\n    border-bottom: 0; }\n    .registro .modal-header button {\n      visibility: hidden; }\n  .registro .modal-body button {\n    width: 65%; }\n\n.nuevo-exito {\n  background-color: #7dd280;\n  padding: 10em; }\n  .nuevo-exito i {\n    font-size: 6em; }\n  .nuevo-exito h1 {\n    color: #fdfdfd;\n    text-shadow: 1px 1px 1px black; }\n  .nuevo-exito h2 {\n    color: #1a4410; }\n  .nuevo-exito p {\n    background-color: #e8e86c; }\n\n.login-error {\n  background-color: #e91e63;\n  padding: 10em; }\n  .login-error i {\n    font-size: 6em; }\n  .login-error h1 {\n    color: #fdfdfd;\n    text-shadow: 1px 1px 1px black; }\n  .login-error h2 {\n    color: #1a4410; }\n\n.perfil .compras {\n  background-color: #f7f7f7;\n  padding: 2em; }\n\n.perfil li:hover {\n  background-color: #e9dfff; }\n\n.forget {\n  background-color: white; }\n  .forget form {\n    width: 40%; }\n\n.order {\n  border: 1px solid #eaeaea; }\n  .order img {\n    width: 100%; }\n\n.info {\n  background-color: white; }\n", ""]);
 
 // exports
 
@@ -44117,7 +44148,7 @@ module.exports = "<div class=\"list-group maspedidos galeria\">\n\t<li class=\"\
 /* 53 */
 /***/ (function(module, exports) {
 
-module.exports = "<nav id=\"login\" class=\"collapse login container col-lg-5 p-5\">\n  <h3>Ingresa a tu cuenta</h3>\n  <form name=\"Form\">\n  \t<input class=\"d-block form-control mt-2 mb-2\" type=\"email\" name=\"email\" ng-model=\"$ctrl.email\" placeholder=\"Email\" required>\n  \t<input class=\"d-block form-control mb-2 mt-2\" type=\"password\" ng-model=\"$ctrl.password\" name=\"password\" placeholder=\"Contraseña\" required>\n  \t<button class=\"btn btn-secondary mt-2 mb-2\" ng-click=\"$ctrl.sendQuery()\" ng-disabled=\"!Form.email.$valid\">Entrar</button>\n  \t<a href=\"#\" ng-click=\"$ctrl.forgetPassword(); $ctrl.closeLogin();\">Olvidé mi contraseña</a>\n  </form>\n  <p>No tienes cuenta?  <a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal\" ng-click=\"$ctrl.closeLogin()\">Regístrate</a></p>\n</nav>\n\n<div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\n  <div class=\"modal-dialog\">\n  \t<div class=\"modal-content\">\n  \t\t<signup></signup>\n  \t</div>\n  </div>\n</div>";
+module.exports = "<nav id=\"login\" class=\"collapse login container col-lg-5 p-5\">\n  <h3 class=\"mt-5\">Ingresa a tu cuenta</h3>\n  <form name=\"Form\">\n  \t<input class=\"d-block form-control mt-2 mb-2\" type=\"email\" name=\"email\" ng-model=\"$ctrl.email\" placeholder=\"Email\" required>\n  \t<input class=\"d-block form-control mb-2 mt-2\" type=\"password\" ng-model=\"$ctrl.password\" name=\"password\" placeholder=\"Contraseña\" required>\n  \t<button class=\"btn btn-secondary mt-2 mb-2\" ng-click=\"$ctrl.sendQuery()\" ng-disabled=\"!Form.email.$valid\">Entrar</button>\n  \t<a href=\"#\" ng-click=\"$ctrl.forgetPassword(); $ctrl.closeLogin();\">Olvidé mi contraseña</a>\n  </form>\n  <p class=\"mb-5 mt-5\">No tienes cuenta?  <a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal\" ng-click=\"$ctrl.closeLogin()\">Regístrate</a></p>\n</nav>\n\n<div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\n  <div class=\"modal-dialog\">\n  \t<div class=\"modal-content\">\n  \t\t<signup></signup>\n  \t</div>\n  </div>\n</div>";
 
 /***/ }),
 /* 54 */
@@ -44141,7 +44172,7 @@ module.exports = "<nav id=\"mas\" class=\"collapse\">\n  <button  ng-repeat=\"ca
 /* 57 */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"mt-5 container\">\n  <li class=\"list-group-item\" ng-repeat=\"li in $ctrl.options\">{{li.nombre}}</li>\n</ul>";
+module.exports = "<ul class=\"mt-5 container\">\n  <li class=\"list-group-item\" ng-repeat=\"li in $ctrl.options\"><i class=\"fa {{li.icon}} mr-1\"></i>{{li.nombre}}</li>\n</ul>";
 
 /***/ }),
 /* 58 */
@@ -44153,7 +44184,7 @@ module.exports = "<div class=\"mt-5 mb-5 container\">\n  <li class=\"list-group-
 /* 59 */
 /***/ (function(module, exports) {
 
-module.exports = "<p ng-if=\"$ctrl.list.length > 0\" class=\"d-block mt-2 dir-productos\"> <strong>{{$ctrl.list[0].categoria}}</strong> </p>\n<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-3 mb-4 item\" ui-sref=\"product({code: pro.codigo_producto})\">\n\t\t<img height=\"100\" src=\"{{pro.foto}}\">\n\t\t<small><strong>{{pro.nombre}}</strong></small>\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.calificacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ningún artículo para esta categoría</small>\n</div>";
+module.exports = "<p ng-if=\"$ctrl.list.length > 0\" class=\"d-block mt-2 dir-productos\"> <strong>{{$ctrl.list[0].categoria}}</strong> </p>\n<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-3 mb-4 item\" ui-sref=\"product({code: pro.codigoProducto})\">\n\t\t<img height=\"100\" src=\"{{pro.foto}}\">\n\t\t<small><strong>{{pro.nombre}}</strong></small>\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.calificacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ningún artículo para esta categoría</small>\n</div>";
 
 /***/ }),
 /* 60 */
@@ -44207,7 +44238,7 @@ module.exports = "<div class=\"forget\">\n\t<div>\n\t\t<div class=\"form-group\"
 /* 68 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"perfil\">\n\t<button id=\"closeSession\" ng-click=\"$ctrl.closeSession()\">Cerrar sesion</button>\n\t<p>Mis compras</p>\n\t<p>Modificar perfil</p>\n\t<p>Mis direcciones de envio</p>\n\t<p>Compras recientes</p>\n</div>";
+module.exports = "<div class=\"perfil p-3\">\n\t<div class=\"row mt-5 mb-5\">\n\t\t<div class=\"col-3\">\n\t\t\t<ul class=\"mt-5 container\">\n\t\t\t  <li class=\"list-group-item\" ng-repeat=\"li in $ctrl.panelOptions\" ng-click=\"$ctrl.confYouSee = li.nombre\"><i class=\"fa {{li.icon}} mr-1\"></i>{{li.nombre}}</li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<div class=\"col-8\">\n\t\t\t<button id=\"closeSession\" class=\"btn btn-danger float-right\" ng-click=\"$ctrl.closeSession()\">Cerrar sesion</button>\n\t\t\t<div ng-if=\"$ctrl.confYouSee === 'Mis compras'\" class=\"col-12 mb-5\">\n\t\t\t\t<h2>Hola {{$ctrl.usuario[0].nombre}}</h2>\n\t\t\t\t<div>\n\t\t\t\t\tCompras en Curso\n\t\t\t\t\t<div class=\"compras\"></div>\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\tCompras completadas\n\t\t\t\t\t<div class=\"compras\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-12\" ng-if=\"$ctrl.confYouSee === 'Modificar Datos personales'\">\n\t\t\t\t<form>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"nombre\">Nombre:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].nombre\" type=\"text\" name=\"nombre\">\n\t\t\t\t\t\t<label for=\"apellido\">Apellido:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].apellido\" type=\"text\" name=\"apellido\">\n\t\t\t\t\t\t<label for=\"email\">Email:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].email\" type=\"email\" name=\"email\">\n\t\t\t\t\t\t<label for=\"fecha\">Fecha de Nacimiento:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].fecha_nacimiento\" type=\"text\" name=\"fecha\">\n\t\t\t\t\t\t<label for=\"telefono\">Telefono:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].telefono\" type=\"text\" name=\"telefono\"><br>\n\t\t\t\t\t\t<a href=\"\">Modificar Contraseña</a><br>\n\t\t\t\t\t\t<button class=\"btn btn-success\">Actualizar Datos</button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t\t<div class=\"col-12\" ng-if=\"$ctrl.confYouSee === 'Direcciones de envio'\">\n\t\t\t\t<form>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 1:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir1\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 2:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir2\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 3:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir3\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 4:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir4\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 5:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir5\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
 
 /***/ }),
 /* 69 */
@@ -44225,7 +44256,7 @@ module.exports = "<div class=\"setPassword col-5 container\">\n\t<div class=\"mt
 /* 71 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"order\">\n\t<h1>Detalles de orden</h1>\n\t<div>\n\t\t<form>\n\t\t\t<img src=\"{{$ctrl.orderData[0].foto}}\">\n\t\t</form>\n\t\t<p>{{$ctrl.orderData[0].nombre}}</p>\n\t\t<p>Quedan {{$ctrl.orderData[0].disponible}} disponible(s)</p>\n\t</div>\n\t<p>Cantidad</p>\n\t<input type=\"number\" name=\"cantidad\" value=\"1\" max=\"{{$ctrl.orderData[0].disponible}}\">\n\t<div>Direccion de entrega:</div>\n\t<button>Enviar pedido</button>\n\n</div>";
+module.exports = "<div class=\"order container col-5 p-5 mt-5 mb-5\">\n\t<h2 class=\"text-center\">Detalles de orden</h2>\n\t<div>\n\t\t<form>\n\t\t\t<img src=\"{{$ctrl.orderData[0].foto}}\">\n\t\t</form>\n\t\t<p class=\"text-center\">{{$ctrl.orderData[0].nombre}}</p>\n\t\t\n\t</div>\n\t<div ng-if=\"$ctrl.orderData[0].inventario === 1\">\n\t\t<p>Quedan {{$ctrl.orderData[0].disponible}} disponible(s)</p>\n\t\t<p>Cantidad</p>\n\t\t<input type=\"number\" class=\"form-control\" name=\"cantidad\" ng-model=\"$ctrl.cantidad\" value=\"1\" max=\"{{$ctrl.orderData[0].disponible}}\">\n\t</div>\n\t<p>Direccion de entrega:</p>\n\t<div class=\"direcciones d-block\">\n\t\t<select ng-if=\"$ctrl.session[0].direccion1.length > 0\" class=\"form-control\" ng-model=\"$ctrl.direccion\" name=\"direccion\">\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion1.length > 0\" value=\"{{$ctrl.session[0].direccion1}}\">{{$ctrl.session[0].direccion1}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion2.length > 0\" value=\"{{$ctrl.session[0].direccion2}}\">{{$ctrl.session[0].direccion2}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion3.length > 0\" value=\"{{$ctrl.session[0].direccion3}}\">{{$ctrl.session[0].direccion3}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion4.length > 0\" value=\"{{$ctrl.session[0].direccion4}}\">{{$ctrl.session[0].direccion4}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion5.length > 0\" value=\"{{$ctrl.session[0].direccion5}}\">{{$ctrl.session[0].direccion5}}</option>\n\t\t</select>\n\t\t<a class=\"d-block\" href=\"\" ui-sref=\"profile\">Modificar direcciones de envio</a>\n\t\t<label class=\"mt-3\" for=\"fecha\">Fecha de pedido:</label>\n\t\t<input type=\"text\" class=\"form-control\" ng-model=\"$ctrl.fechaPedido\" name=\"fecha\" disabled>\n\t\t<label for=\"hora\">Hora de Pedido:</label>\n\t\t<input type=\"text\" class=\"form-control mb-3\" ng-model=\"$ctrl.horaPedido\" name=\"hora\" disabled>\n\t</div>\n\t<button class=\"btn btn-success\" data-toggle=\"modal\" data-target=\"#confirmAsk\">Enviar pedido</button>\n</div>\n<div id=\"confirmAsk\" class=\"modal fade\" role=\"dialog\">\n  <div class=\"modal-dialog\">\n  \t<div class=\"modal-content confirmAsk p-5\">\n  \t\t<button id=\"cerre\" type=\"button\" class=\"close invisible\" data-dismiss=\"modal\"></button>\n  \t\t<p class=\"text-center\">Estas seguro que quieres enviar esta orden?</p>\n  \t\t<button class=\"btn btn-success mb-1\" ng-click=\"$ctrl.sendForm()\">Confirmar</button>\n  \t</div>\n  </div>\n</div>\n";
 
 /***/ }),
 /* 72 */
@@ -44237,7 +44268,7 @@ module.exports = "<div class=\"detalles\">\n\t<div class=\"row\">\n\t\t<div clas
 /* 73 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"success\">\n\tExitooo\n</div>";
+module.exports = "<div class=\"success\">\n\t<div class=\"nuevo-exito text-center\">\n\t<i class=\"fa fa-check-square\" aria-hidden=\"true\"></i>\n\t<h1>Se ha realizado tu pedido correctamente</h1>\n\t<h2>Recuerda calificar al vendedor una vez recibas tu producto</h2>\n</div>\n</div>";
 
 /***/ }),
 /* 74 */
