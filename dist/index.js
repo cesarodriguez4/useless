@@ -44389,7 +44389,7 @@ module.exports = "<div class=\"detalles\">\n\t<div class=\"row\">\n\t\t<div clas
 /* 79 */
 /***/ (function(module, exports) {
 
-module.exports = "<p ng-if=\"$ctrl.list.length > 0\" class=\"d-block mt-2 dir-productos\">\n<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-3 mb-4 item\" ui-sref=\"shop({code: pro.id})\">\n\t\t<img height=\"100\" src=\"{{pro.logo}}\">\n\t\t<small><strong>{{pro.nombre}}</strong></small>\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.reputacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ninguna tienda para esta categoría</small>\n</div>";
+module.exports = "<p ng-if=\"$ctrl.list.length > 0\" class=\"d-block mt-2 dir-productos\">\n<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-3 mb-4 mt-3 item\" ui-sref=\"shop({code: pro.id})\">\n\t\t<img height=\"100\" src=\"{{pro.logo}}\">\n\t\t<small><strong>{{pro.nombre}}</strong></small>\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.reputacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ninguna tienda para esta categoría</small>\n</div>";
 
 /***/ }),
 /* 80 */
