@@ -8977,19 +8977,27 @@ const login = {
 const main = {
   template: __webpack_require__(59),
   controller(API, $state) {
-    const cat = $state.params.cat || 'uP5nxht';
+    const cat = $state.params.cat;
 
-    API.getSubcategories(cat).then(result => {
-      this.panelOptions = result.data;
-    }, () => {
-      this.panelOptions = ['Error en la conexion, comprueba tu conexion de internet'];
-    });
+    if ($state.params.subcat) {
+      API.getShopsBySubcategory($state.params.subcat).then(result => {
+        this.products = result.data;
+      }, () => {
+        this.products = ['No se ha subido ninguna tienda con esta categoria.'];
+      });
+    } else {
+      API.getSubcategories(cat).then(result => {
+        this.panelOptions = result.data;
+      }, () => {
+        this.panelOptions = ['Error en la conexion, comprueba tu conexion de internet'];
+      });
 
-    API.getShopsByCategory(cat).then(result => {
-      this.products = result.data;
-    }, () => {
-      this.products = ['No se ha subido ninguna tienda con esta categoria.'];
-    });
+      API.getShopsByCategory(cat).then(result => {
+        this.products = result.data;
+      }, () => {
+        this.products = ['No se ha subido ninguna tienda con esta categoria.'];
+      });
+    }
 
     this.reload = () => {
       location.reload();
@@ -9026,6 +9034,10 @@ const mas = {
     }, error => {
       this.subcategories = error.data;
     });
+
+    this.reload = () => {
+      location.reload();
+    };
 
     this.putCat = cat => {
       $state.go('main.cat', { cat });
@@ -9600,6 +9612,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     url: 'category/:cat',
     component: 'app',
     params: { cat: null }
+  }).state('main.subcat', {
+    url: 'subcategory/:subcat',
+    component: 'app',
+    params: { subcat: null }
   }).state('sign-user', {
     url: '/signUp/user',
     component: 'signUpUser'
@@ -44321,7 +44337,7 @@ module.exports = "<div>\n\t<promociones></promociones>\n</div>\n<div class=\"row
 /* 60 */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"mas\" class=\"collapse col-12\">\n\t<div class=\"row\">\n\t\t<div class=\"dropdown col-2\" ng-repeat=\"cat in $ctrl.categories\">\n\t\t\t<button class=\"text-left container mt-2 mb-2 btn btn-primary  dropdown-toogle\" id=\"drop.{{cat.codigo}}\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{cat.nombre || \"Error: No existen Categorias\"}} <i class=\"fa fa-caret-down\"></i></button>\n\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n\t\t\t\t<a class=\"dropdown-item\" ng-repeat=\"val in $ctrl.subcategories\" ng-if=\"cat.codigo === val.categoria\">{{val.nombre}}</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>";
+module.exports = "<div id=\"mas\" class=\"collapse col-12\">\n\t<div class=\"row\">\n\t\t<div class=\"dropdown col-2\" ng-repeat=\"cat in $ctrl.categories\">\n\t\t\t<button class=\"text-left container mt-2 mb-2 btn btn-primary  dropdown-toogle\" id=\"drop.{{cat.codigo}}\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{cat.nombre || \"Error: No existen Categorias\"}} <i class=\"fa fa-caret-down\"></i></button>\n\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n\t\t\t\t<a class=\"dropdown-item\" ng-repeat=\"val in $ctrl.subcategories\" ng-if=\"cat.codigo === val.categoria\" ui-sref=\"main.subcat({subcat: val.codigo})\" ng-click=\"$ctrl.reload()\">{{val.nombre}}</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>";
 
 /***/ }),
 /* 61 */
