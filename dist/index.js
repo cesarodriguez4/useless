@@ -9545,6 +9545,12 @@ const shopDetail = {
     }, error => {
       this.result = error;
     });
+
+    API.getShopCategoryByCode($state.params.code).then(result => {
+      this.categories = result.data;
+    }, err => {
+      this.categories = err;
+    });
   }
 };
 /* harmony export (immutable) */ __webpack_exports__["a"] = shopDetail;
@@ -9632,6 +9638,9 @@ class API {
   }
   califica(obj) {
     return this.$http.put(`https://todocondelivery.herokuapp.com/califica`, obj);
+  }
+  getShopCategoryByCode(code) {
+    return this.$http.get(`https://todocondelivery.herokuapp.com/shop-category/byCode/${code}`);
   }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = API;
@@ -52282,7 +52291,7 @@ module.exports = "<div class=\"success\">\n\t<div class=\"nuevo-exito text-cente
 /* 82 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"detalles\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-3 mt-5 mb-5 p-5\">\n\t\t\t<img src=\"{{$ctrl.result[0].logo}}\">\n\t\t</div>\n\t\t<div class=\"col-lg-8\">\n\t\t\t<h1 class=\"col-lg-12 mt-5\">{{$ctrl.result[0].nombre}}</h1>\n\t\t\t<div class=\"col-lg-12\">\n\t\t\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"$ctrl.result[0].calificacion\"></input-stars>\n\t\t\t\t<div>\n\t\t\t\t\t<p class=\"descripcion\">{{$ctrl.result[0].descripcion}}</p>\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t\n\t\t\t\t\t<p>Direccion: <br>{{$ctrl.result[0].direccion}}</p>\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<table class=\"table table-sm\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<th>Telefono</th>\n\t\t\t\t\t\t\t<th>Direccion</th>\n\t\t\t\t\t\t\t<th>Realiza entregas?</th>\n\t\t\t\t\t\t\t<th>Horario de apertura</th>\n\t\t\t\t\t\t\t<th>Horario de cierre</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>{{$ctrl.result[0].telefono}}</td>\n\t\t\t\t\t\t\t<td>{{$ctrl.result[0].direccion}}</td>\n\t\t\t\t\t\t\t<td>{{$ctrl.result[0].realiza_entregas}}</td>\n\t\t\t\t\t\t\t<td>{{$ctrl.result[0].horario_apertura}}</td>\n\t\t\t\t\t\t\t<td>{{$ctrl.result[0].horario_cierre}}</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"$ctrl.products[0].empty.length\" class=\"mt-3\">\n\t\t\t\t\t<h4>{{$ctrl.products[0].empty}}</h4>\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"!$ctrl.products[0].empty.length\">\n\t\t\t\t\t<p>Productos:</p>\n\t\t\t\t\t<productos list=\"$ctrl.products\"></productos>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
+module.exports = "<div class=\"detalles\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-3 mt-5 mb-5 p-5\">\n\t\t\t<img src=\"{{$ctrl.result[0].logo}}\">\n\t\t\t<div class=\"card mt-3 mb-3\">\n\t\t\t\t<p class=\"text-center bg-primary text-white p-2\"><strong>Dirección:</strong></p>\n\t\t\t\t<p class=\"text-center\"><small>{{$ctrl.result[0].direccion}}</small></p>\n\t\t\t</div>\n\t\t\t<div class=\"card\">\n\t\t\t\t<table class=\"table table-sm\">\n\t\t\t\t\t<thead class=\"bg-success text-white p-2\">\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<th>Teléfono</th>\n\t\t\t\t\t\t\t<th>Apertura</th>\n\t\t\t\t\t\t\t<th>Cierre</th>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</thead>\n\t\t\t\t\t<tbody>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><small>{{$ctrl.result[0].telefono}}</small></td>\n\t\t\t\t\t\t\t<td><small>{{$ctrl.result[0].horario_apertura}}</small></td>\n\t\t\t\t\t\t\t<td><small>{{$ctrl.result[0].horario_cierre}}</small></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div class=\"mt-3 panel\">\n\t\t\t\t<li class=\"list-group-item text-center bg-info p-2 text-white\">Categorías por establecimiento</li>\n\t\t\t\t<li class=\"list-group-item\">\n\t\t\t\t\t<div class=\"radio\">\n\t\t\t\t\t\t<label><input class=\"mr-2\" type=\"radio\" name=\"categories\" ng-click=\"$ctrl.reload();\">Todas</label>\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"list-group-item\" ng-repeat=\"list in $ctrl.categories\" ng-click=\"$ctrl.changeSubcategory(li.codigo)\">\n\t\t\t\t\t<div class=\"radio\">\n\t\t\t\t\t\t<label><input id=\"{{list.codigo}}\" class=\"mr-2\" type=\"radio\" name=\"categories\">{{list.nombre}}</label>\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-lg-8\">\n\t\t\t<h1 class=\"col-lg-12 mt-5\">{{$ctrl.result[0].nombre}}</h1>\n\t\t\t<div class=\"col-lg-12\">\n\t\t\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"$ctrl.result[0].calificacion\"></input-stars>\n\t\t\t\t<div>\n\t\t\t\t\t<p class=\"descripcion\">{{$ctrl.result[0].descripcion}}</p>\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"$ctrl.products[0].empty.length\" class=\"mt-3\">\n\t\t\t\t\t<h4>{{$ctrl.products[0].empty}}</h4>\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"!$ctrl.products[0].empty.length\">\n\t\t\t\t<productos list=\"$ctrl.products\"></productos>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n</div>";
 
 /***/ }),
 /* 83 */
