@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 84);
+/******/ 	return __webpack_require__(__webpack_require__.s = 85);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -80,6 +80,14 @@ module.exports = __webpack_require__.p + "e186e8bed71820e941e8e287cf378c62.jpg";
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(48);
+module.exports = angular;
+
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 /*
@@ -135,7 +143,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /*
@@ -387,18 +395,10 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(47);
-module.exports = angular;
-
-
-/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(44);
+__webpack_require__(45);
 module.exports = 'ngCookies';
 
 
@@ -517,7 +517,7 @@ angular.module('angular-input-stars', [])
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(45);
+__webpack_require__(46);
 module.exports = 'ngSanitize';
 
 
@@ -525,7 +525,7 @@ module.exports = 'ngSanitize';
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(46);
+__webpack_require__(47);
 
 module.exports = 'ui.bootstrap';
 
@@ -542,7 +542,7 @@ module.exports = 'ui.bootstrap';
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
-		module.exports = factory(__webpack_require__(4));
+		module.exports = factory(__webpack_require__(2));
 	else if(typeof define === 'function' && define.amd)
 		define("angular-ui-router", ["angular"], factory);
 	else if(typeof exports === 'object')
@@ -8885,7 +8885,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 const footer = {
-  template: __webpack_require__(55)
+  template: __webpack_require__(56)
 };
 /* harmony export (immutable) */ __webpack_exports__["a"] = footer;
 
@@ -8897,7 +8897,7 @@ const footer = {
 "use strict";
 /* eslint-disable eol-last */
 const header = {
-  template: __webpack_require__(56),
+  template: __webpack_require__(57),
   controller($cookies, API) {
     const usuario = $cookies.getObject('session');
     if (usuario) {
@@ -8919,7 +8919,7 @@ const header = {
 
 "use strict";
 const info = {
-  template: __webpack_require__(57),
+  template: __webpack_require__(58),
   controller($stateParams, API) {
     const doc = $stateParams.document;
     API.getDocumentContent(doc).then(result => {
@@ -8938,7 +8938,7 @@ const info = {
 
 "use strict";
 const gallery = {
-  template: __webpack_require__(58)
+  template: __webpack_require__(59)
 };
 /* harmony export (immutable) */ __webpack_exports__["a"] = gallery;
 
@@ -8950,7 +8950,7 @@ const gallery = {
 "use strict";
 /* eslint-disable eol-last */
 const login = {
-  template: __webpack_require__(59),
+  template: __webpack_require__(60),
   controller($document, API, $state, $cookies) {
     this.closeLogin = () => {
       $document[0].getElementById('btnlogin').click();
@@ -8989,7 +8989,7 @@ const login = {
 
 "use strict";
 const main = {
-  template: __webpack_require__(61),
+  template: __webpack_require__(62),
   controller(API, $state) {
     const cat = $state.params.cat || 'uP5nxht';
 
@@ -9036,7 +9036,7 @@ const main = {
 
 "use strict";
 const mas = {
-  template: __webpack_require__(62), controller(API, $state, $document) {
+  template: __webpack_require__(63), controller(API, $state, $document) {
     this.categories = API.getCategories().then(result => {
       this.categories = result.data;
     }, error => {
@@ -9068,7 +9068,7 @@ const mas = {
 
 "use strict";
 const panel = {
-  template: __webpack_require__(63),
+  template: __webpack_require__(64),
   bindings: {
     options: '='
   }
@@ -9082,7 +9082,7 @@ const panel = {
 
 "use strict";
 const product = {
-  template: __webpack_require__(65),
+  template: __webpack_require__(66),
   bindings: {
     list: '='
   }
@@ -9097,7 +9097,7 @@ const product = {
 "use strict";
 /* eslint-disable eol-last */
 const promo = {
-  template: __webpack_require__(66),
+  template: __webpack_require__(67),
   controller() {
     this.herr = 'si';
   }
@@ -9111,7 +9111,7 @@ const promo = {
 
 "use strict";
 const steps = {
-  template: __webpack_require__(64), controller() {
+  template: __webpack_require__(65), controller() {
     this.login = 'si';
   }
 };
@@ -9124,7 +9124,7 @@ const steps = {
 
 "use strict";
 const support = {
-  template: __webpack_require__(67), controller($state) {
+  template: __webpack_require__(68), controller($state) {
     this.info = doc => {
       $state.go('info', { document: doc });
     };
@@ -9139,7 +9139,7 @@ const support = {
 
 "use strict";
 const top = {
-  template: __webpack_require__(60),
+  template: __webpack_require__(61),
   controller() {
     this.const = 'hello';
   }
@@ -9153,7 +9153,7 @@ const top = {
 
 "use strict";
 const calificar = {
-  template: __webpack_require__(68),
+  template: __webpack_require__(69),
   controller(API, $state) {
     this.enviar = () => {
       const obj = {
@@ -9181,7 +9181,7 @@ const calificar = {
 
 "use strict";
 const error = {
-  template: __webpack_require__(70),
+  template: __webpack_require__(71),
   controller($state, $stateParams) {
     this.error = $stateParams.error;
   }
@@ -9195,7 +9195,7 @@ const error = {
 
 "use strict";
 const forget = {
-  template: __webpack_require__(74),
+  template: __webpack_require__(75),
   controller(API, $state) {
     this.sendEmail = () => {
       API.sendData('https://todocondelivery.herokuapp.com/resetPassword', { email: this.email }).then(result => {
@@ -9220,7 +9220,7 @@ const forget = {
 
 "use strict";
 const loginFailed = {
-  template: __webpack_require__(69),
+  template: __webpack_require__(70),
   controller($stateParams, $document) {
     this.error = $stateParams;
     this.signUp = () => {
@@ -9237,7 +9237,7 @@ const loginFailed = {
 
 "use strict";
 const profile = {
-  template: __webpack_require__(75),
+  template: __webpack_require__(76),
   controller($cookies, API, $state) {
     const usuario = $cookies.getObject('session');
     this.confYouSee = 'Mis compras';
@@ -9287,7 +9287,7 @@ const profile = {
 
 "use strict";
 const setPassword = {
-  template: __webpack_require__(77),
+  template: __webpack_require__(78),
   controller($stateParams, $window) {
     this.token = $stateParams.t;
     this.email = $stateParams.u;
@@ -9306,7 +9306,7 @@ const setPassword = {
 
 "use strict";
 const signUp = {
-  template: __webpack_require__(76), controller($document) {
+  template: __webpack_require__(77), controller($document) {
     this.click = () => {
       $document[0].getElementById('cerrar-modal').click();
     };
@@ -9321,7 +9321,7 @@ const signUp = {
 
 "use strict";
 const signUpShop = {
-  template: __webpack_require__(71), controller(API, $state, $document) {
+  template: __webpack_require__(72), controller(API, $state, $document) {
     this.exist = '';
     this.sendForm = () => {
       const serv = 'https://todocondelivery.herokuapp.com/users/new';
@@ -9366,7 +9366,7 @@ const signUpShop = {
 
 "use strict";
 const signUpSuccess = {
-  template: __webpack_require__(72)
+  template: __webpack_require__(73)
 };
 /* harmony export (immutable) */ __webpack_exports__["a"] = signUpSuccess;
 
@@ -9377,8 +9377,9 @@ const signUpSuccess = {
 
 "use strict";
 const signUpUser = {
-  template: __webpack_require__(73), controller(API, $state, $document) {
+  template: __webpack_require__(74), controller(API, $state, $document, NgMap) {
     this.exist = '';
+    this.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAsZ9WXVAEy7ccnZi4PICT3t2BCEqdBBKg';
     this.sendForm = () => {
       const serv = 'https://todocondelivery.herokuapp.com/users/new';
       const form = {};
@@ -9392,12 +9393,19 @@ const signUpUser = {
       form.fechaNacimiento = this.fecha;
       form.nit = this.nit;
       form.apellidoNIT = this.apellidoNIT;
+      form.pos1 = this.pos;
       form.tipo = 0;
 
       API.sendData(serv, form).then(() => {
         $state.transitionTo('sign-success');
       }, () => {
         $state.transitionTo('sign-error');
+      });
+    };
+
+    this.changePos = () => {
+      NgMap.getMap().then(map => {
+        this.pos = map.getCenter().toString().slice(1, -1);
       });
     };
 
@@ -9425,7 +9433,7 @@ const signUpUser = {
 
 "use strict";
 const order = {
-  template: __webpack_require__(78),
+  template: __webpack_require__(79),
   controller($state, API, $cookies, $document) {
     const session = $cookies.getObject('session');
     const date = new Date();
@@ -9471,7 +9479,7 @@ const order = {
 
 "use strict";
 const productDetail = {
-  template: __webpack_require__(79),
+  template: __webpack_require__(80),
   controller($state, API, $cookies, $document) {
     const session = $cookies.getObject('session');
     API.getProduct($state.params.code).then(result => {
@@ -9497,7 +9505,7 @@ const productDetail = {
 
 "use strict";
 const search = {
-  template: __webpack_require__(80),
+  template: __webpack_require__(81),
   controller($state, API) {
     const search = $state.params.search;
     this.search = search;
@@ -9517,7 +9525,7 @@ const search = {
 
 "use strict";
 const success = {
-  template: __webpack_require__(81),
+  template: __webpack_require__(82),
   bindings: '=',
   controller($stateParams) {
     this.title = $stateParams.title;
@@ -9533,7 +9541,7 @@ const success = {
 
 "use strict";
 const shopDetail = {
-  template: __webpack_require__(82),
+  template: __webpack_require__(83),
   controller($state, API) {
     API.getShopByCode($state.params.code).then(result => {
       this.result = result.data;
@@ -9562,7 +9570,7 @@ const shopDetail = {
 
 "use strict";
 const shops = {
-  template: __webpack_require__(83),
+  template: __webpack_require__(84),
   bindings: {
     list: '='
   }
@@ -9728,27 +9736,3455 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(48);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(3)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../css-loader/index.js!../../../sass-loader/lib/loader.js!../../../postcss-loader/index.js!./bootstrap.css", function() {
-			var newContent = require("!!../../../css-loader/index.js!../../../sass-loader/lib/loader.js!../../../postcss-loader/index.js!./bootstrap.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
+(function(root, factory) {
+if (true) {
+module.exports = factory(__webpack_require__(2));
+} else if (typeof define === "function" && define.amd) {
+define(['angular'], factory);
+} else{
+factory(root.angular);
 }
+}(this, function(angular) {
+/**
+ * AngularJS Google Maps Ver. 1.18.3
+ *
+ * The MIT License (MIT)
+ * 
+ * Copyright (c) 2014, 2015, 1016 Allen Kim
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+angular.module('ngMap', []);
+
+/**
+ * @ngdoc controller
+ * @name MapController
+ */
+(function() {
+  'use strict';
+  var Attr2MapOptions;
+
+  var __MapController = function(
+      $scope, $element, $attrs, $parse, $interpolate, _Attr2MapOptions_, NgMap, NgMapPool, escapeRegExp
+    ) {
+    Attr2MapOptions = _Attr2MapOptions_;
+    var vm = this;
+    var exprStartSymbol = $interpolate.startSymbol();
+    var exprEndSymbol = $interpolate.endSymbol();
+
+    vm.mapOptions; /** @memberof __MapController */
+    vm.mapEvents;  /** @memberof __MapController */
+    vm.eventListeners;  /** @memberof __MapController */
+
+    /**
+     * Add an object to the collection of group
+     * @memberof __MapController
+     * @function addObject
+     * @param groupName the name of collection that object belongs to
+     * @param obj  an object to add into a collection, i.e. marker, shape
+     */
+    vm.addObject = function(groupName, obj) {
+      if (vm.map) {
+        vm.map[groupName] = vm.map[groupName] || {};
+        var len = Object.keys(vm.map[groupName]).length;
+        vm.map[groupName][obj.id || len] = obj;
+
+        if (vm.map instanceof google.maps.Map) {
+          //infoWindow.setMap works like infoWindow.open
+          if (groupName != "infoWindows" && obj.setMap) {
+            obj.setMap && obj.setMap(vm.map);
+          }
+          if (obj.centered && obj.position) {
+            vm.map.setCenter(obj.position);
+          }
+          (groupName == 'markers') && vm.objectChanged('markers');
+          (groupName == 'customMarkers') && vm.objectChanged('customMarkers');
+        }
+      }
+    };
+
+    /**
+     * Delete an object from the collection and remove from map
+     * @memberof __MapController
+     * @function deleteObject
+     * @param {Array} objs the collection of objects. i.e., map.markers
+     * @param {Object} obj the object to be removed. i.e., marker
+     */
+    vm.deleteObject = function(groupName, obj) {
+      /* delete from group */
+      if (obj.map) {
+        var objs = obj.map[groupName];
+        for (var name in objs) {
+          if (objs[name] === obj) {
+            void 0;
+            google.maps.event.clearInstanceListeners(obj);
+            delete objs[name];
+          }
+        }
+
+        /* delete from map */
+        obj.map && obj.setMap && obj.setMap(null);
+
+        (groupName == 'markers') && vm.objectChanged('markers');
+        (groupName == 'customMarkers') && vm.objectChanged('customMarkers');
+      }
+    };
+
+    /**
+     * @memberof __MapController
+     * @function observeAttrSetObj
+     * @param {Hash} orgAttrs attributes before its initialization
+     * @param {Hash} attrs    attributes after its initialization
+     * @param {Object} obj    map object that an action is to be done
+     * @description watch changes of attribute values and
+     * do appropriate action based on attribute name
+     */
+    vm.observeAttrSetObj = function(orgAttrs, attrs, obj) {
+      if (attrs.noWatcher) {
+        return false;
+      }
+      var attrsToObserve = Attr2MapOptions.getAttrsToObserve(orgAttrs);
+      for (var i=0; i<attrsToObserve.length; i++) {
+        var attrName = attrsToObserve[i];
+        attrs.$observe(attrName, NgMap.observeAndSet(attrName, obj));
+      }
+    };
+
+    /**
+     * @memberof __MapController
+     * @function zoomToIncludeMarkers
+     */
+    vm.zoomToIncludeMarkers = function() {
+      // Only fit to bounds if we have any markers
+      // object.keys is supported in all major browsers (IE9+)
+      if ((vm.map.markers != null && Object.keys(vm.map.markers).length > 0) || (vm.map.customMarkers != null && Object.keys(vm.map.customMarkers).length > 0)) {
+        var bounds = new google.maps.LatLngBounds();
+        for (var k1 in vm.map.markers) {
+          bounds.extend(vm.map.markers[k1].getPosition());
+        }
+        for (var k2 in vm.map.customMarkers) {
+          bounds.extend(vm.map.customMarkers[k2].getPosition());
+        }
+    	  if (vm.mapOptions.maximumZoom) {
+    		  vm.enableMaximumZoomCheck = true; //enable zoom check after resizing for markers
+    	  }
+        vm.map.fitBounds(bounds);
+      }
+    };
+
+    /**
+     * @memberof __MapController
+     * @function objectChanged
+     * @param {String} group name of group e.g., markers
+     */
+    vm.objectChanged = function(group) {
+      if ( vm.map &&
+        (group == 'markers' || group == 'customMarkers') &&
+        vm.map.zoomToIncludeMarkers == 'auto'
+      ) {
+        vm.zoomToIncludeMarkers();
+      }
+    };
+
+    /**
+     * @memberof __MapController
+     * @function initializeMap
+     * @description
+     *  . initialize Google map on <div> tag
+     *  . set map options, events, and observers
+     *  . reset zoom to include all (custom)markers
+     */
+    vm.initializeMap = function() {
+      var mapOptions = vm.mapOptions,
+          mapEvents = vm.mapEvents;
+
+      var lazyInitMap = vm.map; //prepared for lazy init
+      vm.map = NgMapPool.getMapInstance($element[0]);
+      NgMap.setStyle($element[0]);
+
+      // set objects for lazyInit
+      if (lazyInitMap) {
+
+        /**
+         * rebuild mapOptions for lazyInit
+         * because attributes values might have been changed
+         */
+        var filtered = Attr2MapOptions.filter($attrs);
+        var options = Attr2MapOptions.getOptions(filtered);
+        var controlOptions = Attr2MapOptions.getControlOptions(filtered);
+        mapOptions = angular.extend(options, controlOptions);
+        void 0;
+
+        for (var group in lazyInitMap) {
+          var groupMembers = lazyInitMap[group]; //e.g. markers
+          if (typeof groupMembers == 'object') {
+            for (var id in groupMembers) {
+              vm.addObject(group, groupMembers[id]);
+            }
+          }
+        }
+        vm.map.showInfoWindow = vm.showInfoWindow;
+        vm.map.hideInfoWindow = vm.hideInfoWindow;
+      }
+
+      // set options
+      mapOptions.zoom = mapOptions.zoom || 15;
+      var center = mapOptions.center;
+      var exprRegExp = new RegExp(escapeRegExp(exprStartSymbol) + '.*' + escapeRegExp(exprEndSymbol));
+
+      if (!mapOptions.center ||
+        ((typeof center === 'string') && center.match(exprRegExp))
+      ) {
+        mapOptions.center = new google.maps.LatLng(0, 0);
+      } else if( (typeof center === 'string') && center.match(/^[0-9.-]*,[0-9.-]*$/) ){
+        var lat = parseFloat(center.split(',')[0]);
+        var lng = parseFloat(center.split(',')[1]);
+        mapOptions.center = new google.maps.LatLng(lat, lng);
+      } else if (!(center instanceof google.maps.LatLng)) {
+        var geoCenter = mapOptions.center;
+        delete mapOptions.center;
+        NgMap.getGeoLocation(geoCenter, mapOptions.geoLocationOptions).
+          then(function (latlng) {
+            vm.map.setCenter(latlng);
+            var geoCallback = mapOptions.geoCallback;
+            geoCallback && $parse(geoCallback)($scope);
+          }, function () {
+            if (mapOptions.geoFallbackCenter) {
+              vm.map.setCenter(mapOptions.geoFallbackCenter);
+            }
+          });
+      }
+      vm.map.setOptions(mapOptions);
+
+      // set events
+      for (var eventName in mapEvents) {
+        var event = mapEvents[eventName];
+        var listener = google.maps.event.addListener(vm.map, eventName, event);
+        vm.eventListeners[eventName] = listener;
+      }
+
+      // set observers
+      vm.observeAttrSetObj(orgAttrs, $attrs, vm.map);
+      vm.singleInfoWindow = mapOptions.singleInfoWindow;
+
+      google.maps.event.trigger(vm.map, 'resize');
+
+      google.maps.event.addListenerOnce(vm.map, "idle", function () {
+        NgMap.addMap(vm);
+        if (mapOptions.zoomToIncludeMarkers) {
+          vm.zoomToIncludeMarkers();
+        }
+        //TODO: it's for backward compatibiliy. will be removed
+        $scope.map = vm.map;
+        $scope.$emit('mapInitialized', vm.map);
+
+        //callback
+        if ($attrs.mapInitialized) {
+          $parse($attrs.mapInitialized)($scope, {map: vm.map});
+        }
+      });
+
+	  //add maximum zoom listeners if zoom-to-include-markers and and maximum-zoom are valid attributes
+	  if (mapOptions.zoomToIncludeMarkers && mapOptions.maximumZoom) {
+	    google.maps.event.addListener(vm.map, 'zoom_changed', function() {
+          if (vm.enableMaximumZoomCheck == true) {
+			vm.enableMaximumZoomCheck = false;
+	        google.maps.event.addListenerOnce(vm.map, 'bounds_changed', function() {
+		      vm.map.setZoom(Math.min(mapOptions.maximumZoom, vm.map.getZoom()));
+		    });
+	  	  }
+	    });
+	  }
+    };
+
+    $scope.google = google; //used by $scope.eval to avoid eval()
+
+    /**
+     * get map options and events
+     */
+    var orgAttrs = Attr2MapOptions.orgAttributes($element);
+    var filtered = Attr2MapOptions.filter($attrs);
+    var options = Attr2MapOptions.getOptions(filtered, {scope: $scope});
+    var controlOptions = Attr2MapOptions.getControlOptions(filtered);
+    var mapOptions = angular.extend(options, controlOptions);
+    var mapEvents = Attr2MapOptions.getEvents($scope, filtered);
+    void 0;
+    Object.keys(mapEvents).length && void 0;
+
+    vm.mapOptions = mapOptions;
+    vm.mapEvents = mapEvents;
+    vm.eventListeners = {};
+
+    if (options.lazyInit) { // allows controlled initialization
+      // parse angular expression for dynamic ids
+      if (!!$attrs.id &&
+      	  // starts with, at position 0
+	  $attrs.id.indexOf(exprStartSymbol, 0) === 0 &&
+	  // ends with
+	  $attrs.id.indexOf(exprEndSymbol, $attrs.id.length - exprEndSymbol.length) !== -1) {
+        var idExpression = $attrs.id.slice(2,-2);
+        var mapId = $parse(idExpression)($scope);
+      } else {
+        var mapId = $attrs.id;
+      }
+      vm.map = {id: mapId}; //set empty, not real, map
+      NgMap.addMap(vm);
+    } else {
+      vm.initializeMap();
+    }
+
+    //Trigger Resize
+    if(options.triggerResize) {
+      google.maps.event.trigger(vm.map, 'resize');
+    }
+
+    $element.bind('$destroy', function() {
+      NgMapPool.returnMapInstance(vm.map);
+      NgMap.deleteMap(vm);
+    });
+  }; // __MapController
+
+  __MapController.$inject = [
+    '$scope', '$element', '$attrs', '$parse', '$interpolate', 'Attr2MapOptions', 'NgMap', 'NgMapPool', 'escapeRegexpFilter'
+  ];
+  angular.module('ngMap').controller('__MapController', __MapController);
+})();
+
+/**
+ * @ngdoc directive
+ * @name bicycling-layer
+ * @param Attr2Options {service}
+ *   convert html attribute to Google map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ *
+ *   <map zoom="13" center="34.04924594193164, -118.24104309082031">
+ *     <bicycling-layer></bicycling-layer>
+ *    </map>
+ */
+(function() {
+  'use strict';
+  var parser;
+
+  var linkFunc = function(scope, element, attrs, mapController) {
+    mapController = mapController[0]||mapController[1];
+    var orgAttrs = parser.orgAttributes(element);
+    var filtered = parser.filter(attrs);
+    var options = parser.getOptions(filtered, {scope: scope});
+    var events = parser.getEvents(scope, filtered);
+
+    void 0;
+
+    var layer = getLayer(options, events);
+    mapController.addObject('bicyclingLayers', layer);
+    mapController.observeAttrSetObj(orgAttrs, attrs, layer);  //observers
+    element.bind('$destroy', function() {
+      mapController.deleteObject('bicyclingLayers', layer);
+    });
+  };
+
+  var getLayer = function(options, events) {
+    var layer = new google.maps.BicyclingLayer(options);
+    for (var eventName in events) {
+      google.maps.event.addListener(layer, eventName, events[eventName]);
+    }
+    return layer;
+  };
+
+  var bicyclingLayer= function(Attr2MapOptions) {
+    parser = Attr2MapOptions;
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      link: linkFunc
+     };
+  };
+  bicyclingLayer.$inject = ['Attr2MapOptions'];
+
+  angular.module('ngMap').directive('bicyclingLayer', bicyclingLayer);
+})();
+
+/**
+ * @ngdoc directive
+ * @name custom-control
+ * @param Attr2Options {service} convert html attribute to Google map api options
+ * @param $compile {service} AngularJS $compile service
+ * @description
+ *   Build custom control and set to the map with position
+ *
+ *   Requires:  map directive
+ *
+ *   Restrict To:  Element
+ *
+ * @attr {String} position position of this control
+ *        i.e. TOP_RIGHT
+ * @attr {Number} index index of the control
+ * @example
+ *
+ * Example:
+ *  <map center="41.850033,-87.6500523" zoom="3">
+ *    <custom-control id="home" position="TOP_LEFT" index="1">
+ *      <div style="background-color: white;">
+ *        <b>Home</b>
+ *      </div>
+ *    </custom-control>
+ *  </map>
+ *
+ */
+(function() {
+  'use strict';
+  var parser, NgMap;
+
+  var linkFunc = function(scope, element, attrs, mapController, $transclude) {
+    mapController = mapController[0]||mapController[1];
+    var filtered = parser.filter(attrs);
+    var options = parser.getOptions(filtered, {scope: scope});
+    var events = parser.getEvents(scope, filtered);
+
+    /**
+     * build a custom control element
+     */
+    var customControlEl = element[0].parentElement.removeChild(element[0]);
+    var content = $transclude();
+    angular.element(customControlEl).append(content);
+
+    /**
+     * set events
+     */
+    for (var eventName in events) {
+      google.maps.event.addDomListener(customControlEl, eventName, events[eventName]);
+    }
+
+    mapController.addObject('customControls', customControlEl);
+    var position = options.position;
+    mapController.map.controls[google.maps.ControlPosition[position]].push(customControlEl);
+
+    element.bind('$destroy', function() {
+      mapController.deleteObject('customControls', customControlEl);
+    });
+  };
+
+  var customControl =  function(Attr2MapOptions, _NgMap_)  {
+    parser = Attr2MapOptions, NgMap = _NgMap_;
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      link: linkFunc,
+      transclude: true
+    }; // return
+  };
+  customControl.$inject = ['Attr2MapOptions', 'NgMap'];
+
+  angular.module('ngMap').directive('customControl', customControl);
+})();
+
+/**
+ * @ngdoc directive
+ * @memberof ngmap
+ * @name custom-marker
+ * @param Attr2Options {service} convert html attribute to Google map api options
+ * @param $timeout {service} AngularJS $timeout
+ * @description
+ *   Marker with html
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @attr {String} position required, position on map
+ * @attr {Number} z-index optional
+ * @attr {Boolean} visible optional
+ * @example
+ *
+ * Example:
+ *   <map center="41.850033,-87.6500523" zoom="3">
+ *     <custom-marker position="41.850033,-87.6500523">
+ *       <div>
+ *         <b>Home</b>
+ *       </div>
+ *     </custom-marker>
+ *   </map>
+ *
+ */
+/* global document */
+(function() {
+  'use strict';
+  var parser, $timeout, $compile, NgMap;
+
+  var CustomMarker = function(options) {
+    options = options || {};
+
+    this.el = document.createElement('div');
+    this.el.style.display = 'inline-block';
+    this.el.style.visibility = "hidden";
+    this.visible = true;
+    for (var key in options) { /* jshint ignore:line */
+     this[key] = options[key];
+    }
+  };
+
+  var setCustomMarker = function() {
+
+    CustomMarker.prototype = new google.maps.OverlayView();
+
+    CustomMarker.prototype.setContent = function(html, scope) {
+      this.el.innerHTML = html;
+      this.el.style.position = 'absolute';
+      if (scope) {
+        $compile(angular.element(this.el).contents())(scope);
+      }
+    };
+
+    CustomMarker.prototype.getDraggable = function() {
+      return this.draggable;
+    };
+
+    CustomMarker.prototype.setDraggable = function(draggable) {
+      this.draggable = draggable;
+    };
+
+    CustomMarker.prototype.getPosition = function() {
+      return this.position;
+    };
+
+    CustomMarker.prototype.setPosition = function(position) {
+      position && (this.position = position); /* jshint ignore:line */
+      var _this = this;
+      if (this.getProjection() && typeof this.position.lng == 'function') {
+        void 0;
+        var setPosition = function() {
+          if (!_this.getProjection()) { return; }
+          var posPixel = _this.getProjection().fromLatLngToDivPixel(_this.position);
+          var x = Math.round(posPixel.x - (_this.el.offsetWidth/2));
+          var y = Math.round(posPixel.y - _this.el.offsetHeight - 10); // 10px for anchor
+          _this.el.style.left = x + "px";
+          _this.el.style.top = y + "px";
+          _this.el.style.visibility = "visible";
+        };
+        if (_this.el.offsetWidth && _this.el.offsetHeight) {
+          setPosition();
+        } else {
+          //delayed left/top calculation when width/height are not set instantly
+          $timeout(setPosition, 300);
+        }
+      }
+    };
+
+    CustomMarker.prototype.setZIndex = function(zIndex) {
+      zIndex && (this.zIndex = zIndex); /* jshint ignore:line */
+      this.el.style.zIndex = this.zIndex;
+    };
+
+    CustomMarker.prototype.getVisible = function() {
+      return this.visible;
+    };
+
+    CustomMarker.prototype.setVisible = function(visible) {
+      this.el.style.display = visible ? 'inline-block' : 'none';
+      this.visible = visible;
+    };
+
+    CustomMarker.prototype.addClass = function(className) {
+      var classNames = this.el.className.trim().split(' ');
+      (classNames.indexOf(className) == -1) && classNames.push(className); /* jshint ignore:line */
+      this.el.className = classNames.join(' ');
+    };
+
+    CustomMarker.prototype.removeClass = function(className) {
+      var classNames = this.el.className.split(' ');
+      var index = classNames.indexOf(className);
+      (index > -1) && classNames.splice(index, 1); /* jshint ignore:line */
+      this.el.className = classNames.join(' ');
+    };
+
+    CustomMarker.prototype.onAdd = function() {
+      this.getPanes().overlayMouseTarget.appendChild(this.el);
+    };
+
+    CustomMarker.prototype.draw = function() {
+      this.setPosition();
+      this.setZIndex(this.zIndex);
+      this.setVisible(this.visible);
+    };
+
+    CustomMarker.prototype.onRemove = function() {
+      this.el.parentNode.removeChild(this.el);
+      //this.el = null;
+    };
+  };
+
+  var linkFunc = function(orgHtml, varsToWatch) {
+    //console.log('orgHtml', orgHtml, 'varsToWatch', varsToWatch);
+
+    return function(scope, element, attrs, mapController) {
+      mapController = mapController[0]||mapController[1];
+      var orgAttrs = parser.orgAttributes(element);
+
+      var filtered = parser.filter(attrs);
+      var options = parser.getOptions(filtered, {scope: scope});
+      var events = parser.getEvents(scope, filtered);
+
+      /**
+       * build a custom marker element
+       */
+      element[0].style.display = 'none';
+      void 0;
+      var customMarker = new CustomMarker(options);
+
+      $timeout(function() { //apply contents, class, and location after it is compiled
+
+        scope.$watch('[' + varsToWatch.join(',') + ']', function() {
+          customMarker.setContent(orgHtml, scope);
+        }, true);
+
+        customMarker.setContent(element[0].innerHTML, scope);
+        var classNames = element[0].firstElementChild.className;
+        customMarker.addClass('custom-marker');
+        customMarker.addClass(classNames);
+        void 0;
+
+        if (!(options.position instanceof google.maps.LatLng)) {
+          NgMap.getGeoLocation(options.position).then(
+                function(latlng) {
+                  customMarker.setPosition(latlng);
+                }
+          );
+        }
+
+      });
+
+      void 0;
+      for (var eventName in events) { /* jshint ignore:line */
+        google.maps.event.addDomListener(
+          customMarker.el, eventName, events[eventName]);
+      }
+      mapController.addObject('customMarkers', customMarker);
+
+      //set observers
+      mapController.observeAttrSetObj(orgAttrs, attrs, customMarker);
+
+      element.bind('$destroy', function() {
+        //Is it required to remove event listeners when DOM is removed?
+        mapController.deleteObject('customMarkers', customMarker);
+      });
+
+    }; // linkFunc
+  };
+
+
+  var customMarkerDirective = function(
+      _$timeout_, _$compile_, $interpolate, Attr2MapOptions, _NgMap_, escapeRegExp
+    )  {
+    parser = Attr2MapOptions;
+    $timeout = _$timeout_;
+    $compile = _$compile_;
+    NgMap = _NgMap_;
+
+    var exprStartSymbol = $interpolate.startSymbol();
+    var exprEndSymbol = $interpolate.endSymbol();
+    var exprRegExp = new RegExp(escapeRegExp(exprStartSymbol) + '([^' + exprEndSymbol.substring(0, 1) + ']+)' + escapeRegExp(exprEndSymbol), 'g');
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      compile: function(element) {
+        setCustomMarker();
+        element[0].style.display ='none';
+        var orgHtml = element.html();
+        var matches = orgHtml.match(exprRegExp);
+        var varsToWatch = [];
+        //filter out that contains '::', 'this.'
+        (matches || []).forEach(function(match) {
+          var toWatch = match.replace(exprStartSymbol,'').replace(exprEndSymbol,'');
+          if (match.indexOf('::') == -1 &&
+            match.indexOf('this.') == -1 &&
+            varsToWatch.indexOf(toWatch) == -1) {
+            varsToWatch.push(match.replace(exprStartSymbol,'').replace(exprEndSymbol,''));
+          }
+        });
+
+        return linkFunc(orgHtml, varsToWatch);
+      }
+    }; // return
+  };// function
+  customMarkerDirective.$inject =
+    ['$timeout', '$compile', '$interpolate', 'Attr2MapOptions', 'NgMap', 'escapeRegexpFilter'];
+
+  angular.module('ngMap').directive('customMarker', customMarkerDirective);
+})();
+
+/**
+ * @ngdoc directive
+ * @name directions
+ * @description
+ *   Enable directions on map.
+ *   e.g., origin, destination, draggable, waypoints, etc
+ *
+ *   Requires:  map directive
+ *
+ *   Restrict To:  Element
+ *
+ * @attr {String} DirectionsRendererOptions
+ *   [Any DirectionsRendererOptions](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRendererOptions)
+ * @attr {String} DirectionsRequestOptions
+ *   [Any DirectionsRequest options](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
+ * @example
+ *  <map zoom="14" center="37.7699298, -122.4469157">
+ *    <directions
+ *      draggable="true"
+ *      panel="directions-panel"
+ *      travel-mode="{{travelMode}}"
+ *      waypoints="[{location:'kingston', stopover:true}]"
+ *      origin="{{origin}}"
+ *      destination="{{destination}}">
+ *    </directions>
+ *  </map>
+ */
+/* global document */
+(function() {
+  'use strict';
+  var NgMap, $timeout, NavigatorGeolocation;
+
+  var getDirectionsRenderer = function(options, events) {
+    if (options.panel) {
+      options.panel = document.getElementById(options.panel) ||
+        document.querySelector(options.panel);
+    }
+    var renderer = new google.maps.DirectionsRenderer(options);
+    for (var eventName in events) {
+      google.maps.event.addListener(renderer, eventName, events[eventName]);
+    }
+    return renderer;
+  };
+
+  var updateRoute = function(renderer, options) {
+    var directionsService = new google.maps.DirectionsService();
+
+    /* filter out valid keys only for DirectionsRequest object*/
+    var request = options;
+    request.travelMode = request.travelMode || 'DRIVING';
+    var validKeys = [
+      'origin', 'destination', 'travelMode', 'transitOptions', 'unitSystem',
+      'durationInTraffic', 'waypoints', 'optimizeWaypoints', 
+      'provideRouteAlternatives', 'avoidHighways', 'avoidTolls', 'region'
+    ];
+    for(var key in request){
+      (validKeys.indexOf(key) === -1) && (delete request[key]);
+    }
+
+    if(request.waypoints) {
+      // Check fo valid values
+      if(request.waypoints == "[]" || request.waypoints === "") {
+        delete request.waypoints;
+      }
+    }
+
+    var showDirections = function(request) {
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          $timeout(function() {
+            renderer.setDirections(response);
+          });
+        }
+      });
+    };
+
+    if (request.origin && request.destination) {
+      if (request.origin == 'current-location') {
+        NavigatorGeolocation.getCurrentPosition().then(function(ll) {
+          request.origin = new google.maps.LatLng(ll.coords.latitude, ll.coords.longitude);
+          showDirections(request);
+        });
+      } else if (request.destination == 'current-location') {
+        NavigatorGeolocation.getCurrentPosition().then(function(ll) {
+          request.destination = new google.maps.LatLng(ll.coords.latitude, ll.coords.longitude);
+          showDirections(request);
+        });
+      } else {
+        showDirections(request);
+      }
+    }
+  };
+
+  var directions = function(
+      Attr2MapOptions, _$timeout_, _NavigatorGeolocation_, _NgMap_) {
+    var parser = Attr2MapOptions;
+    NgMap = _NgMap_;
+    $timeout = _$timeout_;
+    NavigatorGeolocation = _NavigatorGeolocation_;
+
+    var linkFunc = function(scope, element, attrs, mapController) {
+      mapController = mapController[0]||mapController[1];
+
+      var orgAttrs = parser.orgAttributes(element);
+      var filtered = parser.filter(attrs);
+      var options = parser.getOptions(filtered, {scope: scope});
+      var events = parser.getEvents(scope, filtered);
+      var attrsToObserve = parser.getAttrsToObserve(orgAttrs);
+
+      var renderer = getDirectionsRenderer(options, events);
+      mapController.addObject('directionsRenderers', renderer);
+
+      attrsToObserve.forEach(function(attrName) {
+        (function(attrName) {
+          attrs.$observe(attrName, function(val) {
+            if (attrName == 'panel') {
+              $timeout(function(){
+                var panel =
+                  document.getElementById(val) || document.querySelector(val);
+                void 0;
+                panel && renderer.setPanel(panel);
+              });
+            } else if (options[attrName] !== val) { //apply only if changed
+              var optionValue = parser.toOptionValue(val, {key: attrName});
+              void 0;
+              options[attrName] = optionValue;
+              updateRoute(renderer, options);
+            }
+          });
+        })(attrName);
+      });
+
+      NgMap.getMap().then(function() {
+        updateRoute(renderer, options);
+      });
+      element.bind('$destroy', function() {
+        mapController.deleteObject('directionsRenderers', renderer);
+      });
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      link: linkFunc
+    };
+  }; // var directions
+  directions.$inject =
+    ['Attr2MapOptions', '$timeout', 'NavigatorGeolocation', 'NgMap'];
+
+  angular.module('ngMap').directive('directions', directions);
+})();
+
+
+/**
+ * @ngdoc directive
+ * @name drawing-manager
+ * @param Attr2Options {service} convert html attribute to Google map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *
+ *  <map zoom="13" center="37.774546, -122.433523" map-type-id="SATELLITE">
+ *    <drawing-manager
+ *      on-overlaycomplete="onMapOverlayCompleted()"
+ *      position="ControlPosition.TOP_CENTER"
+ *      drawingModes="POLYGON,CIRCLE"
+ *      drawingControl="true"
+ *      circleOptions="fillColor: '#FFFF00';fillOpacity: 1;strokeWeight: 5;clickable: false;zIndex: 1;editable: true;" >
+ *    </drawing-manager>
+ *  </map>
+ *
+ *  TODO: Add remove button.
+ *  currently, for our solution, we have the shapes/markers in our own
+ *  controller, and we use some css classes to change the shape button
+ *  to a remove button (<div>X</div>) and have the remove operation in our own controller.
+ */
+(function() {
+  'use strict';
+  angular.module('ngMap').directive('drawingManager', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var controlOptions = parser.getControlOptions(filtered);
+        var events = parser.getEvents(scope, filtered);
+
+        /**
+         * set options
+         */
+        var drawingManager = new google.maps.drawing.DrawingManager({
+          drawingMode: options.drawingmode,
+          drawingControl: options.drawingcontrol,
+          drawingControlOptions: controlOptions.drawingControlOptions,
+          circleOptions:options.circleoptions,
+          markerOptions:options.markeroptions,
+          polygonOptions:options.polygonoptions,
+          polylineOptions:options.polylineoptions,
+          rectangleOptions:options.rectangleoptions
+        });
+
+        //Observers
+        attrs.$observe('drawingControlOptions', function (newValue) {
+          drawingManager.drawingControlOptions = parser.getControlOptions({drawingControlOptions: newValue}).drawingControlOptions;
+          drawingManager.setDrawingMode(null);
+          drawingManager.setMap(mapController.map);
+        });
+
+
+        /**
+         * set events
+         */
+        for (var eventName in events) {
+          google.maps.event.addListener(drawingManager, eventName, events[eventName]);
+        }
+
+        mapController.addObject('mapDrawingManager', drawingManager);
+
+        element.bind('$destroy', function() {
+          mapController.deleteObject('mapDrawingManager', drawingManager);
+        });
+      }
+    }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name dynamic-maps-engine-layer
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *   <map zoom="14" center="[59.322506, 18.010025]">
+ *     <dynamic-maps-engine-layer
+ *       layer-id="06673056454046135537-08896501997766553811">
+ *     </dynamic-maps-engine-layer>
+ *    </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('dynamicMapsEngineLayer', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
+    var getDynamicMapsEngineLayer = function(options, events) {
+      var layer = new google.maps.visualization.DynamicMapsEngineLayer(options);
+
+      for (var eventName in events) {
+        google.maps.event.addListener(layer, eventName, events[eventName]);
+      }
+
+      return layer;
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var events = parser.getEvents(scope, filtered, events);
+
+        var layer = getDynamicMapsEngineLayer(options, events);
+        mapController.addObject('mapsEngineLayers', layer);
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name fusion-tables-layer
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *   <map zoom="11" center="41.850033, -87.6500523">
+ *     <fusion-tables-layer query="{
+ *       select: 'Geocodable address',
+ *       from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'}">
+ *     </fusion-tables-layer>
+ *   </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('fusionTablesLayer', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
+    var getLayer = function(options, events) {
+      var layer = new google.maps.FusionTablesLayer(options);
+
+      for (var eventName in events) {
+        google.maps.event.addListener(layer, eventName, events[eventName]);
+      }
+
+      return layer;
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var events = parser.getEvents(scope, filtered, events);
+        void 0;
+
+        var layer = getLayer(options, events);
+        mapController.addObject('fusionTablesLayers', layer);
+        element.bind('$destroy', function() {
+          mapController.deleteObject('fusionTablesLayers', layer);
+        });
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name heatmap-layer
+ * @param Attr2Options {service} convert html attribute to Google map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ *
+ * <map zoom="11" center="[41.875696,-87.624207]">
+ *   <heatmap-layer data="taxiData"></heatmap-layer>
+ * </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('heatmapLayer', [
+    'Attr2MapOptions', '$window', function(Attr2MapOptions, $window) {
+    var parser = Attr2MapOptions;
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var filtered = parser.filter(attrs);
+
+        /**
+         * set options
+         */
+        var options = parser.getOptions(filtered, {scope: scope});
+        options.data = $window[attrs.data] || scope[attrs.data];
+        if (options.data instanceof Array) {
+          options.data = new google.maps.MVCArray(options.data);
+        } else {
+          throw "invalid heatmap data";
+        }
+        var layer = new google.maps.visualization.HeatmapLayer(options);
+
+        /**
+         * set events
+         */
+        var events = parser.getEvents(scope, filtered);
+        void 0;
+
+        mapController.addObject('heatmapLayers', layer);
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name info-window
+ * @param Attr2MapOptions {service}
+ *   convert html attribute to Google map api options
+ * @param $compile {service} $compile service
+ * @description
+ *  Defines infoWindow and provides compile method
+ *
+ *  Requires:  map directive
+ *
+ *  Restrict To:  Element
+ *
+ *  NOTE: this directive should **NOT** be used with `ng-repeat`
+ *  because InfoWindow itself is a template, and a template must be
+ *  reused by each marker, thus, should not be redefined repeatedly
+ *  by `ng-repeat`.
+ *
+ * @attr {Boolean} visible
+ *   Indicates to show it when map is initialized
+ * @attr {Boolean} visible-on-marker
+ *   Indicates to show it on a marker when map is initialized
+ * @attr {Expression} geo-callback
+ *   if position is an address, the expression is will be performed
+ *   when geo-lookup is successful. e.g., geo-callback="showDetail()"
+ * @attr {String} &lt;InfoWindowOption> Any InfoWindow options,
+ *   https://developers.google.com/maps/documentation/javascript/reference?csw=1#InfoWindowOptions
+ * @attr {String} &lt;InfoWindowEvent> Any InfoWindow events,
+ *   https://developers.google.com/maps/documentation/javascript/reference
+ * @example
+ * Usage:
+ *   <map MAP_ATTRIBUTES>
+ *    <info-window id="foo" ANY_OPTIONS ANY_EVENTS"></info-window>
+ *   </map>
+ *
+ * Example:
+ *  <map center="41.850033,-87.6500523" zoom="3">
+ *    <info-window id="1" position="41.850033,-87.6500523" >
+ *      <div ng-non-bindable>
+ *        Chicago, IL<br/>
+ *        LatLng: {{chicago.lat()}}, {{chicago.lng()}}, <br/>
+ *        World Coordinate: {{worldCoordinate.x}}, {{worldCoordinate.y}}, <br/>
+ *        Pixel Coordinate: {{pixelCoordinate.x}}, {{pixelCoordinate.y}}, <br/>
+ *        Tile Coordinate: {{tileCoordinate.x}}, {{tileCoordinate.y}} at Zoom Level {{map.getZoom()}}
+ *      </div>
+ *    </info-window>
+ *  </map>
+ */
+/* global google */
+(function() {
+  'use strict';
+
+  var infoWindow = function(Attr2MapOptions, $compile, $q, $templateRequest, $timeout, $parse, NgMap)  {
+    var parser = Attr2MapOptions;
+
+    var getInfoWindow = function(options, events, element) {
+      var infoWindow;
+
+      /**
+       * set options
+       */
+      if (options.position && !(options.position instanceof google.maps.LatLng)) {
+        delete options.position;
+      }
+      infoWindow = new google.maps.InfoWindow(options);
+
+      /**
+       * set events
+       */
+      for (var eventName in events) {
+        if (eventName) {
+          google.maps.event.addListener(infoWindow, eventName, events[eventName]);
+        }
+      }
+
+      /**
+       * set template and template-related functions
+       * it must have a container element with ng-non-bindable
+       */
+      var templatePromise = $q(function(resolve) {
+        if (angular.isString(element)) {
+          $templateRequest(element).then(function (requestedTemplate) {
+            resolve(angular.element(requestedTemplate).wrap('<div>').parent());
+          }, function(message) {
+            throw "info-window template request failed: " + message;
+          });
+        }
+        else {
+          resolve(element);
+        }
+      }).then(function(resolvedTemplate) {
+        var template = resolvedTemplate.html().trim();
+        if (angular.element(template).length != 1) {
+          throw "info-window working as a template must have a container";
+        }
+        infoWindow.__template = template.replace(/\s?ng-non-bindable[='"]+/,"");
+      });
+
+      infoWindow.__open = function(map, scope, anchor) {
+        templatePromise.then(function() {
+          $timeout(function() {
+            anchor && (scope.anchor = anchor);
+            var el = $compile(infoWindow.__template)(scope);
+            infoWindow.setContent(el[0]);
+            scope.$apply();
+            if (anchor && anchor.getPosition) {
+              infoWindow.open(map, anchor);
+            } else if (anchor && anchor instanceof google.maps.LatLng) {
+              infoWindow.open(map);
+              infoWindow.setPosition(anchor);
+            } else {
+              infoWindow.open(map);
+            }
+            var infoWindowContainerEl = infoWindow.content.parentElement.parentElement.parentElement;
+            infoWindowContainerEl.className = "ng-map-info-window";
+          });
+        });
+      };
+
+      return infoWindow;
+    };
+
+    var linkFunc = function(scope, element, attrs, mapController) {
+      mapController = mapController[0]||mapController[1];
+
+      element.css('display','none');
+
+      var orgAttrs = parser.orgAttributes(element);
+      var filtered = parser.filter(attrs);
+      var options = parser.getOptions(filtered, {scope: scope});
+      var events = parser.getEvents(scope, filtered);
+
+      var infoWindow = getInfoWindow(options, events, options.template || element);
+      var address;
+      if (options.position && !(options.position instanceof google.maps.LatLng)) {
+        address = options.position;
+      }
+      if (address) {
+        NgMap.getGeoLocation(address).then(function(latlng) {
+          infoWindow.setPosition(latlng);
+          infoWindow.__open(mapController.map, scope, latlng);
+          var geoCallback = attrs.geoCallback;
+          geoCallback && $parse(geoCallback)(scope);
+        });
+      }
+
+      mapController.addObject('infoWindows', infoWindow);
+      mapController.observeAttrSetObj(orgAttrs, attrs, infoWindow);
+
+      mapController.showInfoWindow =
+      mapController.map.showInfoWindow = mapController.showInfoWindow ||
+        function(p1, p2, p3) { //event, id, marker
+          var id = typeof p1 == 'string' ? p1 : p2;
+          var marker = typeof p1 == 'string' ? p2 : p3;
+          if (typeof marker == 'string') {
+            //Check if markers if defined to avoid odd 'undefined' errors
+            if (
+              typeof mapController.map.markers != "undefined"
+              && typeof mapController.map.markers[marker] != "undefined") {
+                marker = mapController.map.markers[marker];
+            } else if (
+              //additionally check if that marker is a custom marker
+              typeof mapController.map.customMarkers !== "undefined"
+              && typeof mapController.map.customMarkers[marker] !== "undefined") {
+                marker = mapController.map.customMarkers[marker];
+            } else {
+              //Better error output if marker with that id is not defined
+              throw new Error("Cant open info window for id " + marker + ". Marker or CustomMarker is not defined")
+            }
+          }
+
+          var infoWindow = mapController.map.infoWindows[id];
+          var anchor = marker ? marker : (this.getPosition ? this : null);
+          infoWindow.__open(mapController.map, scope, anchor);
+          if(mapController.singleInfoWindow) {
+            if(mapController.lastInfoWindow) {
+              scope.hideInfoWindow(mapController.lastInfoWindow);
+            }
+            mapController.lastInfoWindow = id;
+          }
+        };
+
+      mapController.hideInfoWindow =
+      mapController.map.hideInfoWindow = mapController.hideInfoWindow ||
+        function(p1, p2) {
+          var id = typeof p1 == 'string' ? p1 : p2;
+          var infoWindow = mapController.map.infoWindows[id];
+          infoWindow.close();
+        };
+
+      //TODO DEPRECATED
+      scope.showInfoWindow = mapController.map.showInfoWindow;
+      scope.hideInfoWindow = mapController.map.hideInfoWindow;
+
+      var map = infoWindow.mapId ? {id:infoWindow.mapId} : 0;
+      NgMap.getMap(map).then(function(map) {
+        infoWindow.visible && infoWindow.__open(map, scope);
+        if (infoWindow.visibleOnMarker) {
+          var markerId = infoWindow.visibleOnMarker;
+          infoWindow.__open(map, scope, map.markers[markerId]);
+        }
+      });
+
+    }; //link
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      link: linkFunc
+    };
+
+  }; // infoWindow
+  infoWindow.$inject =
+    ['Attr2MapOptions', '$compile', '$q', '$templateRequest', '$timeout', '$parse', 'NgMap'];
+
+  angular.module('ngMap').directive('infoWindow', infoWindow);
+})();
+
+/**
+ * @ngdoc directive
+ * @name kml-layer
+ * @param Attr2MapOptions {service} convert html attribute to Google map api options
+ * @description
+ *   renders Kml layer on a map
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @attr {Url} url url of the kml layer
+ * @attr {KmlLayerOptions} KmlLayerOptions
+ *   (https://developers.google.com/maps/documentation/javascript/reference#KmlLayerOptions) 
+ * @attr {String} &lt;KmlLayerEvent> Any KmlLayer events,
+ *   https://developers.google.com/maps/documentation/javascript/reference
+ * @example
+ * Usage:
+ *   <map MAP_ATTRIBUTES>
+ *    <kml-layer ANY_KML_LAYER ANY_KML_LAYER_EVENTS"></kml-layer>
+ *   </map>
+ *
+ * Example:
+ *
+ * <map zoom="11" center="[41.875696,-87.624207]">
+ *   <kml-layer url="https://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml" >
+ *   </kml-layer>
+ * </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('kmlLayer', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
+    var getKmlLayer = function(options, events) {
+      var kmlLayer = new google.maps.KmlLayer(options);
+      for (var eventName in events) {
+        google.maps.event.addListener(kmlLayer, eventName, events[eventName]);
+      }
+      return kmlLayer;
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var orgAttrs = parser.orgAttributes(element);
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var events = parser.getEvents(scope, filtered);
+        void 0;
+
+        var kmlLayer = getKmlLayer(options, events);
+        mapController.addObject('kmlLayers', kmlLayer);
+        mapController.observeAttrSetObj(orgAttrs, attrs, kmlLayer);  //observers
+        element.bind('$destroy', function() {
+          mapController.deleteObject('kmlLayers', kmlLayer);
+        });
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name map-data
+ * @param Attr2MapOptions {service}
+ *   convert html attribute to Google map api options
+ * @description
+ *   set map data
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @wn {String} method-name, run map.data[method-name] with attribute value
+ * @example
+ * Example:
+ *
+ *  <map zoom="11" center="[41.875696,-87.624207]">
+ *    <map-data load-geo-json="https://storage.googleapis.com/maps-devrel/google.json"></map-data>
+ *   </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('mapData', [
+    'Attr2MapOptions', 'NgMap', function(Attr2MapOptions, NgMap) {
+    var parser = Attr2MapOptions;
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0] || mapController[1];
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var events = parser.getEvents(scope, filtered, events);
+
+        void 0;
+        NgMap.getMap(mapController.map.id).then(function(map) {
+          //options
+          for (var key in options) {
+            var val = options[key];
+            if (typeof scope[val] === "function") {
+              map.data[key](scope[val]);
+            } else {
+              map.data[key](val);
+            }
+          }
+
+          //events
+          for (var eventName in events) {
+            map.data.addListener(eventName, events[eventName]);
+          }
+        });
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name map-lazy-load
+ * @param Attr2Options {service} convert html attribute to Google map api options
+ * @description
+ *  Requires: Delay the initialization of map directive
+ *    until the map is ready to be rendered
+ *  Restrict To: Attribute
+ *
+ * @attr {String} map-lazy-load
+ *    Maps api script source file location.
+ *    Example:
+ *      'https://maps.google.com/maps/api/js'
+ * @attr {String} map-lazy-load-params
+ *   Maps api script source file location via angular scope variable.
+ *   Also requires the map-lazy-load attribute to be present in the directive.
+ *   Example: In your controller, set
+ *     $scope.googleMapsURL = 'https://maps.google.com/maps/api/js?v=3.20&client=XXXXXenter-api-key-hereXXXX'
+ *
+ * @example
+ * Example:
+ *
+ *   <div map-lazy-load="http://maps.google.com/maps/api/js">
+ *     <map center="Brampton" zoom="10">
+ *       <marker position="Brampton"></marker>
+ *     </map>
+ *   </div>
+ *
+ *   <div map-lazy-load="http://maps.google.com/maps/api/js"
+ *        map-lazy-load-params="{{googleMapsUrl}}">
+ *     <map center="Brampton" zoom="10">
+ *       <marker position="Brampton"></marker>
+ *     </map>
+ *   </div>
+ */
+/* global window, document */
+(function() {
+  'use strict';
+  var $timeout, $compile, src, savedHtml = [], elements = [];
+
+  var preLinkFunc = function(scope, element, attrs) {
+    var mapsUrl = attrs.mapLazyLoadParams || attrs.mapLazyLoad;
+
+    if(window.google === undefined || window.google.maps === undefined) {
+      elements.push({
+        scope: scope,
+        element: element,
+        savedHtml: savedHtml[elements.length],
+      });
+
+      window.lazyLoadCallback = function() {
+        void 0;
+        $timeout(function() { /* give some time to load */
+          elements.forEach(function(elm) {
+              elm.element.html(elm.savedHtml);
+              $compile(elm.element.contents())(elm.scope);
+          });
+        }, 100);
+      };
+
+      var scriptEl = document.createElement('script');
+      void 0;
+
+      scriptEl.src = mapsUrl +
+        (mapsUrl.indexOf('?') > -1 ? '&' : '?') +
+        'callback=lazyLoadCallback';
+
+        if (!document.querySelector('script[src="' + scriptEl.src + '"]')) {
+          document.body.appendChild(scriptEl);
+        }
+    } else {
+      element.html(savedHtml);
+      $compile(element.contents())(scope);
+    }
+  };
+
+  var compileFunc = function(tElement, tAttrs) {
+
+    (!tAttrs.mapLazyLoad) && void 0;
+    savedHtml.push(tElement.html());
+    src = tAttrs.mapLazyLoad;
+
+    /**
+     * if already loaded, stop processing it
+     */
+    if(window.google !== undefined && window.google.maps !== undefined) {
+      return false;
+    }
+
+    tElement.html('');  // will compile again after script is loaded
+
+    return {
+      pre: preLinkFunc
+    };
+  };
+
+  var mapLazyLoad = function(_$compile_, _$timeout_) {
+    $compile = _$compile_, $timeout = _$timeout_;
+    return {
+      compile: compileFunc
+    };
+  };
+  mapLazyLoad.$inject = ['$compile','$timeout'];
+
+  angular.module('ngMap').directive('mapLazyLoad', mapLazyLoad);
+})();
+
+/**
+ * @ngdoc directive
+ * @name map-type
+ * @param Attr2MapOptions {service} 
+ *   convert html attribute to Google map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *
+ *   <map zoom="13" center="34.04924594193164, -118.24104309082031">
+ *     <map-type name="coordinate" object="coordinateMapType"></map-type>
+ *   </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('mapType', ['$parse', 'NgMap',
+    function($parse, NgMap) {
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var mapTypeName = attrs.name, mapTypeObject;
+        if (!mapTypeName) {
+          throw "invalid map-type name";
+        }
+        mapTypeObject = $parse(attrs.object)(scope);
+        if (!mapTypeObject) {
+          throw "invalid map-type object";
+        }
+
+        NgMap.getMap().then(function(map) {
+          map.mapTypes.set(mapTypeName, mapTypeObject);
+        });
+        mapController.addObject('mapTypes', mapTypeObject);
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @memberof ngMap
+ * @name ng-map
+ * @param Attr2Options {service}
+ *  convert html attribute to Google map api options
+ * @description
+ * Implementation of {@link __MapController}
+ * Initialize a Google map within a `<div>` tag
+ *   with given options and register events
+ *
+ * @attr {Expression} map-initialized
+ *   callback function when map is initialized
+ *   e.g., map-initialized="mycallback(map)"
+ * @attr {Expression} geo-callback if center is an address or current location,
+ *   the expression is will be executed when geo-lookup is successful.
+ *   e.g., geo-callback="showMyStoreInfo()"
+ * @attr {Array} geo-fallback-center
+ *   The center of map incase geolocation failed. i.e. [0,0]
+ * @attr {Object} geo-location-options
+ *  The navigator geolocation options.
+ *  e.g., { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }.
+ *  If none specified, { timeout: 5000 }.
+ *  If timeout not specified, timeout: 5000 added
+ * @attr {Boolean} zoom-to-include-markers
+ *  When true, map boundary will be changed automatially
+ *  to include all markers when initialized
+ * @attr {Boolean} default-style
+ *  When false, the default styling,
+ *  `display:block;height:300px`, will be ignored.
+ * @attr {String} &lt;MapOption> Any Google map options,
+ *  https://developers.google.com/maps/documentation/javascript/reference?csw=1#MapOptions
+ * @attr {String} &lt;MapEvent> Any Google map events,
+ *  https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/map_events.html
+ * @attr {Boolean} single-info-window
+ *  When true the map will only display one info window at the time,
+ *  if not set or false,
+ *  everytime an info window is open it will be displayed with the othe one.
+ * @attr {Boolean} trigger-resize
+ *  Default to false.  Set to true to trigger resize of the map.  Needs to be done anytime you resize the map
+ * @example
+ * Usage:
+ *   <map MAP_OPTIONS_OR_MAP_EVENTS ..>
+ *     ... Any children directives
+ *   </map>
+ *
+ * Example:
+ *   <map center="[40.74, -74.18]" on-click="doThat()">
+ *   </map>
+ *
+ *   <map geo-fallback-center="[40.74, -74.18]" zoom-to-inlude-markers="true">
+ *   </map>
+ */
+(function () {
+  'use strict';
+
+  var mapDirective = function () {
+    return {
+      restrict: 'AE',
+      controller: '__MapController',
+      controllerAs: 'ngmap'
+    };
+  };
+
+  angular.module('ngMap').directive('map', [mapDirective]);
+  angular.module('ngMap').directive('ngMap', [mapDirective]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name maps-engine-layer
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *  <map zoom="14" center="[59.322506, 18.010025]">
+ *    <maps-engine-layer layer-id="06673056454046135537-08896501997766553811">
+ *    </maps-engine-layer>
+ *  </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('mapsEngineLayer', ['Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
+    var getMapsEngineLayer = function(options, events) {
+      var layer = new google.maps.visualization.MapsEngineLayer(options);
+
+      for (var eventName in events) {
+        google.maps.event.addListener(layer, eventName, events[eventName]);
+      }
+
+      return layer;
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var events = parser.getEvents(scope, filtered, events);
+        void 0;
+
+        var layer = getMapsEngineLayer(options, events);
+        mapController.addObject('mapsEngineLayers', layer);
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name marker
+ * @param Attr2Options {service} convert html attribute to Google map api options
+ * @param NavigatorGeolocation It is used to find the current location
+ * @description
+ *  Draw a Google map marker on a map with given options and register events
+ *
+ *  Requires:  map directive
+ *
+ *  Restrict To:  Element
+ *
+ * @attr {String} position address, 'current', or [latitude, longitude]
+ *  example:
+ *    '1600 Pennsylvania Ave, 20500  Washingtion DC',
+ *    'current position',
+ *    '[40.74, -74.18]'
+ * @attr {Boolean} centered if set, map will be centered with this marker
+ * @attr {Expression} geo-callback if position is an address,
+ *   the expression is will be performed when geo-lookup is successful.
+ *   e.g., geo-callback="showStoreInfo()"
+ * @attr {Boolean} no-watcher if true, no attribute observer is added.
+ *   Useful for many ng-repeat
+ * @attr {String} &lt;MarkerOption>
+ *   [Any Marker options](https://developers.google.com/maps/documentation/javascript/reference?csw=1#MarkerOptions)
+ * @attr {String} &lt;MapEvent>
+ *   [Any Marker events](https://developers.google.com/maps/documentation/javascript/reference)
+ * @example
+ * Usage:
+ *   <map MAP_ATTRIBUTES>
+ *    <marker ANY_MARKER_OPTIONS ANY_MARKER_EVENTS"></MARKER>
+ *   </map>
+ *
+ * Example:
+ *   <map center="[40.74, -74.18]">
+ *    <marker position="[40.74, -74.18]" on-click="myfunc()"></div>
+ *   </map>
+ *
+ *   <map center="the cn tower">
+ *    <marker position="the cn tower" on-click="myfunc()"></div>
+ *   </map>
+ */
+/* global google */
+(function() {
+  'use strict';
+  var parser, $parse, NgMap;
+
+  var getMarker = function(options, events) {
+    var marker;
+
+    if (NgMap.defaultOptions.marker) {
+      for (var key in NgMap.defaultOptions.marker) {
+        if (typeof options[key] == 'undefined') {
+          void 0;
+          options[key] = NgMap.defaultOptions.marker[key];
+        }
+      }
+    }
+
+    if (!(options.position instanceof google.maps.LatLng)) {
+      options.position = new google.maps.LatLng(0,0);
+    }
+    marker = new google.maps.Marker(options);
+
+    /**
+     * set events
+     */
+    if (Object.keys(events).length > 0) {
+      void 0;
+    }
+    for (var eventName in events) {
+      if (eventName) {
+        google.maps.event.addListener(marker, eventName, events[eventName]);
+      }
+    }
+
+    return marker;
+  };
+
+  var linkFunc = function(scope, element, attrs, mapController) {
+    mapController = mapController[0]||mapController[1];
+
+    var orgAttrs = parser.orgAttributes(element);
+    var filtered = parser.filter(attrs);
+    var markerOptions = parser.getOptions(filtered, scope, {scope: scope});
+    var markerEvents = parser.getEvents(scope, filtered);
+    void 0;
+
+    var address;
+    if (!(markerOptions.position instanceof google.maps.LatLng)) {
+      address = markerOptions.position;
+    }
+    var marker = getMarker(markerOptions, markerEvents);
+    mapController.addObject('markers', marker);
+    if (address) {
+      NgMap.getGeoLocation(address).then(function(latlng) {
+        marker.setPosition(latlng);
+        markerOptions.centered && marker.map.setCenter(latlng);
+        var geoCallback = attrs.geoCallback;
+        geoCallback && $parse(geoCallback)(scope);
+      });
+    }
+
+    //set observers
+    mapController.observeAttrSetObj(orgAttrs, attrs, marker); /* observers */
+
+    element.bind('$destroy', function() {
+      mapController.deleteObject('markers', marker);
+    });
+  };
+
+  var marker = function(Attr2MapOptions, _$parse_, _NgMap_) {
+    parser = Attr2MapOptions;
+    $parse = _$parse_;
+    NgMap = _NgMap_;
+
+    return {
+      restrict: 'E',
+      require: ['^?map','?^ngMap'],
+      link: linkFunc
+    };
+  };
+
+  marker.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
+  angular.module('ngMap').directive('marker', marker);
+
+})();
+
+/**
+ * @ngdoc directive
+ * @name overlay-map-type
+ * @param Attr2MapOptions {service} convert html attribute to Google map api options
+ * @param $window {service}
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *
+ * <map zoom="13" center="34.04924594193164, -118.24104309082031">
+ *   <overlay-map-type index="0" object="coordinateMapType"></map-type>
+ * </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('overlayMapType', [
+    'NgMap', function(NgMap) {
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var initMethod = attrs.initMethod || "insertAt";
+        var overlayMapTypeObject = scope[attrs.object];
+
+        NgMap.getMap().then(function(map) {
+          if (initMethod == "insertAt") {
+            var index = parseInt(attrs.index, 10);
+            map.overlayMapTypes.insertAt(index, overlayMapTypeObject);
+          } else if (initMethod == "push") {
+            map.overlayMapTypes.push(overlayMapTypeObject);
+          }
+        });
+        mapController.addObject('overlayMapTypes', overlayMapTypeObject);
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name places-auto-complete
+ * @param Attr2MapOptions {service} convert html attribute to Google map api options
+ * @description
+ *   Provides address auto complete feature to an input element
+ *   Requires: input tag
+ *   Restrict To: Attribute
+ *
+ * @attr {AutoCompleteOptions}
+ *   [Any AutocompleteOptions](https://developers.google.com/maps/documentation/javascript/3.exp/reference#AutocompleteOptions)
+ *
+ * @example
+ * Example:
+ *   <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+ *   <input places-auto-complete types="['geocode']" on-place-changed="myCallback(place)" component-restrictions="{country:'au'}"/>
+ */
+/* global google */
+(function() {
+  'use strict';
+
+  var placesAutoComplete = function(Attr2MapOptions, $timeout) {
+    var parser = Attr2MapOptions;
+
+    var linkFunc = function(scope, element, attrs, ngModelCtrl) {
+      if (attrs.placesAutoComplete ==='false') {
+        return false;
+      }
+      var filtered = parser.filter(attrs);
+      var options = parser.getOptions(filtered, {scope: scope});
+      var events = parser.getEvents(scope, filtered);
+      var autocomplete = new google.maps.places.Autocomplete(element[0], options);
+      for (var eventName in events) {
+        google.maps.event.addListener(autocomplete, eventName, events[eventName]);
+      }
+
+      var updateModel = function() {
+        $timeout(function(){
+          ngModelCtrl && ngModelCtrl.$setViewValue(element.val());
+        },100);
+      };
+      google.maps.event.addListener(autocomplete, 'place_changed', updateModel);
+      element[0].addEventListener('change', updateModel);
+
+      attrs.$observe('types', function(val) {
+        if (val) {
+          var optionValue = parser.toOptionValue(val, {key: 'types'});
+          autocomplete.setTypes(optionValue);
+        }
+      });
+	  
+	  attrs.$observe('componentRestrictions', function (val) {
+		 if (val) {
+		   autocomplete.setComponentRestrictions(scope.$eval(val));
+		 }
+	   });
+    };
+	
+    return {
+      restrict: 'A',
+      require: '?ngModel',
+      link: linkFunc
+    };
+  };
+
+  placesAutoComplete.$inject = ['Attr2MapOptions', '$timeout'];
+  angular.module('ngMap').directive('placesAutoComplete', placesAutoComplete);
+})();
+
+/**
+ * @ngdoc directive
+ * @name shape
+ * @param Attr2MapOptions {service} convert html attribute to Google map api options
+ * @description
+ *   Initialize a Google map shape in map with given options and register events
+ *   The shapes are:
+ *     . circle
+ *     . polygon
+ *     . polyline
+ *     . rectangle
+ *     . groundOverlay(or image)
+ *
+ *   Requires:  map directive
+ *
+ *   Restrict To:  Element
+ *
+ * @attr {Boolean} centered if set, map will be centered with this marker
+ * @attr {Expression} geo-callback if shape is a circle and the center is
+ *   an address, the expression is will be performed when geo-lookup
+ *   is successful. e.g., geo-callback="showDetail()"
+ * @attr {String} &lt;OPTIONS>
+ *   For circle, [any circle options](https://developers.google.com/maps/documentation/javascript/reference#CircleOptions)
+ *   For polygon, [any polygon options](https://developers.google.com/maps/documentation/javascript/reference#PolygonOptions)
+ *   For polyline, [any polyline options](https://developers.google.com/maps/documentation/javascript/reference#PolylineOptions)
+ *   For rectangle, [any rectangle options](https://developers.google.com/maps/documentation/javascript/reference#RectangleOptions)
+ *   For image, [any groundOverlay options](https://developers.google.com/maps/documentation/javascript/reference#GroundOverlayOptions)
+ * @attr {String} &lt;MapEvent> [Any Shape events](https://developers.google.com/maps/documentation/javascript/reference)
+ * @example
+ * Usage:
+ *   <map MAP_ATTRIBUTES>
+ *    <shape name=SHAPE_NAME ANY_SHAPE_OPTIONS ANY_SHAPE_EVENTS"></MARKER>
+ *   </map>
+ *
+ * Example:
+ *
+ *   <map zoom="11" center="[40.74, -74.18]">
+ *     <shape id="polyline" name="polyline" geodesic="true"
+ *       stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2"
+ *       path="[[40.74,-74.18],[40.64,-74.10],[40.54,-74.05],[40.44,-74]]" >
+ *     </shape>
+ *   </map>
+ *
+ *   <map zoom="11" center="[40.74, -74.18]">
+ *     <shape id="polygon" name="polygon" stroke-color="#FF0000"
+ *       stroke-opacity="1.0" stroke-weight="2"
+ *       paths="[[40.74,-74.18],[40.64,-74.18],[40.84,-74.08],[40.74,-74.18]]" >
+ *     </shape>
+ *   </map>
+ *
+ *   <map zoom="11" center="[40.74, -74.18]">
+ *     <shape id="rectangle" name="rectangle" stroke-color='#FF0000'
+ *       stroke-opacity="0.8" stroke-weight="2"
+ *       bounds="[[40.74,-74.18], [40.78,-74.14]]" editable="true" >
+ *     </shape>
+ *   </map>
+ *
+ *   <map zoom="11" center="[40.74, -74.18]">
+ *     <shape id="circle" name="circle" stroke-color='#FF0000'
+ *       stroke-opacity="0.8"stroke-weight="2"
+ *       center="[40.70,-74.14]" radius="4000" editable="true" >
+ *     </shape>
+ *   </map>
+ *
+ *   <map zoom="11" center="[40.74, -74.18]">
+ *     <shape id="image" name="image"
+ *       url="https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg"
+ *       bounds="[[40.71,-74.22],[40.77,-74.12]]" opacity="0.7"
+ *       clickable="true">
+ *     </shape>
+ *   </map>
+ *
+ *  For full-working example, please visit
+ *    [shape example](https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/shape.html)
+ */
+/* global google */
+(function() {
+  'use strict';
+
+  var getShape = function(options, events) {
+    var shape;
+
+    var shapeName = options.name;
+    delete options.name;  //remove name bcoz it's not for options
+    void 0;
+
+    /**
+     * set options
+     */
+    switch(shapeName) {
+      case "circle":
+        if (!(options.center instanceof google.maps.LatLng)) {
+          options.center = new google.maps.LatLng(0,0);
+        } 
+        shape = new google.maps.Circle(options);
+        break;
+      case "polygon":
+        shape = new google.maps.Polygon(options);
+        break;
+      case "polyline":
+        shape = new google.maps.Polyline(options);
+        break;
+      case "rectangle":
+        shape = new google.maps.Rectangle(options);
+        break;
+      case "groundOverlay":
+      case "image":
+        var url = options.url;
+        var opts = {opacity: options.opacity, clickable: options.clickable, id:options.id};
+        shape = new google.maps.GroundOverlay(url, options.bounds, opts);
+        break;
+    }
+
+    /**
+     * set events
+     */
+    for (var eventName in events) {
+      if (events[eventName]) {
+        google.maps.event.addListener(shape, eventName, events[eventName]);
+      }
+    }
+    return shape;
+  };
+
+  var shape = function(Attr2MapOptions, $parse, NgMap) {
+    var parser = Attr2MapOptions;
+
+    var linkFunc = function(scope, element, attrs, mapController) {
+      mapController = mapController[0]||mapController[1];
+
+      var orgAttrs = parser.orgAttributes(element);
+      var filtered = parser.filter(attrs);
+      var shapeOptions = parser.getOptions(filtered, {scope: scope});
+      var shapeEvents = parser.getEvents(scope, filtered);
+
+      var address, shapeType;
+      shapeType = shapeOptions.name;
+      if (!(shapeOptions.center instanceof google.maps.LatLng)) {
+        address = shapeOptions.center;
+      }
+      var shape = getShape(shapeOptions, shapeEvents);
+      mapController.addObject('shapes', shape);
+
+      if (address && shapeType == 'circle') {
+        NgMap.getGeoLocation(address).then(function(latlng) {
+          shape.setCenter(latlng);
+          shape.centered && shape.map.setCenter(latlng);
+          var geoCallback = attrs.geoCallback;
+          geoCallback && $parse(geoCallback)(scope);
+        });
+      }
+
+      //set observers
+      mapController.observeAttrSetObj(orgAttrs, attrs, shape);
+      element.bind('$destroy', function() {
+        mapController.deleteObject('shapes', shape);
+      });
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      link: linkFunc
+     }; // return
+  };
+  shape.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
+
+  angular.module('ngMap').directive('shape', shape);
+
+})();
+
+/**
+ * @ngdoc directive
+ * @name streetview-panorama
+ * @param Attr2MapOptions {service} convert html attribute to Google map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @attr container Optional, id or css selector, if given, streetview will be in the given html element
+ * @attr {String} &lt;StreetViewPanoramaOption>
+ *   [Any Google StreetViewPanorama options](https://developers.google.com/maps/documentation/javascript/reference?csw=1#StreetViewPanoramaOptions)
+ * @attr {String} &lt;StreetViewPanoramaEvent>
+ *   [Any Google StreetViewPanorama events](https://developers.google.com/maps/documentation/javascript/reference#StreetViewPanorama)
+ *
+ * @example
+ *   <map zoom="11" center="[40.688738,-74.043871]" >
+ *     <street-view-panorama
+ *       click-to-go="true"
+ *       disable-default-ui="true"
+ *       disable-double-click-zoom="true"
+ *       enable-close-button="true"
+ *       pano="my-pano"
+ *       position="40.688738,-74.043871"
+ *       pov="{heading:0, pitch: 90}"
+ *       scrollwheel="false"
+ *       visible="true">
+ *     </street-view-panorama>
+ *   </map>
+ */
+/* global google, document */
+(function() {
+  'use strict';
+
+  var streetViewPanorama = function(Attr2MapOptions, NgMap) {
+    var parser = Attr2MapOptions;
+
+    var getStreetViewPanorama = function(map, options, events) {
+      var svp, container;
+      if (options.container) {
+        container = document.getElementById(options.container);
+        container = container || document.querySelector(options.container);
+      }
+      if (container) {
+        svp = new google.maps.StreetViewPanorama(container, options);
+      } else {
+        svp = map.getStreetView();
+        svp.setOptions(options);
+      }
+
+      for (var eventName in events) {
+        eventName &&
+          google.maps.event.addListener(svp, eventName, events[eventName]);
+      }
+      return svp;
+    };
+
+    var linkFunc = function(scope, element, attrs) {
+      var filtered = parser.filter(attrs);
+      var options = parser.getOptions(filtered, {scope: scope});
+      var controlOptions = parser.getControlOptions(filtered);
+      var svpOptions = angular.extend(options, controlOptions);
+
+      var svpEvents = parser.getEvents(scope, filtered);
+      void 0;
+
+      NgMap.getMap().then(function(map) {
+        var svp = getStreetViewPanorama(map, svpOptions, svpEvents);
+
+        map.setStreetView(svp);
+        (!svp.getPosition()) && svp.setPosition(map.getCenter());
+        google.maps.event.addListener(svp, 'position_changed', function() {
+          if (svp.getPosition() !== map.getCenter()) {
+            map.setCenter(svp.getPosition());
+          }
+        });
+        //needed for geo-callback
+        var listener =
+          google.maps.event.addListener(map, 'center_changed', function() {
+            svp.setPosition(map.getCenter());
+            google.maps.event.removeListener(listener);
+          });
+      });
+
+    }; //link
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      link: linkFunc
+    };
+
+  };
+  streetViewPanorama.$inject = ['Attr2MapOptions', 'NgMap'];
+
+  angular.module('ngMap').directive('streetViewPanorama', streetViewPanorama);
+})();
+
+/**
+ * @ngdoc directive
+ * @name traffic-layer
+ * @param Attr2MapOptions {service} convert html attribute to Google map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *
+ *   <map zoom="13" center="34.04924594193164, -118.24104309082031">
+ *     <traffic-layer></traffic-layer>
+ *    </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('trafficLayer', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
+    var getLayer = function(options, events) {
+      var layer = new google.maps.TrafficLayer(options);
+      for (var eventName in events) {
+        google.maps.event.addListener(layer, eventName, events[eventName]);
+      }
+      return layer;
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var orgAttrs = parser.orgAttributes(element);
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var events = parser.getEvents(scope, filtered);
+        void 0;
+
+        var layer = getLayer(options, events);
+        mapController.addObject('trafficLayers', layer);
+        mapController.observeAttrSetObj(orgAttrs, attrs, layer);  //observers
+        element.bind('$destroy', function() {
+          mapController.deleteObject('trafficLayers', layer);
+        });
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc directive
+ * @name transit-layer
+ * @param Attr2MapOptions {service} convert html attribute to Google map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *
+ *  <map zoom="13" center="34.04924594193164, -118.24104309082031">
+ *    <transit-layer></transit-layer>
+ *  </map>
+ */
+(function() {
+  'use strict';
+
+  angular.module('ngMap').directive('transitLayer', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
+    var getLayer = function(options, events) {
+      var layer = new google.maps.TransitLayer(options);
+      for (var eventName in events) {
+        google.maps.event.addListener(layer, eventName, events[eventName]);
+      }
+      return layer;
+    };
+
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
+        var orgAttrs = parser.orgAttributes(element);
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var events = parser.getEvents(scope, filtered);
+        void 0;
+
+        var layer = getLayer(options, events);
+        mapController.addObject('transitLayers', layer);
+        mapController.observeAttrSetObj(orgAttrs, attrs, layer);  //observers
+        element.bind('$destroy', function() {
+          mapController.deleteObject('transitLayers', layer);
+        });
+      }
+     }; // return
+  }]);
+})();
+
+/**
+ * @ngdoc filter
+ * @name camel-case
+ * @description
+ *   Converts string to camel cased
+ */
+(function() {
+  'use strict';
+
+  var SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;
+  var MOZ_HACK_REGEXP = /^moz([A-Z])/;
+
+  var camelCaseFilter = function() {
+    return function(name) {
+      return name.
+        replace(SPECIAL_CHARS_REGEXP,
+          function(_, separator, letter, offset) {
+            return offset ? letter.toUpperCase() : letter;
+        }).
+        replace(MOZ_HACK_REGEXP, 'Moz$1');
+    };
+  };
+
+  angular.module('ngMap').filter('camelCase', camelCaseFilter);
+})();
+
+/**
+ * @ngdoc filter
+ * @name escape-regex
+ * @description
+ *   Escapes all regex special characters in a string
+ */
+(function() {
+  'use strict';
+
+
+
+  var escapeRegexpFilter = function() {
+    return function(string) {
+			return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+		};
+  };
+
+  angular.module('ngMap').filter('escapeRegexp', escapeRegexpFilter);
+})();
+
+/**
+ * @ngdoc filter
+ * @name jsonize
+ * @description
+ *   Converts json-like string to json string
+ */
+(function() {
+  'use strict';
+
+  var jsonizeFilter = function() {
+    return function(str) {
+      try {       // if parsable already, return as it is
+        JSON.parse(str);
+        return str;
+      } catch(e) { // if not parsable, change little
+        return str
+          // wrap keys without quote with valid double quote
+          .replace(/([\$\w]+)\s*:/g,
+            function(_, $1) {
+              return '"'+$1+'":';
+            }
+          )
+          // replacing single quote wrapped ones to double quote
+          .replace(/'([^']+)'/g,
+            function(_, $1) {
+              return '"'+$1+'"';
+            }
+          )
+          .replace(/''/g, '""');
+      }
+    };
+  };
+
+  angular.module('ngMap').filter('jsonize', jsonizeFilter);
+})();
+
+/**
+ * @ngdoc service
+ * @name Attr2MapOptions
+ * @description
+ *   Converts tag attributes to options used by google api v3 objects
+ */
+/* global google */
+(function() {
+  'use strict';
+
+  //i.e. "2015-08-12T06:12:40.858Z"
+  var isoDateRE =
+    /^(\d{4}\-\d\d\-\d\d([tT][\d:\.]*)?)([zZ]|([+\-])(\d\d):?(\d\d))?$/;
+
+  var Attr2MapOptions = function(
+      $parse, $timeout, $log, $interpolate, NavigatorGeolocation, GeoCoder,
+      camelCaseFilter, jsonizeFilter, escapeRegExp
+    ) {
+
+    var exprStartSymbol = $interpolate.startSymbol();
+    var exprEndSymbol = $interpolate.endSymbol();
+
+    /**
+     * Returns the attributes of an element as hash
+     * @memberof Attr2MapOptions
+     * @param {HTMLElement} el html element
+     * @returns {Hash} attributes
+     */
+    var orgAttributes = function(el) {
+      (el.length > 0) && (el = el[0]);
+      var orgAttributes = {};
+      for (var i=0; i<el.attributes.length; i++) {
+        var attr = el.attributes[i];
+        orgAttributes[attr.name] = attr.value;
+      }
+      return orgAttributes;
+    };
+
+    var getJSON = function(input) {
+      var re =/^[\+\-]?[0-9\.]+,[ ]*\ ?[\+\-]?[0-9\.]+$/; //lat,lng
+      if (input.match(re)) {
+        input = "["+input+"]";
+      }
+      return JSON.parse(jsonizeFilter(input));
+    };
+    
+    var getLatLng = function(input) {
+      var output = input;
+      if (input[0].constructor == Array) { 
+        if ((input[0][0].constructor == Array && input[0][0].length == 2) || input[0][0].constructor == Object) {
+            var preoutput;
+            var outputArray = [];
+            for (var i = 0; i < input.length; i++) {
+                preoutput = input[i].map(function(el){
+                    return new google.maps.LatLng(el[0], el[1]);
+                });
+                outputArray.push(preoutput);
+            }
+            output = outputArray;
+        } else {
+            output = input.map(function(el) {
+                return new google.maps.LatLng(el[0], el[1]);
+            });
+        }
+      } else if (!isNaN(parseFloat(input[0])) && isFinite(input[0])) {
+        output = new google.maps.LatLng(output[0], output[1]);
+      }
+      return output;
+    };
+
+    var toOptionValue = function(input, options) {
+      var output;
+      try { // 1. Number?
+        output = getNumber(input);
+      } catch(err) {
+        try { // 2. JSON?
+          var output = getJSON(input);
+          if (output instanceof Array) {
+            if (output[0].constructor == Object) {
+              output = output;
+            } else if (output[0] instanceof Array) {
+              if (output[0][0].constructor == Object) {
+                output = output;
+              } else {
+                output = getLatLng(output);
+              }
+            } else {
+                output = getLatLng(output);
+            }
+          }
+          // JSON is an object (not array or null)
+          else if (output === Object(output)) {
+            // check for nested hashes and convert to Google API options
+            var newOptions = options;
+            newOptions.doNotConverStringToNumber = true;
+            output = getOptions(output, newOptions);
+          }
+        } catch(err2) {
+          // 3. Google Map Object function Expression. i.e. LatLng(80,-49)
+          if (input.match(/^[A-Z][a-zA-Z0-9]+\(.*\)$/)) {
+            try {
+              var exp = "new google.maps."+input;
+              output = eval(exp); /* jshint ignore:line */
+            } catch(e) {
+              output = input;
+            }
+          // 4. Google Map Object constant Expression. i.e. MayTypeId.HYBRID
+          } else if (input.match(/^([A-Z][a-zA-Z0-9]+)\.([A-Z]+)$/)) {
+            try {
+              var matches = input.match(/^([A-Z][a-zA-Z0-9]+)\.([A-Z]+)$/);
+              output = google.maps[matches[1]][matches[2]];
+            } catch(e) {
+              output = input;
+            }
+          // 5. Google Map Object constant Expression. i.e. HYBRID
+          } else if (input.match(/^[A-Z]+$/)) {
+            try {
+              var capitalizedKey = options.key.charAt(0).toUpperCase() +
+                options.key.slice(1);
+              if (options.key.match(/temperatureUnit|windSpeedUnit|labelColor/)) {
+                capitalizedKey = capitalizedKey.replace(/s$/,"");
+                output = google.maps.weather[capitalizedKey][input];
+              } else {
+                output = google.maps[capitalizedKey][input];
+              }
+            } catch(e) {
+              output = input;
+            }
+          // 6. Date Object as ISO String
+          } else if (input.match(isoDateRE)) {
+            try {
+              output = new Date(input);
+            } catch(e) {
+              output = input;
+            }
+          // 7. evaluate dynamically bound values
+        } else if (input.match(new RegExp('^' + escapeRegExp(exprStartSymbol))) && options.scope) {
+            try {
+              var expr = input.replace(new RegExp(escapeRegExp(exprStartSymbol)),'').replace(new RegExp(escapeRegExp(exprEndSymbol), 'g'),'');
+              output = options.scope.$eval(expr);
+            } catch (err) {
+              output = input;
+            }
+          } else {
+            output = input;
+          }
+        } // catch(err2)
+      } // catch(err)
+
+      // convert output more for center and position
+      if (
+        (options.key == 'center' || options.key == 'position') &&
+        output instanceof Array
+      ) {
+        output = new google.maps.LatLng(output[0], output[1]);
+      }
+
+      // convert output more for shape bounds
+      if (options.key == 'bounds' && output instanceof Array) {
+        output = new google.maps.LatLngBounds(output[0], output[1]);
+      }
+
+      // convert output more for shape icons
+      if (options.key == 'icons' && output instanceof Array) {
+
+        for (var i=0; i<output.length; i++) {
+          var el = output[i];
+          if (el.icon.path.match(/^[A-Z_]+$/)) {
+            el.icon.path =  google.maps.SymbolPath[el.icon.path];
+          }
+        }
+      }
+
+      // convert output more for marker icon
+      if (options.key == 'icon' && output instanceof Object) {
+        if ((""+output.path).match(/^[A-Z_]+$/)) {
+          output.path = google.maps.SymbolPath[output.path];
+        }
+        for (var key in output) { //jshint ignore:line
+          var arr = output[key];
+          if (key == "anchor" || key == "origin" || key == "labelOrigin") {
+            output[key] = new google.maps.Point(arr[0], arr[1]);
+          } else if (key == "size" || key == "scaledSize") {
+            output[key] = new google.maps.Size(arr[0], arr[1]);
+          }
+        }
+      }
+
+      return output;
+    };
+
+    var getAttrsToObserve = function(attrs) {
+      var attrsToObserve = [];
+      var exprRegExp = new RegExp(escapeRegExp(exprStartSymbol) + '.*' + escapeRegExp(exprEndSymbol), 'g');
+
+      if (!attrs.noWatcher) {
+        for (var attrName in attrs) { //jshint ignore:line
+          var attrValue = attrs[attrName];
+          if (attrValue && attrValue.match(exprRegExp)) { // if attr value is {{..}}
+            attrsToObserve.push(camelCaseFilter(attrName));
+          }
+        }
+      }
+
+      return attrsToObserve;
+    };
+
+    /**
+     * filters attributes by skipping angularjs methods $.. $$..
+     * @memberof Attr2MapOptions
+     * @param {Hash} attrs tag attributes
+     * @returns {Hash} filterd attributes
+     */
+    var filter = function(attrs) {
+      var options = {};
+      for(var key in attrs) {
+        if (key.match(/^\$/) || key.match(/^ng[A-Z]/)) {
+          void(0);
+        } else {
+          options[key] = attrs[key];
+        }
+      }
+      return options;
+    };
+
+    /**
+     * converts attributes hash to Google Maps API v3 options
+     * ```
+     *  . converts numbers to number
+     *  . converts class-like string to google maps instance
+     *    i.e. `LatLng(1,1)` to `new google.maps.LatLng(1,1)`
+     *  . converts constant-like string to google maps constant
+     *    i.e. `MapTypeId.HYBRID` to `google.maps.MapTypeId.HYBRID`
+     *    i.e. `HYBRID"` to `google.maps.MapTypeId.HYBRID`
+     * ```
+     * @memberof Attr2MapOptions
+     * @param {Hash} attrs tag attributes
+     * @param {Hash} options
+     * @returns {Hash} options converted attributess
+     */
+    var getOptions = function(attrs, params) {
+      params = params || {};
+      var options = {};
+      for(var key in attrs) {
+        if (attrs[key] || attrs[key] === 0) {
+          if (key.match(/^on[A-Z]/)) { //skip events, i.e. on-click
+            continue;
+          } else if (key.match(/ControlOptions$/)) { // skip controlOptions
+            continue;
+          } else {
+            // nested conversions need to be typechecked
+            // (non-strings are fully converted)
+            if (typeof attrs[key] !== 'string') {
+              options[key] = attrs[key];
+            } else {
+              if (params.doNotConverStringToNumber &&
+                attrs[key].match(/^[0-9]+$/)
+              ) {
+                options[key] = attrs[key];
+              } else {
+                options[key] = toOptionValue(attrs[key], {key: key, scope: params.scope});
+              }
+            }
+          }
+        } // if (attrs[key])
+      } // for(var key in attrs)
+      return options;
+    };
+
+    /**
+     * converts attributes hash to scope-specific event function
+     * @memberof Attr2MapOptions
+     * @param {scope} scope angularjs scope
+     * @param {Hash} attrs tag attributes
+     * @returns {Hash} events converted events
+     */
+    var getEvents = function(scope, attrs) {
+      var events = {};
+      var toLowercaseFunc = function($1){
+        return "_"+$1.toLowerCase();
+      };
+      var EventFunc = function(attrValue) {
+        // funcName(argsStr)
+        var matches = attrValue.match(/([^\(]+)\(([^\)]*)\)/);
+        var funcName = matches[1];
+        var argsStr = matches[2].replace(/event[ ,]*/,'');  //remove string 'event'
+        var argsExpr = $parse("["+argsStr+"]"); //for perf when triggering event
+        return function(event) {
+          var args = argsExpr(scope); //get args here to pass updated model values
+          function index(obj,i) {return obj[i];}
+          var f = funcName.split('.').reduce(index, scope);
+          f && f.apply(this, [event].concat(args));
+          $timeout( function() {
+            scope.$apply();
+          });
+        };
+      };
+
+      for(var key in attrs) {
+        if (attrs[key]) {
+          if (!key.match(/^on[A-Z]/)) { //skip if not events
+            continue;
+          }
+
+          //get event name as underscored. i.e. zoom_changed
+          var eventName = key.replace(/^on/,'');
+          eventName = eventName.charAt(0).toLowerCase() + eventName.slice(1);
+          eventName = eventName.replace(/([A-Z])/g, toLowercaseFunc);
+
+          var attrValue = attrs[key];
+          events[eventName] = new EventFunc(attrValue);
+        }
+      }
+      return events;
+    };
+
+    /**
+     * control means map controls, i.e streetview, pan, etc, not a general control
+     * @memberof Attr2MapOptions
+     * @param {Hash} filtered filtered tag attributes
+     * @returns {Hash} Google Map options
+     */
+    var getControlOptions = function(filtered) {
+      var controlOptions = {};
+      if (typeof filtered != 'object') {
+        return false;
+      }
+
+      for (var attr in filtered) {
+        if (filtered[attr]) {
+          if (!attr.match(/(.*)ControlOptions$/)) {
+            continue; // if not controlOptions, skip it
+          }
+
+          //change invalid json to valid one, i.e. {foo:1} to {"foo": 1}
+          var orgValue = filtered[attr];
+          var newValue = orgValue.replace(/'/g, '"');
+          newValue = newValue.replace(/([^"]+)|("[^"]+")/g, function($0, $1, $2) {
+            if ($1) {
+              return $1.replace(/([a-zA-Z0-9]+?):/g, '"$1":');
+            } else {
+              return $2;
+            }
+          });
+          try {
+            var options = JSON.parse(newValue);
+            for (var key in options) { //assign the right values
+              if (options[key]) {
+                var value = options[key];
+                if (typeof value === 'string') {
+                  value = value.toUpperCase();
+                } else if (key === "mapTypeIds") {
+                  value = value.map( function(str) {
+                    if (str.match(/^[A-Z]+$/)) { // if constant
+                      return google.maps.MapTypeId[str.toUpperCase()];
+                    } else { // else, custom map-type
+                      return str;
+                    }
+                  });
+                }
+
+                if (key === "style") {
+                  var str = attr.charAt(0).toUpperCase() + attr.slice(1);
+                  var objName = str.replace(/Options$/,'')+"Style";
+                  options[key] = google.maps[objName][value];
+                } else if (key === "position") {
+                  options[key] = google.maps.ControlPosition[value];
+                } else {
+                  options[key] = value;
+                }
+              }
+            }
+            controlOptions[attr] = options;
+          } catch (e) {
+            void 0;
+          }
+        }
+      } // for
+
+      return controlOptions;
+    };
+
+    return {
+      filter: filter,
+      getOptions: getOptions,
+      getEvents: getEvents,
+      getControlOptions: getControlOptions,
+      toOptionValue: toOptionValue,
+      getAttrsToObserve: getAttrsToObserve,
+      orgAttributes: orgAttributes
+    }; // return
+
+  };
+  Attr2MapOptions.$inject= [
+    '$parse', '$timeout', '$log', '$interpolate', 'NavigatorGeolocation', 'GeoCoder',
+    'camelCaseFilter', 'jsonizeFilter', 'escapeRegexpFilter'
+  ];
+
+  angular.module('ngMap').service('Attr2MapOptions', Attr2MapOptions);
+})();
+
+/**
+ * @ngdoc service
+ * @name GeoCoder
+ * @description
+ *   Provides [defered/promise API](https://docs.angularjs.org/api/ng/service/$q)
+ *   service for Google Geocoder service
+ */
+(function() {
+  'use strict';
+  var $q;
+  /**
+   * @memberof GeoCoder
+   * @param {Hash} options
+   *   https://developers.google.com/maps/documentation/geocoding/#geocoding
+   * @example
+   * ```
+   *   GeoCoder.geocode({address: 'the cn tower'}).then(function(result) {
+   *     //... do something with result
+   *   });
+   * ```
+   * @returns {HttpPromise} Future object
+   */
+  var geocodeFunc = function(options) {
+    var deferred = $q.defer();
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode(options, function (results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        deferred.resolve(results);
+      } else {
+        deferred.reject(status);
+      }
+    });
+    return deferred.promise;
+  };
+
+  var GeoCoder = function(_$q_) {
+    $q = _$q_;
+    return {
+      geocode : geocodeFunc
+    };
+  };
+  GeoCoder.$inject = ['$q'];
+
+  angular.module('ngMap').service('GeoCoder', GeoCoder);
+})();
+
+/**
+ * @ngdoc service
+ * @name GoogleMapsApi
+ * @description
+ *   Load Google Maps API Service
+ */
+(function() {
+  'use strict';
+  var $q;
+  var $timeout;
+
+  var GoogleMapsApi = function(_$q_, _$timeout_) {
+    $q = _$q_;
+    $timeout = _$timeout_;
+
+    return {
+
+      /**
+       * Load google maps into document by creating a script tag
+       * @memberof GoogleMapsApi
+       * @param {string} mapsUrl
+       * @example
+       *   GoogleMapsApi.load(myUrl).then(function() {
+       *     console.log('google map has been loaded')
+       *   });
+       */
+      load: function (mapsUrl) {
+
+        var deferred = $q.defer();
+
+        if (window.google === undefined || window.google.maps === undefined) {
+
+          window.lazyLoadCallback = function() {
+            $timeout(function() { /* give some time to load */
+              deferred.resolve(window.google)
+            }, 100);
+          };
+
+          var scriptEl = document.createElement('script');
+          scriptEl.src = mapsUrl +
+            (mapsUrl.indexOf('?') > -1 ? '&' : '?') +
+            'callback=lazyLoadCallback';
+
+          if (!document.querySelector('script[src="' + scriptEl.src + '"]')) {
+            document.body.appendChild(scriptEl);
+          }
+        } else {
+          deferred.resolve(window.google)
+        }
+
+        return deferred.promise;
+      }
+
+    }
+  }
+  GoogleMapsApi.$inject = ['$q', '$timeout'];
+
+  angular.module('ngMap').service('GoogleMapsApi', GoogleMapsApi);
+})();
+
+
+
+/**
+ * @ngdoc service
+ * @name NavigatorGeolocation
+ * @description
+ *  Provides [defered/promise API](https://docs.angularjs.org/api/ng/service/$q)
+ *  service for navigator.geolocation methods
+ */
+/* global google */
+(function() {
+  'use strict';
+  var $q;
+
+  /**
+   * @memberof NavigatorGeolocation
+   * @param {Object} geoLocationOptions the navigator geolocations options.
+   *  i.e. { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }.
+   *  If none specified, { timeout: 5000 }. 
+   *  If timeout not specified, timeout: 5000 added
+   * @param {function} success success callback function
+   * @param {function} failure failure callback function
+   * @example
+   * ```
+   *  NavigatorGeolocation.getCurrentPosition()
+   *    .then(function(position) {
+   *      var lat = position.coords.latitude, lng = position.coords.longitude;
+   *      .. do something lat and lng
+   *    });
+   * ```
+   * @returns {HttpPromise} Future object
+   */
+  var getCurrentPosition = function(geoLocationOptions) {
+    var deferred = $q.defer();
+    if (navigator.geolocation) {
+
+      if (geoLocationOptions === undefined) {
+        geoLocationOptions = { timeout: 5000 };
+      }
+      else if (geoLocationOptions.timeout === undefined) {
+        geoLocationOptions.timeout = 5000;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          deferred.resolve(position);
+        }, function(evt) {
+          void 0;
+          deferred.reject(evt);
+        },
+        geoLocationOptions
+      );
+    } else {
+      deferred.reject("Browser Geolocation service failed.");
+    }
+    return deferred.promise;
+  };
+
+  var NavigatorGeolocation = function(_$q_) {
+    $q = _$q_;
+    return {
+      getCurrentPosition: getCurrentPosition
+    };
+  };
+  NavigatorGeolocation.$inject = ['$q'];
+
+  angular.module('ngMap').
+    service('NavigatorGeolocation', NavigatorGeolocation);
+})();
+
+/**
+ * @ngdoc factory
+ * @name NgMapPool
+ * @description
+ *   Provide map instance to avoid memory leak
+ */
+(function() {
+  'use strict';
+  /**
+   * @memberof NgMapPool
+   * @desc map instance pool
+   */
+  var mapInstances = [];
+  var $window, $document, $timeout;
+
+  var add = function(el) {
+    var mapDiv = $document.createElement("div");
+    mapDiv.style.width = "100%";
+    mapDiv.style.height = "100%";
+    el.appendChild(mapDiv);
+    var map = new $window.google.maps.Map(mapDiv, {});
+    mapInstances.push(map);
+    return map;
+  };
+
+  var findById = function(el, id) {
+    var notInUseMap;
+    for (var i=0; i<mapInstances.length; i++) {
+      var map = mapInstances[i];
+      if (map.id == id && !map.inUse) {
+        var mapDiv = map.getDiv();
+        el.appendChild(mapDiv);
+        notInUseMap = map;
+        break;
+      }
+    }
+    return notInUseMap;
+  };
+
+  var findUnused = function(el) { //jshint ignore:line
+    var notInUseMap;
+    for (var i=0; i<mapInstances.length; i++) {
+      var map = mapInstances[i];
+      if (map.id) {
+        continue;
+      }
+      if (!map.inUse) {
+        var mapDiv = map.getDiv();
+        el.appendChild(mapDiv);
+        notInUseMap = map;
+        break;
+      }
+    }
+    return notInUseMap;
+  };
+
+  /**
+   * @memberof NgMapPool
+   * @function getMapInstance
+   * @param {HtmlElement} el map container element
+   * @return map instance for the given element
+   */
+  var getMapInstance = function(el) {
+    var map = findById(el, el.id) || findUnused(el);
+    if (!map) {
+      map = add(el);
+    } else {
+      /* firing map idle event, which is used by map controller */
+      $timeout(function() {
+        google.maps.event.trigger(map, 'idle');
+      }, 100);
+    }
+    map.inUse = true;
+    return map;
+  };
+
+  /**
+   * @memberof NgMapPool
+   * @function returnMapInstance
+   * @param {Map} an instance of google.maps.Map
+   * @desc sets the flag inUse of the given map instance to false, so that it 
+   * can be reused later
+   */
+  var returnMapInstance = function(map) {
+    map.inUse = false;
+  };
+  
+  /**
+   * @memberof NgMapPool
+   * @function resetMapInstances
+   * @desc resets mapInstance array
+   */
+  var resetMapInstances = function() {
+    for(var i = 0;i < mapInstances.length;i++) {
+        mapInstances[i] = null;
+    }
+    mapInstances = [];
+  };
+  
+  /**
+   * @memberof NgMapPool
+   * @function deleteMapInstance
+   * @desc delete a mapInstance
+   */
+  var deleteMapInstance= function(mapId) {
+	  for( var i=0; i<mapInstances.length; i++ ) {
+		  if( (mapInstances[i] !== null) && (mapInstances[i].id == mapId)) {
+			  mapInstances[i]= null;
+			  mapInstances.splice( i, 1 );
+		  }
+	  }
+  };
+
+  var NgMapPool = function(_$document_, _$window_, _$timeout_) {
+    $document = _$document_[0], $window = _$window_, $timeout = _$timeout_;
+
+    return {
+	  mapInstances: mapInstances,
+      resetMapInstances: resetMapInstances,
+      getMapInstance: getMapInstance,
+      returnMapInstance: returnMapInstance,
+      deleteMapInstance: deleteMapInstance
+    };
+  };
+
+  NgMapPool.$inject = [ '$document', '$window', '$timeout'];
+
+  angular.module('ngMap').factory('NgMapPool', NgMapPool);
+
+})();
+
+/**
+ * @ngdoc provider
+ * @name NgMap
+ * @description
+ *  common utility service for ng-map
+ */
+(function() {
+  'use strict';
+  var $window, $document, $q;
+  var NavigatorGeolocation, Attr2MapOptions, GeoCoder, camelCaseFilter, NgMapPool;
+
+  var mapControllers = {};
+
+  var getStyle = function(el, styleProp) {
+    var y;
+    if (el.currentStyle) {
+      y = el.currentStyle[styleProp];
+    } else if ($window.getComputedStyle) {
+      y = $document.defaultView.
+        getComputedStyle(el, null).
+        getPropertyValue(styleProp);
+    }
+    return y;
+  };
+
+  /**
+   * @memberof NgMap
+   * @function initMap
+   * @param id optional, id of the map. default 0
+   */
+  var initMap = function(id) {
+    var ctrl = mapControllers[id || 0];
+    if (!(ctrl.map instanceof google.maps.Map)) {
+      ctrl.initializeMap();
+      return ctrl.map;
+    } else {
+      void 0;
+    }
+  };
+
+  /**
+   * @memberof NgMap
+   * @function getMap
+   * @param {String} optional, id e.g., 'foo'
+   * @returns promise
+   */
+  var getMap = function(id, options) {
+    options = options || {};
+    id = typeof id === 'object' ? id.id : id;
+
+    var deferred = $q.defer();
+    var timeout = options.timeout || 10000;
+
+    function waitForMap(timeElapsed){
+      var keys = Object.keys(mapControllers);
+      var theFirstController = mapControllers[keys[0]];
+      if(id && mapControllers[id]){
+        deferred.resolve(mapControllers[id].map);
+      } else if (!id && theFirstController && theFirstController.map) {
+        deferred.resolve(theFirstController.map);
+      } else if (timeElapsed > timeout) {
+        deferred.reject('could not find map');
+      } else {
+        $window.setTimeout( function(){
+          waitForMap(timeElapsed+100);
+        }, 100);
+      }
+    }
+    waitForMap(0);
+
+    return deferred.promise;
+  };
+
+  /**
+   * @memberof NgMap
+   * @function addMap
+   * @param mapController {__MapContoller} a map controller
+   * @returns promise
+   */
+  var addMap = function(mapCtrl) {
+    if (mapCtrl.map) {
+      var len = Object.keys(mapControllers).length;
+      mapControllers[mapCtrl.map.id || len] = mapCtrl;
+    }
+  };
+
+  /**
+   * @memberof NgMap
+   * @function deleteMap
+   * @param mapController {__MapContoller} a map controller
+   */
+  var deleteMap = function(mapCtrl) {
+    var len = Object.keys(mapControllers).length - 1;
+    var mapId = mapCtrl.map.id || len;
+    if (mapCtrl.map) {
+      for (var eventName in mapCtrl.eventListeners) {
+        void 0;
+        var listener = mapCtrl.eventListeners[eventName];
+        google.maps.event.removeListener(listener);
+      }
+      if (mapCtrl.map.controls) {
+        mapCtrl.map.controls.forEach(function(ctrl) {
+          ctrl.clear();
+        });
+      }
+    }
+
+    //Remove Heatmap Layers
+    if (mapCtrl.map.heatmapLayers) {
+      Object.keys(mapCtrl.map.heatmapLayers).forEach(function (layer) {
+        mapCtrl.deleteObject('heatmapLayers', mapCtrl.map.heatmapLayers[layer]);
+      });
+    }
+
+    NgMapPool.deleteMapInstance(mapId);
+
+    delete mapControllers[mapId];
+  };
+
+  /**
+   * @memberof NgMap
+   * @function getGeoLocation
+   * @param {String} address
+   * @param {Hash} options geo options
+   * @returns promise
+   */
+  var getGeoLocation = function(string, options) {
+    var deferred = $q.defer();
+    if (!string || string.match(/^current/i)) { // current location
+      NavigatorGeolocation.getCurrentPosition(options).then(
+        function(position) {
+          var lat = position.coords.latitude;
+          var lng = position.coords.longitude;
+          var latLng = new google.maps.LatLng(lat,lng);
+          deferred.resolve(latLng);
+        },
+        function(error) {
+          deferred.reject(error);
+        }
+      );
+    } else {
+      GeoCoder.geocode({address: string}).then(
+        function(results) {
+          deferred.resolve(results[0].geometry.location);
+        },
+        function(error) {
+          deferred.reject(error);
+        }
+      );
+      // var geocoder = new google.maps.Geocoder();
+      // geocoder.geocode(options, function (results, status) {
+      //   if (status == google.maps.GeocoderStatus.OK) {
+      //     deferred.resolve(results);
+      //   } else {
+      //     deferred.reject(status);
+      //   }
+      // });
+    }
+
+    return deferred.promise;
+  };
+
+  /**
+   * @memberof NgMap
+   * @function observeAndSet
+   * @param {String} attrName attribute name
+   * @param {Object} object A Google maps object to be changed
+   * @returns attribue observe function
+   */
+  var observeAndSet = function(attrName, object) {
+    void 0;
+    return function(val) {
+      if (val) {
+        var setMethod = camelCaseFilter('set-'+attrName);
+        var optionValue = Attr2MapOptions.toOptionValue(val, {key: attrName});
+        if (object[setMethod]) { //if set method does exist
+          void 0;
+          /* if an location is being observed */
+          if (attrName.match(/center|position/) &&
+            typeof optionValue == 'string') {
+            getGeoLocation(optionValue).then(function(latlng) {
+              object[setMethod](latlng);
+            });
+          } else {
+            object[setMethod](optionValue);
+          }
+        }
+      }
+    };
+  };
+
+  /**
+   * @memberof NgMap
+   * @function setStyle
+   * @param {HtmlElement} map contriner element
+   * @desc set display, width, height of map container element
+   */
+  var setStyle = function(el) {
+    //if style is not given to the map element, set display and height
+    var defaultStyle = el.getAttribute('default-style');
+    if (defaultStyle == "true") {
+      el.style.display = 'block';
+      el.style.height = '300px';
+    } else {
+      if (getStyle(el, 'display') != "block") {
+        el.style.display = 'block';
+      }
+      if (getStyle(el, 'height').match(/^(0|auto)/)) {
+        el.style.height = '300px';
+      }
+    }
+  };
+
+  angular.module('ngMap').provider('NgMap', function() {
+    var defaultOptions = {};
+
+    /**
+     * @memberof NgMap
+     * @function setDefaultOptions
+     * @param {Hash} options
+     * @example
+     *  app.config(function(NgMapProvider) {
+     *    NgMapProvider.setDefaultOptions({
+     *      marker: {
+     *        optimized: false
+     *      }
+     *    });
+     *  });
+     */
+    this.setDefaultOptions = function(options) {
+      defaultOptions = options;
+    };
+
+    var NgMap = function(
+        _$window_, _$document_, _$q_,
+        _NavigatorGeolocation_, _Attr2MapOptions_,
+        _GeoCoder_, _camelCaseFilter_, _NgMapPool_
+      ) {
+      $window = _$window_;
+      $document = _$document_[0];
+      $q = _$q_;
+      NavigatorGeolocation = _NavigatorGeolocation_;
+      Attr2MapOptions = _Attr2MapOptions_;
+      GeoCoder = _GeoCoder_;
+      camelCaseFilter = _camelCaseFilter_;
+      NgMapPool = _NgMapPool_;
+
+      return {
+        defaultOptions: defaultOptions,
+        addMap: addMap,
+        deleteMap: deleteMap,
+        getMap: getMap,
+        initMap: initMap,
+        setStyle: setStyle,
+        getGeoLocation: getGeoLocation,
+        observeAndSet: observeAndSet
+      };
+    };
+    NgMap.$inject = [
+      '$window', '$document', '$q',
+      'NavigatorGeolocation', 'Attr2MapOptions',
+      'GeoCoder', 'camelCaseFilter', 'NgMapPool'
+    ];
+
+    this.$get = NgMap;
+  });
+})();
+
+/**
+ * @ngdoc service
+ * @name StreetView
+ * @description
+ *  Provides [defered/promise API](https://docs.angularjs.org/api/ng/service/$q)
+ *  service for [Google StreetViewService]
+ *  (https://developers.google.com/maps/documentation/javascript/streetview)
+ */
+(function() {
+  'use strict';
+  var $q;
+
+  /**
+   * Retrieves panorama id from the given map (and or position)
+   * @memberof StreetView
+   * @param {map} map Google map instance
+   * @param {LatLng} latlng Google LatLng instance
+   *   default: the center of the map
+   * @example
+   *   StreetView.getPanorama(map).then(function(panoId) {
+   *     $scope.panoId = panoId;
+   *   });
+   * @returns {HttpPromise} Future object
+   */
+  var getPanorama = function(map, latlng) {
+    latlng = latlng || map.getCenter();
+    var deferred = $q.defer();
+    var svs = new google.maps.StreetViewService();
+    svs.getPanoramaByLocation( (latlng||map.getCenter), 100,
+      function (data, status) {
+        // if streetView available
+        if (status === google.maps.StreetViewStatus.OK) {
+          deferred.resolve(data.location.pano);
+        } else {
+          // no street view available in this range, or some error occurred
+          deferred.resolve(false);
+          //deferred.reject('Geocoder failed due to: '+ status);
+        }
+      }
+    );
+    return deferred.promise;
+  };
+
+  /**
+   * Set panorama view on the given map with the panorama id
+   * @memberof StreetView
+   * @param {map} map Google map instance
+   * @param {String} panoId Panorama id fro getPanorama method
+   * @example
+   *   StreetView.setPanorama(map, panoId);
+   */
+  var setPanorama = function(map, panoId) {
+    var svp = new google.maps.StreetViewPanorama(
+      map.getDiv(), {enableCloseButton: true}
+    );
+    svp.setPano(panoId);
+  };
+
+  var StreetView = function(_$q_) {
+    $q = _$q_;
+
+    return {
+      getPanorama: getPanorama,
+      setPanorama: setPanorama
+    };
+  };
+  StreetView.$inject = ['$q'];
+
+  angular.module('ngMap').service('StreetView', StreetView);
+})();
+
+return 'ngMap';
+}));
 
 /***/ }),
 /* 42 */
@@ -9760,14 +13196,14 @@ if(false) {
 var content = __webpack_require__(49);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(3)(content, {});
+var update = __webpack_require__(4)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../css-loader/index.js!../../sass-loader/lib/loader.js!../../postcss-loader/index.js!./font-awesome.css", function() {
-			var newContent = require("!!../../css-loader/index.js!../../sass-loader/lib/loader.js!../../postcss-loader/index.js!./font-awesome.css");
+		module.hot.accept("!!../../../css-loader/index.js!../../../sass-loader/lib/loader.js!../../../postcss-loader/index.js!./bootstrap.css", function() {
+			var newContent = require("!!../../../css-loader/index.js!../../../sass-loader/lib/loader.js!../../../postcss-loader/index.js!./bootstrap.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -9786,7 +13222,33 @@ if(false) {
 var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(3)(content, {});
+var update = __webpack_require__(4)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../css-loader/index.js!../../sass-loader/lib/loader.js!../../postcss-loader/index.js!./font-awesome.css", function() {
+			var newContent = require("!!../../css-loader/index.js!../../sass-loader/lib/loader.js!../../postcss-loader/index.js!./font-awesome.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(51);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -9803,7 +13265,7 @@ if(false) {
 }
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 /**
@@ -10140,7 +13602,7 @@ angular.module('ngCookies').provider('$$cookieWriter', /** @this */ function $$C
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 /**
@@ -10902,7 +14364,7 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 /*
@@ -18683,7 +22145,7 @@ angular.module('ui.bootstrap.timepicker').run(function() {!angular.$$csp().noInl
 angular.module('ui.bootstrap.typeahead').run(function() {!angular.$$csp().noInlineStyle && !angular.$$uibTypeaheadCss && angular.element(document).find('head').prepend('<style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style>'); angular.$$uibTypeaheadCss = true; });
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 /**
@@ -52060,10 +55522,10 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)();
+exports = module.exports = __webpack_require__(3)();
 // imports
 
 
@@ -52074,24 +55536,24 @@ exports.push([module.i, "/*!\n * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)();
+exports = module.exports = __webpack_require__(3)();
 // imports
 
 
 // module
-exports.push([module.i, "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\n */\n/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(" + __webpack_require__(53) + ");\n  src: url(" + __webpack_require__(52) + "?#iefix&v=4.7.0) format(\"embedded-opentype\"), url(" + __webpack_require__(85) + ") format(\"woff2\"), url(" + __webpack_require__(86) + ") format(\"woff\"), url(" + __webpack_require__(54) + ") format(\"truetype\"), url(" + __webpack_require__(51) + "#fontawesomeregular) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n.fa {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n/* makes the font 33% larger relative to the icon container */\n.fa-lg {\n  font-size: 1.33333333em;\n  line-height: 0.75em;\n  vertical-align: -15%; }\n\n.fa-2x {\n  font-size: 2em; }\n\n.fa-3x {\n  font-size: 3em; }\n\n.fa-4x {\n  font-size: 4em; }\n\n.fa-5x {\n  font-size: 5em; }\n\n.fa-fw {\n  width: 1.28571429em;\n  text-align: center; }\n\n.fa-ul {\n  padding-left: 0;\n  margin-left: 2.14285714em;\n  list-style-type: none; }\n\n.fa-ul > li {\n  position: relative; }\n\n.fa-li {\n  position: absolute;\n  left: -2.14285714em;\n  width: 2.14285714em;\n  top: 0.14285714em;\n  text-align: center; }\n\n.fa-li.fa-lg {\n  left: -1.85714286em; }\n\n.fa-border {\n  padding: .2em .25em .15em;\n  border: solid 0.08em #eeeeee;\n  border-radius: .1em; }\n\n.fa-pull-left {\n  float: left; }\n\n.fa-pull-right {\n  float: right; }\n\n.fa.fa-pull-left {\n  margin-right: .3em; }\n\n.fa.fa-pull-right {\n  margin-left: .3em; }\n\n/* Deprecated as of 4.4.0 */\n.pull-right {\n  float: right; }\n\n.pull-left {\n  float: left; }\n\n.fa.pull-left {\n  margin-right: .3em; }\n\n.fa.pull-right {\n  margin-left: .3em; }\n\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n  animation: fa-spin 2s infinite linear; }\n\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n  animation: fa-spin 1s infinite steps(8); }\n\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg); } }\n\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg); } }\n\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n  transform: rotate(90deg); }\n\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg); }\n\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n  transform: rotate(270deg); }\n\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n  transform: scale(-1, 1); }\n\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n  transform: scale(1, -1); }\n\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  -webkit-filter: none;\n  filter: none; }\n\n.fa-stack {\n  position: relative;\n  display: inline-block;\n  width: 2em;\n  height: 2em;\n  line-height: 2em;\n  vertical-align: middle; }\n\n.fa-stack-1x,\n.fa-stack-2x {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  text-align: center; }\n\n.fa-stack-1x {\n  line-height: inherit; }\n\n.fa-stack-2x {\n  font-size: 2em; }\n\n.fa-inverse {\n  color: #ffffff; }\n\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\n   readers do not read off random characters that represent icons */\n.fa-glass:before {\n  content: \"\\F000\"; }\n\n.fa-music:before {\n  content: \"\\F001\"; }\n\n.fa-search:before {\n  content: \"\\F002\"; }\n\n.fa-envelope-o:before {\n  content: \"\\F003\"; }\n\n.fa-heart:before {\n  content: \"\\F004\"; }\n\n.fa-star:before {\n  content: \"\\F005\"; }\n\n.fa-star-o:before {\n  content: \"\\F006\"; }\n\n.fa-user:before {\n  content: \"\\F007\"; }\n\n.fa-film:before {\n  content: \"\\F008\"; }\n\n.fa-th-large:before {\n  content: \"\\F009\"; }\n\n.fa-th:before {\n  content: \"\\F00A\"; }\n\n.fa-th-list:before {\n  content: \"\\F00B\"; }\n\n.fa-check:before {\n  content: \"\\F00C\"; }\n\n.fa-remove:before,\n.fa-close:before,\n.fa-times:before {\n  content: \"\\F00D\"; }\n\n.fa-search-plus:before {\n  content: \"\\F00E\"; }\n\n.fa-search-minus:before {\n  content: \"\\F010\"; }\n\n.fa-power-off:before {\n  content: \"\\F011\"; }\n\n.fa-signal:before {\n  content: \"\\F012\"; }\n\n.fa-gear:before,\n.fa-cog:before {\n  content: \"\\F013\"; }\n\n.fa-trash-o:before {\n  content: \"\\F014\"; }\n\n.fa-home:before {\n  content: \"\\F015\"; }\n\n.fa-file-o:before {\n  content: \"\\F016\"; }\n\n.fa-clock-o:before {\n  content: \"\\F017\"; }\n\n.fa-road:before {\n  content: \"\\F018\"; }\n\n.fa-download:before {\n  content: \"\\F019\"; }\n\n.fa-arrow-circle-o-down:before {\n  content: \"\\F01A\"; }\n\n.fa-arrow-circle-o-up:before {\n  content: \"\\F01B\"; }\n\n.fa-inbox:before {\n  content: \"\\F01C\"; }\n\n.fa-play-circle-o:before {\n  content: \"\\F01D\"; }\n\n.fa-rotate-right:before,\n.fa-repeat:before {\n  content: \"\\F01E\"; }\n\n.fa-refresh:before {\n  content: \"\\F021\"; }\n\n.fa-list-alt:before {\n  content: \"\\F022\"; }\n\n.fa-lock:before {\n  content: \"\\F023\"; }\n\n.fa-flag:before {\n  content: \"\\F024\"; }\n\n.fa-headphones:before {\n  content: \"\\F025\"; }\n\n.fa-volume-off:before {\n  content: \"\\F026\"; }\n\n.fa-volume-down:before {\n  content: \"\\F027\"; }\n\n.fa-volume-up:before {\n  content: \"\\F028\"; }\n\n.fa-qrcode:before {\n  content: \"\\F029\"; }\n\n.fa-barcode:before {\n  content: \"\\F02A\"; }\n\n.fa-tag:before {\n  content: \"\\F02B\"; }\n\n.fa-tags:before {\n  content: \"\\F02C\"; }\n\n.fa-book:before {\n  content: \"\\F02D\"; }\n\n.fa-bookmark:before {\n  content: \"\\F02E\"; }\n\n.fa-print:before {\n  content: \"\\F02F\"; }\n\n.fa-camera:before {\n  content: \"\\F030\"; }\n\n.fa-font:before {\n  content: \"\\F031\"; }\n\n.fa-bold:before {\n  content: \"\\F032\"; }\n\n.fa-italic:before {\n  content: \"\\F033\"; }\n\n.fa-text-height:before {\n  content: \"\\F034\"; }\n\n.fa-text-width:before {\n  content: \"\\F035\"; }\n\n.fa-align-left:before {\n  content: \"\\F036\"; }\n\n.fa-align-center:before {\n  content: \"\\F037\"; }\n\n.fa-align-right:before {\n  content: \"\\F038\"; }\n\n.fa-align-justify:before {\n  content: \"\\F039\"; }\n\n.fa-list:before {\n  content: \"\\F03A\"; }\n\n.fa-dedent:before,\n.fa-outdent:before {\n  content: \"\\F03B\"; }\n\n.fa-indent:before {\n  content: \"\\F03C\"; }\n\n.fa-video-camera:before {\n  content: \"\\F03D\"; }\n\n.fa-photo:before,\n.fa-image:before,\n.fa-picture-o:before {\n  content: \"\\F03E\"; }\n\n.fa-pencil:before {\n  content: \"\\F040\"; }\n\n.fa-map-marker:before {\n  content: \"\\F041\"; }\n\n.fa-adjust:before {\n  content: \"\\F042\"; }\n\n.fa-tint:before {\n  content: \"\\F043\"; }\n\n.fa-edit:before,\n.fa-pencil-square-o:before {\n  content: \"\\F044\"; }\n\n.fa-share-square-o:before {\n  content: \"\\F045\"; }\n\n.fa-check-square-o:before {\n  content: \"\\F046\"; }\n\n.fa-arrows:before {\n  content: \"\\F047\"; }\n\n.fa-step-backward:before {\n  content: \"\\F048\"; }\n\n.fa-fast-backward:before {\n  content: \"\\F049\"; }\n\n.fa-backward:before {\n  content: \"\\F04A\"; }\n\n.fa-play:before {\n  content: \"\\F04B\"; }\n\n.fa-pause:before {\n  content: \"\\F04C\"; }\n\n.fa-stop:before {\n  content: \"\\F04D\"; }\n\n.fa-forward:before {\n  content: \"\\F04E\"; }\n\n.fa-fast-forward:before {\n  content: \"\\F050\"; }\n\n.fa-step-forward:before {\n  content: \"\\F051\"; }\n\n.fa-eject:before {\n  content: \"\\F052\"; }\n\n.fa-chevron-left:before {\n  content: \"\\F053\"; }\n\n.fa-chevron-right:before {\n  content: \"\\F054\"; }\n\n.fa-plus-circle:before {\n  content: \"\\F055\"; }\n\n.fa-minus-circle:before {\n  content: \"\\F056\"; }\n\n.fa-times-circle:before {\n  content: \"\\F057\"; }\n\n.fa-check-circle:before {\n  content: \"\\F058\"; }\n\n.fa-question-circle:before {\n  content: \"\\F059\"; }\n\n.fa-info-circle:before {\n  content: \"\\F05A\"; }\n\n.fa-crosshairs:before {\n  content: \"\\F05B\"; }\n\n.fa-times-circle-o:before {\n  content: \"\\F05C\"; }\n\n.fa-check-circle-o:before {\n  content: \"\\F05D\"; }\n\n.fa-ban:before {\n  content: \"\\F05E\"; }\n\n.fa-arrow-left:before {\n  content: \"\\F060\"; }\n\n.fa-arrow-right:before {\n  content: \"\\F061\"; }\n\n.fa-arrow-up:before {\n  content: \"\\F062\"; }\n\n.fa-arrow-down:before {\n  content: \"\\F063\"; }\n\n.fa-mail-forward:before,\n.fa-share:before {\n  content: \"\\F064\"; }\n\n.fa-expand:before {\n  content: \"\\F065\"; }\n\n.fa-compress:before {\n  content: \"\\F066\"; }\n\n.fa-plus:before {\n  content: \"\\F067\"; }\n\n.fa-minus:before {\n  content: \"\\F068\"; }\n\n.fa-asterisk:before {\n  content: \"\\F069\"; }\n\n.fa-exclamation-circle:before {\n  content: \"\\F06A\"; }\n\n.fa-gift:before {\n  content: \"\\F06B\"; }\n\n.fa-leaf:before {\n  content: \"\\F06C\"; }\n\n.fa-fire:before {\n  content: \"\\F06D\"; }\n\n.fa-eye:before {\n  content: \"\\F06E\"; }\n\n.fa-eye-slash:before {\n  content: \"\\F070\"; }\n\n.fa-warning:before,\n.fa-exclamation-triangle:before {\n  content: \"\\F071\"; }\n\n.fa-plane:before {\n  content: \"\\F072\"; }\n\n.fa-calendar:before {\n  content: \"\\F073\"; }\n\n.fa-random:before {\n  content: \"\\F074\"; }\n\n.fa-comment:before {\n  content: \"\\F075\"; }\n\n.fa-magnet:before {\n  content: \"\\F076\"; }\n\n.fa-chevron-up:before {\n  content: \"\\F077\"; }\n\n.fa-chevron-down:before {\n  content: \"\\F078\"; }\n\n.fa-retweet:before {\n  content: \"\\F079\"; }\n\n.fa-shopping-cart:before {\n  content: \"\\F07A\"; }\n\n.fa-folder:before {\n  content: \"\\F07B\"; }\n\n.fa-folder-open:before {\n  content: \"\\F07C\"; }\n\n.fa-arrows-v:before {\n  content: \"\\F07D\"; }\n\n.fa-arrows-h:before {\n  content: \"\\F07E\"; }\n\n.fa-bar-chart-o:before,\n.fa-bar-chart:before {\n  content: \"\\F080\"; }\n\n.fa-twitter-square:before {\n  content: \"\\F081\"; }\n\n.fa-facebook-square:before {\n  content: \"\\F082\"; }\n\n.fa-camera-retro:before {\n  content: \"\\F083\"; }\n\n.fa-key:before {\n  content: \"\\F084\"; }\n\n.fa-gears:before,\n.fa-cogs:before {\n  content: \"\\F085\"; }\n\n.fa-comments:before {\n  content: \"\\F086\"; }\n\n.fa-thumbs-o-up:before {\n  content: \"\\F087\"; }\n\n.fa-thumbs-o-down:before {\n  content: \"\\F088\"; }\n\n.fa-star-half:before {\n  content: \"\\F089\"; }\n\n.fa-heart-o:before {\n  content: \"\\F08A\"; }\n\n.fa-sign-out:before {\n  content: \"\\F08B\"; }\n\n.fa-linkedin-square:before {\n  content: \"\\F08C\"; }\n\n.fa-thumb-tack:before {\n  content: \"\\F08D\"; }\n\n.fa-external-link:before {\n  content: \"\\F08E\"; }\n\n.fa-sign-in:before {\n  content: \"\\F090\"; }\n\n.fa-trophy:before {\n  content: \"\\F091\"; }\n\n.fa-github-square:before {\n  content: \"\\F092\"; }\n\n.fa-upload:before {\n  content: \"\\F093\"; }\n\n.fa-lemon-o:before {\n  content: \"\\F094\"; }\n\n.fa-phone:before {\n  content: \"\\F095\"; }\n\n.fa-square-o:before {\n  content: \"\\F096\"; }\n\n.fa-bookmark-o:before {\n  content: \"\\F097\"; }\n\n.fa-phone-square:before {\n  content: \"\\F098\"; }\n\n.fa-twitter:before {\n  content: \"\\F099\"; }\n\n.fa-facebook-f:before,\n.fa-facebook:before {\n  content: \"\\F09A\"; }\n\n.fa-github:before {\n  content: \"\\F09B\"; }\n\n.fa-unlock:before {\n  content: \"\\F09C\"; }\n\n.fa-credit-card:before {\n  content: \"\\F09D\"; }\n\n.fa-feed:before,\n.fa-rss:before {\n  content: \"\\F09E\"; }\n\n.fa-hdd-o:before {\n  content: \"\\F0A0\"; }\n\n.fa-bullhorn:before {\n  content: \"\\F0A1\"; }\n\n.fa-bell:before {\n  content: \"\\F0F3\"; }\n\n.fa-certificate:before {\n  content: \"\\F0A3\"; }\n\n.fa-hand-o-right:before {\n  content: \"\\F0A4\"; }\n\n.fa-hand-o-left:before {\n  content: \"\\F0A5\"; }\n\n.fa-hand-o-up:before {\n  content: \"\\F0A6\"; }\n\n.fa-hand-o-down:before {\n  content: \"\\F0A7\"; }\n\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\"; }\n\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\"; }\n\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\"; }\n\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\"; }\n\n.fa-globe:before {\n  content: \"\\F0AC\"; }\n\n.fa-wrench:before {\n  content: \"\\F0AD\"; }\n\n.fa-tasks:before {\n  content: \"\\F0AE\"; }\n\n.fa-filter:before {\n  content: \"\\F0B0\"; }\n\n.fa-briefcase:before {\n  content: \"\\F0B1\"; }\n\n.fa-arrows-alt:before {\n  content: \"\\F0B2\"; }\n\n.fa-group:before,\n.fa-users:before {\n  content: \"\\F0C0\"; }\n\n.fa-chain:before,\n.fa-link:before {\n  content: \"\\F0C1\"; }\n\n.fa-cloud:before {\n  content: \"\\F0C2\"; }\n\n.fa-flask:before {\n  content: \"\\F0C3\"; }\n\n.fa-cut:before,\n.fa-scissors:before {\n  content: \"\\F0C4\"; }\n\n.fa-copy:before,\n.fa-files-o:before {\n  content: \"\\F0C5\"; }\n\n.fa-paperclip:before {\n  content: \"\\F0C6\"; }\n\n.fa-save:before,\n.fa-floppy-o:before {\n  content: \"\\F0C7\"; }\n\n.fa-square:before {\n  content: \"\\F0C8\"; }\n\n.fa-navicon:before,\n.fa-reorder:before,\n.fa-bars:before {\n  content: \"\\F0C9\"; }\n\n.fa-list-ul:before {\n  content: \"\\F0CA\"; }\n\n.fa-list-ol:before {\n  content: \"\\F0CB\"; }\n\n.fa-strikethrough:before {\n  content: \"\\F0CC\"; }\n\n.fa-underline:before {\n  content: \"\\F0CD\"; }\n\n.fa-table:before {\n  content: \"\\F0CE\"; }\n\n.fa-magic:before {\n  content: \"\\F0D0\"; }\n\n.fa-truck:before {\n  content: \"\\F0D1\"; }\n\n.fa-pinterest:before {\n  content: \"\\F0D2\"; }\n\n.fa-pinterest-square:before {\n  content: \"\\F0D3\"; }\n\n.fa-google-plus-square:before {\n  content: \"\\F0D4\"; }\n\n.fa-google-plus:before {\n  content: \"\\F0D5\"; }\n\n.fa-money:before {\n  content: \"\\F0D6\"; }\n\n.fa-caret-down:before {\n  content: \"\\F0D7\"; }\n\n.fa-caret-up:before {\n  content: \"\\F0D8\"; }\n\n.fa-caret-left:before {\n  content: \"\\F0D9\"; }\n\n.fa-caret-right:before {\n  content: \"\\F0DA\"; }\n\n.fa-columns:before {\n  content: \"\\F0DB\"; }\n\n.fa-unsorted:before,\n.fa-sort:before {\n  content: \"\\F0DC\"; }\n\n.fa-sort-down:before,\n.fa-sort-desc:before {\n  content: \"\\F0DD\"; }\n\n.fa-sort-up:before,\n.fa-sort-asc:before {\n  content: \"\\F0DE\"; }\n\n.fa-envelope:before {\n  content: \"\\F0E0\"; }\n\n.fa-linkedin:before {\n  content: \"\\F0E1\"; }\n\n.fa-rotate-left:before,\n.fa-undo:before {\n  content: \"\\F0E2\"; }\n\n.fa-legal:before,\n.fa-gavel:before {\n  content: \"\\F0E3\"; }\n\n.fa-dashboard:before,\n.fa-tachometer:before {\n  content: \"\\F0E4\"; }\n\n.fa-comment-o:before {\n  content: \"\\F0E5\"; }\n\n.fa-comments-o:before {\n  content: \"\\F0E6\"; }\n\n.fa-flash:before,\n.fa-bolt:before {\n  content: \"\\F0E7\"; }\n\n.fa-sitemap:before {\n  content: \"\\F0E8\"; }\n\n.fa-umbrella:before {\n  content: \"\\F0E9\"; }\n\n.fa-paste:before,\n.fa-clipboard:before {\n  content: \"\\F0EA\"; }\n\n.fa-lightbulb-o:before {\n  content: \"\\F0EB\"; }\n\n.fa-exchange:before {\n  content: \"\\F0EC\"; }\n\n.fa-cloud-download:before {\n  content: \"\\F0ED\"; }\n\n.fa-cloud-upload:before {\n  content: \"\\F0EE\"; }\n\n.fa-user-md:before {\n  content: \"\\F0F0\"; }\n\n.fa-stethoscope:before {\n  content: \"\\F0F1\"; }\n\n.fa-suitcase:before {\n  content: \"\\F0F2\"; }\n\n.fa-bell-o:before {\n  content: \"\\F0A2\"; }\n\n.fa-coffee:before {\n  content: \"\\F0F4\"; }\n\n.fa-cutlery:before {\n  content: \"\\F0F5\"; }\n\n.fa-file-text-o:before {\n  content: \"\\F0F6\"; }\n\n.fa-building-o:before {\n  content: \"\\F0F7\"; }\n\n.fa-hospital-o:before {\n  content: \"\\F0F8\"; }\n\n.fa-ambulance:before {\n  content: \"\\F0F9\"; }\n\n.fa-medkit:before {\n  content: \"\\F0FA\"; }\n\n.fa-fighter-jet:before {\n  content: \"\\F0FB\"; }\n\n.fa-beer:before {\n  content: \"\\F0FC\"; }\n\n.fa-h-square:before {\n  content: \"\\F0FD\"; }\n\n.fa-plus-square:before {\n  content: \"\\F0FE\"; }\n\n.fa-angle-double-left:before {\n  content: \"\\F100\"; }\n\n.fa-angle-double-right:before {\n  content: \"\\F101\"; }\n\n.fa-angle-double-up:before {\n  content: \"\\F102\"; }\n\n.fa-angle-double-down:before {\n  content: \"\\F103\"; }\n\n.fa-angle-left:before {\n  content: \"\\F104\"; }\n\n.fa-angle-right:before {\n  content: \"\\F105\"; }\n\n.fa-angle-up:before {\n  content: \"\\F106\"; }\n\n.fa-angle-down:before {\n  content: \"\\F107\"; }\n\n.fa-desktop:before {\n  content: \"\\F108\"; }\n\n.fa-laptop:before {\n  content: \"\\F109\"; }\n\n.fa-tablet:before {\n  content: \"\\F10A\"; }\n\n.fa-mobile-phone:before,\n.fa-mobile:before {\n  content: \"\\F10B\"; }\n\n.fa-circle-o:before {\n  content: \"\\F10C\"; }\n\n.fa-quote-left:before {\n  content: \"\\F10D\"; }\n\n.fa-quote-right:before {\n  content: \"\\F10E\"; }\n\n.fa-spinner:before {\n  content: \"\\F110\"; }\n\n.fa-circle:before {\n  content: \"\\F111\"; }\n\n.fa-mail-reply:before,\n.fa-reply:before {\n  content: \"\\F112\"; }\n\n.fa-github-alt:before {\n  content: \"\\F113\"; }\n\n.fa-folder-o:before {\n  content: \"\\F114\"; }\n\n.fa-folder-open-o:before {\n  content: \"\\F115\"; }\n\n.fa-smile-o:before {\n  content: \"\\F118\"; }\n\n.fa-frown-o:before {\n  content: \"\\F119\"; }\n\n.fa-meh-o:before {\n  content: \"\\F11A\"; }\n\n.fa-gamepad:before {\n  content: \"\\F11B\"; }\n\n.fa-keyboard-o:before {\n  content: \"\\F11C\"; }\n\n.fa-flag-o:before {\n  content: \"\\F11D\"; }\n\n.fa-flag-checkered:before {\n  content: \"\\F11E\"; }\n\n.fa-terminal:before {\n  content: \"\\F120\"; }\n\n.fa-code:before {\n  content: \"\\F121\"; }\n\n.fa-mail-reply-all:before,\n.fa-reply-all:before {\n  content: \"\\F122\"; }\n\n.fa-star-half-empty:before,\n.fa-star-half-full:before,\n.fa-star-half-o:before {\n  content: \"\\F123\"; }\n\n.fa-location-arrow:before {\n  content: \"\\F124\"; }\n\n.fa-crop:before {\n  content: \"\\F125\"; }\n\n.fa-code-fork:before {\n  content: \"\\F126\"; }\n\n.fa-unlink:before,\n.fa-chain-broken:before {\n  content: \"\\F127\"; }\n\n.fa-question:before {\n  content: \"\\F128\"; }\n\n.fa-info:before {\n  content: \"\\F129\"; }\n\n.fa-exclamation:before {\n  content: \"\\F12A\"; }\n\n.fa-superscript:before {\n  content: \"\\F12B\"; }\n\n.fa-subscript:before {\n  content: \"\\F12C\"; }\n\n.fa-eraser:before {\n  content: \"\\F12D\"; }\n\n.fa-puzzle-piece:before {\n  content: \"\\F12E\"; }\n\n.fa-microphone:before {\n  content: \"\\F130\"; }\n\n.fa-microphone-slash:before {\n  content: \"\\F131\"; }\n\n.fa-shield:before {\n  content: \"\\F132\"; }\n\n.fa-calendar-o:before {\n  content: \"\\F133\"; }\n\n.fa-fire-extinguisher:before {\n  content: \"\\F134\"; }\n\n.fa-rocket:before {\n  content: \"\\F135\"; }\n\n.fa-maxcdn:before {\n  content: \"\\F136\"; }\n\n.fa-chevron-circle-left:before {\n  content: \"\\F137\"; }\n\n.fa-chevron-circle-right:before {\n  content: \"\\F138\"; }\n\n.fa-chevron-circle-up:before {\n  content: \"\\F139\"; }\n\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\"; }\n\n.fa-html5:before {\n  content: \"\\F13B\"; }\n\n.fa-css3:before {\n  content: \"\\F13C\"; }\n\n.fa-anchor:before {\n  content: \"\\F13D\"; }\n\n.fa-unlock-alt:before {\n  content: \"\\F13E\"; }\n\n.fa-bullseye:before {\n  content: \"\\F140\"; }\n\n.fa-ellipsis-h:before {\n  content: \"\\F141\"; }\n\n.fa-ellipsis-v:before {\n  content: \"\\F142\"; }\n\n.fa-rss-square:before {\n  content: \"\\F143\"; }\n\n.fa-play-circle:before {\n  content: \"\\F144\"; }\n\n.fa-ticket:before {\n  content: \"\\F145\"; }\n\n.fa-minus-square:before {\n  content: \"\\F146\"; }\n\n.fa-minus-square-o:before {\n  content: \"\\F147\"; }\n\n.fa-level-up:before {\n  content: \"\\F148\"; }\n\n.fa-level-down:before {\n  content: \"\\F149\"; }\n\n.fa-check-square:before {\n  content: \"\\F14A\"; }\n\n.fa-pencil-square:before {\n  content: \"\\F14B\"; }\n\n.fa-external-link-square:before {\n  content: \"\\F14C\"; }\n\n.fa-share-square:before {\n  content: \"\\F14D\"; }\n\n.fa-compass:before {\n  content: \"\\F14E\"; }\n\n.fa-toggle-down:before,\n.fa-caret-square-o-down:before {\n  content: \"\\F150\"; }\n\n.fa-toggle-up:before,\n.fa-caret-square-o-up:before {\n  content: \"\\F151\"; }\n\n.fa-toggle-right:before,\n.fa-caret-square-o-right:before {\n  content: \"\\F152\"; }\n\n.fa-euro:before,\n.fa-eur:before {\n  content: \"\\F153\"; }\n\n.fa-gbp:before {\n  content: \"\\F154\"; }\n\n.fa-dollar:before,\n.fa-usd:before {\n  content: \"\\F155\"; }\n\n.fa-rupee:before,\n.fa-inr:before {\n  content: \"\\F156\"; }\n\n.fa-cny:before,\n.fa-rmb:before,\n.fa-yen:before,\n.fa-jpy:before {\n  content: \"\\F157\"; }\n\n.fa-ruble:before,\n.fa-rouble:before,\n.fa-rub:before {\n  content: \"\\F158\"; }\n\n.fa-won:before,\n.fa-krw:before {\n  content: \"\\F159\"; }\n\n.fa-bitcoin:before,\n.fa-btc:before {\n  content: \"\\F15A\"; }\n\n.fa-file:before {\n  content: \"\\F15B\"; }\n\n.fa-file-text:before {\n  content: \"\\F15C\"; }\n\n.fa-sort-alpha-asc:before {\n  content: \"\\F15D\"; }\n\n.fa-sort-alpha-desc:before {\n  content: \"\\F15E\"; }\n\n.fa-sort-amount-asc:before {\n  content: \"\\F160\"; }\n\n.fa-sort-amount-desc:before {\n  content: \"\\F161\"; }\n\n.fa-sort-numeric-asc:before {\n  content: \"\\F162\"; }\n\n.fa-sort-numeric-desc:before {\n  content: \"\\F163\"; }\n\n.fa-thumbs-up:before {\n  content: \"\\F164\"; }\n\n.fa-thumbs-down:before {\n  content: \"\\F165\"; }\n\n.fa-youtube-square:before {\n  content: \"\\F166\"; }\n\n.fa-youtube:before {\n  content: \"\\F167\"; }\n\n.fa-xing:before {\n  content: \"\\F168\"; }\n\n.fa-xing-square:before {\n  content: \"\\F169\"; }\n\n.fa-youtube-play:before {\n  content: \"\\F16A\"; }\n\n.fa-dropbox:before {\n  content: \"\\F16B\"; }\n\n.fa-stack-overflow:before {\n  content: \"\\F16C\"; }\n\n.fa-instagram:before {\n  content: \"\\F16D\"; }\n\n.fa-flickr:before {\n  content: \"\\F16E\"; }\n\n.fa-adn:before {\n  content: \"\\F170\"; }\n\n.fa-bitbucket:before {\n  content: \"\\F171\"; }\n\n.fa-bitbucket-square:before {\n  content: \"\\F172\"; }\n\n.fa-tumblr:before {\n  content: \"\\F173\"; }\n\n.fa-tumblr-square:before {\n  content: \"\\F174\"; }\n\n.fa-long-arrow-down:before {\n  content: \"\\F175\"; }\n\n.fa-long-arrow-up:before {\n  content: \"\\F176\"; }\n\n.fa-long-arrow-left:before {\n  content: \"\\F177\"; }\n\n.fa-long-arrow-right:before {\n  content: \"\\F178\"; }\n\n.fa-apple:before {\n  content: \"\\F179\"; }\n\n.fa-windows:before {\n  content: \"\\F17A\"; }\n\n.fa-android:before {\n  content: \"\\F17B\"; }\n\n.fa-linux:before {\n  content: \"\\F17C\"; }\n\n.fa-dribbble:before {\n  content: \"\\F17D\"; }\n\n.fa-skype:before {\n  content: \"\\F17E\"; }\n\n.fa-foursquare:before {\n  content: \"\\F180\"; }\n\n.fa-trello:before {\n  content: \"\\F181\"; }\n\n.fa-female:before {\n  content: \"\\F182\"; }\n\n.fa-male:before {\n  content: \"\\F183\"; }\n\n.fa-gittip:before,\n.fa-gratipay:before {\n  content: \"\\F184\"; }\n\n.fa-sun-o:before {\n  content: \"\\F185\"; }\n\n.fa-moon-o:before {\n  content: \"\\F186\"; }\n\n.fa-archive:before {\n  content: \"\\F187\"; }\n\n.fa-bug:before {\n  content: \"\\F188\"; }\n\n.fa-vk:before {\n  content: \"\\F189\"; }\n\n.fa-weibo:before {\n  content: \"\\F18A\"; }\n\n.fa-renren:before {\n  content: \"\\F18B\"; }\n\n.fa-pagelines:before {\n  content: \"\\F18C\"; }\n\n.fa-stack-exchange:before {\n  content: \"\\F18D\"; }\n\n.fa-arrow-circle-o-right:before {\n  content: \"\\F18E\"; }\n\n.fa-arrow-circle-o-left:before {\n  content: \"\\F190\"; }\n\n.fa-toggle-left:before,\n.fa-caret-square-o-left:before {\n  content: \"\\F191\"; }\n\n.fa-dot-circle-o:before {\n  content: \"\\F192\"; }\n\n.fa-wheelchair:before {\n  content: \"\\F193\"; }\n\n.fa-vimeo-square:before {\n  content: \"\\F194\"; }\n\n.fa-turkish-lira:before,\n.fa-try:before {\n  content: \"\\F195\"; }\n\n.fa-plus-square-o:before {\n  content: \"\\F196\"; }\n\n.fa-space-shuttle:before {\n  content: \"\\F197\"; }\n\n.fa-slack:before {\n  content: \"\\F198\"; }\n\n.fa-envelope-square:before {\n  content: \"\\F199\"; }\n\n.fa-wordpress:before {\n  content: \"\\F19A\"; }\n\n.fa-openid:before {\n  content: \"\\F19B\"; }\n\n.fa-institution:before,\n.fa-bank:before,\n.fa-university:before {\n  content: \"\\F19C\"; }\n\n.fa-mortar-board:before,\n.fa-graduation-cap:before {\n  content: \"\\F19D\"; }\n\n.fa-yahoo:before {\n  content: \"\\F19E\"; }\n\n.fa-google:before {\n  content: \"\\F1A0\"; }\n\n.fa-reddit:before {\n  content: \"\\F1A1\"; }\n\n.fa-reddit-square:before {\n  content: \"\\F1A2\"; }\n\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\"; }\n\n.fa-stumbleupon:before {\n  content: \"\\F1A4\"; }\n\n.fa-delicious:before {\n  content: \"\\F1A5\"; }\n\n.fa-digg:before {\n  content: \"\\F1A6\"; }\n\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\"; }\n\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\"; }\n\n.fa-drupal:before {\n  content: \"\\F1A9\"; }\n\n.fa-joomla:before {\n  content: \"\\F1AA\"; }\n\n.fa-language:before {\n  content: \"\\F1AB\"; }\n\n.fa-fax:before {\n  content: \"\\F1AC\"; }\n\n.fa-building:before {\n  content: \"\\F1AD\"; }\n\n.fa-child:before {\n  content: \"\\F1AE\"; }\n\n.fa-paw:before {\n  content: \"\\F1B0\"; }\n\n.fa-spoon:before {\n  content: \"\\F1B1\"; }\n\n.fa-cube:before {\n  content: \"\\F1B2\"; }\n\n.fa-cubes:before {\n  content: \"\\F1B3\"; }\n\n.fa-behance:before {\n  content: \"\\F1B4\"; }\n\n.fa-behance-square:before {\n  content: \"\\F1B5\"; }\n\n.fa-steam:before {\n  content: \"\\F1B6\"; }\n\n.fa-steam-square:before {\n  content: \"\\F1B7\"; }\n\n.fa-recycle:before {\n  content: \"\\F1B8\"; }\n\n.fa-automobile:before,\n.fa-car:before {\n  content: \"\\F1B9\"; }\n\n.fa-cab:before,\n.fa-taxi:before {\n  content: \"\\F1BA\"; }\n\n.fa-tree:before {\n  content: \"\\F1BB\"; }\n\n.fa-spotify:before {\n  content: \"\\F1BC\"; }\n\n.fa-deviantart:before {\n  content: \"\\F1BD\"; }\n\n.fa-soundcloud:before {\n  content: \"\\F1BE\"; }\n\n.fa-database:before {\n  content: \"\\F1C0\"; }\n\n.fa-file-pdf-o:before {\n  content: \"\\F1C1\"; }\n\n.fa-file-word-o:before {\n  content: \"\\F1C2\"; }\n\n.fa-file-excel-o:before {\n  content: \"\\F1C3\"; }\n\n.fa-file-powerpoint-o:before {\n  content: \"\\F1C4\"; }\n\n.fa-file-photo-o:before,\n.fa-file-picture-o:before,\n.fa-file-image-o:before {\n  content: \"\\F1C5\"; }\n\n.fa-file-zip-o:before,\n.fa-file-archive-o:before {\n  content: \"\\F1C6\"; }\n\n.fa-file-sound-o:before,\n.fa-file-audio-o:before {\n  content: \"\\F1C7\"; }\n\n.fa-file-movie-o:before,\n.fa-file-video-o:before {\n  content: \"\\F1C8\"; }\n\n.fa-file-code-o:before {\n  content: \"\\F1C9\"; }\n\n.fa-vine:before {\n  content: \"\\F1CA\"; }\n\n.fa-codepen:before {\n  content: \"\\F1CB\"; }\n\n.fa-jsfiddle:before {\n  content: \"\\F1CC\"; }\n\n.fa-life-bouy:before,\n.fa-life-buoy:before,\n.fa-life-saver:before,\n.fa-support:before,\n.fa-life-ring:before {\n  content: \"\\F1CD\"; }\n\n.fa-circle-o-notch:before {\n  content: \"\\F1CE\"; }\n\n.fa-ra:before,\n.fa-resistance:before,\n.fa-rebel:before {\n  content: \"\\F1D0\"; }\n\n.fa-ge:before,\n.fa-empire:before {\n  content: \"\\F1D1\"; }\n\n.fa-git-square:before {\n  content: \"\\F1D2\"; }\n\n.fa-git:before {\n  content: \"\\F1D3\"; }\n\n.fa-y-combinator-square:before,\n.fa-yc-square:before,\n.fa-hacker-news:before {\n  content: \"\\F1D4\"; }\n\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\"; }\n\n.fa-qq:before {\n  content: \"\\F1D6\"; }\n\n.fa-wechat:before,\n.fa-weixin:before {\n  content: \"\\F1D7\"; }\n\n.fa-send:before,\n.fa-paper-plane:before {\n  content: \"\\F1D8\"; }\n\n.fa-send-o:before,\n.fa-paper-plane-o:before {\n  content: \"\\F1D9\"; }\n\n.fa-history:before {\n  content: \"\\F1DA\"; }\n\n.fa-circle-thin:before {\n  content: \"\\F1DB\"; }\n\n.fa-header:before {\n  content: \"\\F1DC\"; }\n\n.fa-paragraph:before {\n  content: \"\\F1DD\"; }\n\n.fa-sliders:before {\n  content: \"\\F1DE\"; }\n\n.fa-share-alt:before {\n  content: \"\\F1E0\"; }\n\n.fa-share-alt-square:before {\n  content: \"\\F1E1\"; }\n\n.fa-bomb:before {\n  content: \"\\F1E2\"; }\n\n.fa-soccer-ball-o:before,\n.fa-futbol-o:before {\n  content: \"\\F1E3\"; }\n\n.fa-tty:before {\n  content: \"\\F1E4\"; }\n\n.fa-binoculars:before {\n  content: \"\\F1E5\"; }\n\n.fa-plug:before {\n  content: \"\\F1E6\"; }\n\n.fa-slideshare:before {\n  content: \"\\F1E7\"; }\n\n.fa-twitch:before {\n  content: \"\\F1E8\"; }\n\n.fa-yelp:before {\n  content: \"\\F1E9\"; }\n\n.fa-newspaper-o:before {\n  content: \"\\F1EA\"; }\n\n.fa-wifi:before {\n  content: \"\\F1EB\"; }\n\n.fa-calculator:before {\n  content: \"\\F1EC\"; }\n\n.fa-paypal:before {\n  content: \"\\F1ED\"; }\n\n.fa-google-wallet:before {\n  content: \"\\F1EE\"; }\n\n.fa-cc-visa:before {\n  content: \"\\F1F0\"; }\n\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\"; }\n\n.fa-cc-discover:before {\n  content: \"\\F1F2\"; }\n\n.fa-cc-amex:before {\n  content: \"\\F1F3\"; }\n\n.fa-cc-paypal:before {\n  content: \"\\F1F4\"; }\n\n.fa-cc-stripe:before {\n  content: \"\\F1F5\"; }\n\n.fa-bell-slash:before {\n  content: \"\\F1F6\"; }\n\n.fa-bell-slash-o:before {\n  content: \"\\F1F7\"; }\n\n.fa-trash:before {\n  content: \"\\F1F8\"; }\n\n.fa-copyright:before {\n  content: \"\\F1F9\"; }\n\n.fa-at:before {\n  content: \"\\F1FA\"; }\n\n.fa-eyedropper:before {\n  content: \"\\F1FB\"; }\n\n.fa-paint-brush:before {\n  content: \"\\F1FC\"; }\n\n.fa-birthday-cake:before {\n  content: \"\\F1FD\"; }\n\n.fa-area-chart:before {\n  content: \"\\F1FE\"; }\n\n.fa-pie-chart:before {\n  content: \"\\F200\"; }\n\n.fa-line-chart:before {\n  content: \"\\F201\"; }\n\n.fa-lastfm:before {\n  content: \"\\F202\"; }\n\n.fa-lastfm-square:before {\n  content: \"\\F203\"; }\n\n.fa-toggle-off:before {\n  content: \"\\F204\"; }\n\n.fa-toggle-on:before {\n  content: \"\\F205\"; }\n\n.fa-bicycle:before {\n  content: \"\\F206\"; }\n\n.fa-bus:before {\n  content: \"\\F207\"; }\n\n.fa-ioxhost:before {\n  content: \"\\F208\"; }\n\n.fa-angellist:before {\n  content: \"\\F209\"; }\n\n.fa-cc:before {\n  content: \"\\F20A\"; }\n\n.fa-shekel:before,\n.fa-sheqel:before,\n.fa-ils:before {\n  content: \"\\F20B\"; }\n\n.fa-meanpath:before {\n  content: \"\\F20C\"; }\n\n.fa-buysellads:before {\n  content: \"\\F20D\"; }\n\n.fa-connectdevelop:before {\n  content: \"\\F20E\"; }\n\n.fa-dashcube:before {\n  content: \"\\F210\"; }\n\n.fa-forumbee:before {\n  content: \"\\F211\"; }\n\n.fa-leanpub:before {\n  content: \"\\F212\"; }\n\n.fa-sellsy:before {\n  content: \"\\F213\"; }\n\n.fa-shirtsinbulk:before {\n  content: \"\\F214\"; }\n\n.fa-simplybuilt:before {\n  content: \"\\F215\"; }\n\n.fa-skyatlas:before {\n  content: \"\\F216\"; }\n\n.fa-cart-plus:before {\n  content: \"\\F217\"; }\n\n.fa-cart-arrow-down:before {\n  content: \"\\F218\"; }\n\n.fa-diamond:before {\n  content: \"\\F219\"; }\n\n.fa-ship:before {\n  content: \"\\F21A\"; }\n\n.fa-user-secret:before {\n  content: \"\\F21B\"; }\n\n.fa-motorcycle:before {\n  content: \"\\F21C\"; }\n\n.fa-street-view:before {\n  content: \"\\F21D\"; }\n\n.fa-heartbeat:before {\n  content: \"\\F21E\"; }\n\n.fa-venus:before {\n  content: \"\\F221\"; }\n\n.fa-mars:before {\n  content: \"\\F222\"; }\n\n.fa-mercury:before {\n  content: \"\\F223\"; }\n\n.fa-intersex:before,\n.fa-transgender:before {\n  content: \"\\F224\"; }\n\n.fa-transgender-alt:before {\n  content: \"\\F225\"; }\n\n.fa-venus-double:before {\n  content: \"\\F226\"; }\n\n.fa-mars-double:before {\n  content: \"\\F227\"; }\n\n.fa-venus-mars:before {\n  content: \"\\F228\"; }\n\n.fa-mars-stroke:before {\n  content: \"\\F229\"; }\n\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\"; }\n\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\"; }\n\n.fa-neuter:before {\n  content: \"\\F22C\"; }\n\n.fa-genderless:before {\n  content: \"\\F22D\"; }\n\n.fa-facebook-official:before {\n  content: \"\\F230\"; }\n\n.fa-pinterest-p:before {\n  content: \"\\F231\"; }\n\n.fa-whatsapp:before {\n  content: \"\\F232\"; }\n\n.fa-server:before {\n  content: \"\\F233\"; }\n\n.fa-user-plus:before {\n  content: \"\\F234\"; }\n\n.fa-user-times:before {\n  content: \"\\F235\"; }\n\n.fa-hotel:before,\n.fa-bed:before {\n  content: \"\\F236\"; }\n\n.fa-viacoin:before {\n  content: \"\\F237\"; }\n\n.fa-train:before {\n  content: \"\\F238\"; }\n\n.fa-subway:before {\n  content: \"\\F239\"; }\n\n.fa-medium:before {\n  content: \"\\F23A\"; }\n\n.fa-yc:before,\n.fa-y-combinator:before {\n  content: \"\\F23B\"; }\n\n.fa-optin-monster:before {\n  content: \"\\F23C\"; }\n\n.fa-opencart:before {\n  content: \"\\F23D\"; }\n\n.fa-expeditedssl:before {\n  content: \"\\F23E\"; }\n\n.fa-battery-4:before,\n.fa-battery:before,\n.fa-battery-full:before {\n  content: \"\\F240\"; }\n\n.fa-battery-3:before,\n.fa-battery-three-quarters:before {\n  content: \"\\F241\"; }\n\n.fa-battery-2:before,\n.fa-battery-half:before {\n  content: \"\\F242\"; }\n\n.fa-battery-1:before,\n.fa-battery-quarter:before {\n  content: \"\\F243\"; }\n\n.fa-battery-0:before,\n.fa-battery-empty:before {\n  content: \"\\F244\"; }\n\n.fa-mouse-pointer:before {\n  content: \"\\F245\"; }\n\n.fa-i-cursor:before {\n  content: \"\\F246\"; }\n\n.fa-object-group:before {\n  content: \"\\F247\"; }\n\n.fa-object-ungroup:before {\n  content: \"\\F248\"; }\n\n.fa-sticky-note:before {\n  content: \"\\F249\"; }\n\n.fa-sticky-note-o:before {\n  content: \"\\F24A\"; }\n\n.fa-cc-jcb:before {\n  content: \"\\F24B\"; }\n\n.fa-cc-diners-club:before {\n  content: \"\\F24C\"; }\n\n.fa-clone:before {\n  content: \"\\F24D\"; }\n\n.fa-balance-scale:before {\n  content: \"\\F24E\"; }\n\n.fa-hourglass-o:before {\n  content: \"\\F250\"; }\n\n.fa-hourglass-1:before,\n.fa-hourglass-start:before {\n  content: \"\\F251\"; }\n\n.fa-hourglass-2:before,\n.fa-hourglass-half:before {\n  content: \"\\F252\"; }\n\n.fa-hourglass-3:before,\n.fa-hourglass-end:before {\n  content: \"\\F253\"; }\n\n.fa-hourglass:before {\n  content: \"\\F254\"; }\n\n.fa-hand-grab-o:before,\n.fa-hand-rock-o:before {\n  content: \"\\F255\"; }\n\n.fa-hand-stop-o:before,\n.fa-hand-paper-o:before {\n  content: \"\\F256\"; }\n\n.fa-hand-scissors-o:before {\n  content: \"\\F257\"; }\n\n.fa-hand-lizard-o:before {\n  content: \"\\F258\"; }\n\n.fa-hand-spock-o:before {\n  content: \"\\F259\"; }\n\n.fa-hand-pointer-o:before {\n  content: \"\\F25A\"; }\n\n.fa-hand-peace-o:before {\n  content: \"\\F25B\"; }\n\n.fa-trademark:before {\n  content: \"\\F25C\"; }\n\n.fa-registered:before {\n  content: \"\\F25D\"; }\n\n.fa-creative-commons:before {\n  content: \"\\F25E\"; }\n\n.fa-gg:before {\n  content: \"\\F260\"; }\n\n.fa-gg-circle:before {\n  content: \"\\F261\"; }\n\n.fa-tripadvisor:before {\n  content: \"\\F262\"; }\n\n.fa-odnoklassniki:before {\n  content: \"\\F263\"; }\n\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\"; }\n\n.fa-get-pocket:before {\n  content: \"\\F265\"; }\n\n.fa-wikipedia-w:before {\n  content: \"\\F266\"; }\n\n.fa-safari:before {\n  content: \"\\F267\"; }\n\n.fa-chrome:before {\n  content: \"\\F268\"; }\n\n.fa-firefox:before {\n  content: \"\\F269\"; }\n\n.fa-opera:before {\n  content: \"\\F26A\"; }\n\n.fa-internet-explorer:before {\n  content: \"\\F26B\"; }\n\n.fa-tv:before,\n.fa-television:before {\n  content: \"\\F26C\"; }\n\n.fa-contao:before {\n  content: \"\\F26D\"; }\n\n.fa-500px:before {\n  content: \"\\F26E\"; }\n\n.fa-amazon:before {\n  content: \"\\F270\"; }\n\n.fa-calendar-plus-o:before {\n  content: \"\\F271\"; }\n\n.fa-calendar-minus-o:before {\n  content: \"\\F272\"; }\n\n.fa-calendar-times-o:before {\n  content: \"\\F273\"; }\n\n.fa-calendar-check-o:before {\n  content: \"\\F274\"; }\n\n.fa-industry:before {\n  content: \"\\F275\"; }\n\n.fa-map-pin:before {\n  content: \"\\F276\"; }\n\n.fa-map-signs:before {\n  content: \"\\F277\"; }\n\n.fa-map-o:before {\n  content: \"\\F278\"; }\n\n.fa-map:before {\n  content: \"\\F279\"; }\n\n.fa-commenting:before {\n  content: \"\\F27A\"; }\n\n.fa-commenting-o:before {\n  content: \"\\F27B\"; }\n\n.fa-houzz:before {\n  content: \"\\F27C\"; }\n\n.fa-vimeo:before {\n  content: \"\\F27D\"; }\n\n.fa-black-tie:before {\n  content: \"\\F27E\"; }\n\n.fa-fonticons:before {\n  content: \"\\F280\"; }\n\n.fa-reddit-alien:before {\n  content: \"\\F281\"; }\n\n.fa-edge:before {\n  content: \"\\F282\"; }\n\n.fa-credit-card-alt:before {\n  content: \"\\F283\"; }\n\n.fa-codiepie:before {\n  content: \"\\F284\"; }\n\n.fa-modx:before {\n  content: \"\\F285\"; }\n\n.fa-fort-awesome:before {\n  content: \"\\F286\"; }\n\n.fa-usb:before {\n  content: \"\\F287\"; }\n\n.fa-product-hunt:before {\n  content: \"\\F288\"; }\n\n.fa-mixcloud:before {\n  content: \"\\F289\"; }\n\n.fa-scribd:before {\n  content: \"\\F28A\"; }\n\n.fa-pause-circle:before {\n  content: \"\\F28B\"; }\n\n.fa-pause-circle-o:before {\n  content: \"\\F28C\"; }\n\n.fa-stop-circle:before {\n  content: \"\\F28D\"; }\n\n.fa-stop-circle-o:before {\n  content: \"\\F28E\"; }\n\n.fa-shopping-bag:before {\n  content: \"\\F290\"; }\n\n.fa-shopping-basket:before {\n  content: \"\\F291\"; }\n\n.fa-hashtag:before {\n  content: \"\\F292\"; }\n\n.fa-bluetooth:before {\n  content: \"\\F293\"; }\n\n.fa-bluetooth-b:before {\n  content: \"\\F294\"; }\n\n.fa-percent:before {\n  content: \"\\F295\"; }\n\n.fa-gitlab:before {\n  content: \"\\F296\"; }\n\n.fa-wpbeginner:before {\n  content: \"\\F297\"; }\n\n.fa-wpforms:before {\n  content: \"\\F298\"; }\n\n.fa-envira:before {\n  content: \"\\F299\"; }\n\n.fa-universal-access:before {\n  content: \"\\F29A\"; }\n\n.fa-wheelchair-alt:before {\n  content: \"\\F29B\"; }\n\n.fa-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.fa-blind:before {\n  content: \"\\F29D\"; }\n\n.fa-audio-description:before {\n  content: \"\\F29E\"; }\n\n.fa-volume-control-phone:before {\n  content: \"\\F2A0\"; }\n\n.fa-braille:before {\n  content: \"\\F2A1\"; }\n\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\"; }\n\n.fa-asl-interpreting:before,\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\"; }\n\n.fa-deafness:before,\n.fa-hard-of-hearing:before,\n.fa-deaf:before {\n  content: \"\\F2A4\"; }\n\n.fa-glide:before {\n  content: \"\\F2A5\"; }\n\n.fa-glide-g:before {\n  content: \"\\F2A6\"; }\n\n.fa-signing:before,\n.fa-sign-language:before {\n  content: \"\\F2A7\"; }\n\n.fa-low-vision:before {\n  content: \"\\F2A8\"; }\n\n.fa-viadeo:before {\n  content: \"\\F2A9\"; }\n\n.fa-viadeo-square:before {\n  content: \"\\F2AA\"; }\n\n.fa-snapchat:before {\n  content: \"\\F2AB\"; }\n\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\"; }\n\n.fa-snapchat-square:before {\n  content: \"\\F2AD\"; }\n\n.fa-pied-piper:before {\n  content: \"\\F2AE\"; }\n\n.fa-first-order:before {\n  content: \"\\F2B0\"; }\n\n.fa-yoast:before {\n  content: \"\\F2B1\"; }\n\n.fa-themeisle:before {\n  content: \"\\F2B2\"; }\n\n.fa-google-plus-circle:before,\n.fa-google-plus-official:before {\n  content: \"\\F2B3\"; }\n\n.fa-fa:before,\n.fa-font-awesome:before {\n  content: \"\\F2B4\"; }\n\n.fa-handshake-o:before {\n  content: \"\\F2B5\"; }\n\n.fa-envelope-open:before {\n  content: \"\\F2B6\"; }\n\n.fa-envelope-open-o:before {\n  content: \"\\F2B7\"; }\n\n.fa-linode:before {\n  content: \"\\F2B8\"; }\n\n.fa-address-book:before {\n  content: \"\\F2B9\"; }\n\n.fa-address-book-o:before {\n  content: \"\\F2BA\"; }\n\n.fa-vcard:before,\n.fa-address-card:before {\n  content: \"\\F2BB\"; }\n\n.fa-vcard-o:before,\n.fa-address-card-o:before {\n  content: \"\\F2BC\"; }\n\n.fa-user-circle:before {\n  content: \"\\F2BD\"; }\n\n.fa-user-circle-o:before {\n  content: \"\\F2BE\"; }\n\n.fa-user-o:before {\n  content: \"\\F2C0\"; }\n\n.fa-id-badge:before {\n  content: \"\\F2C1\"; }\n\n.fa-drivers-license:before,\n.fa-id-card:before {\n  content: \"\\F2C2\"; }\n\n.fa-drivers-license-o:before,\n.fa-id-card-o:before {\n  content: \"\\F2C3\"; }\n\n.fa-quora:before {\n  content: \"\\F2C4\"; }\n\n.fa-free-code-camp:before {\n  content: \"\\F2C5\"; }\n\n.fa-telegram:before {\n  content: \"\\F2C6\"; }\n\n.fa-thermometer-4:before,\n.fa-thermometer:before,\n.fa-thermometer-full:before {\n  content: \"\\F2C7\"; }\n\n.fa-thermometer-3:before,\n.fa-thermometer-three-quarters:before {\n  content: \"\\F2C8\"; }\n\n.fa-thermometer-2:before,\n.fa-thermometer-half:before {\n  content: \"\\F2C9\"; }\n\n.fa-thermometer-1:before,\n.fa-thermometer-quarter:before {\n  content: \"\\F2CA\"; }\n\n.fa-thermometer-0:before,\n.fa-thermometer-empty:before {\n  content: \"\\F2CB\"; }\n\n.fa-shower:before {\n  content: \"\\F2CC\"; }\n\n.fa-bathtub:before,\n.fa-s15:before,\n.fa-bath:before {\n  content: \"\\F2CD\"; }\n\n.fa-podcast:before {\n  content: \"\\F2CE\"; }\n\n.fa-window-maximize:before {\n  content: \"\\F2D0\"; }\n\n.fa-window-minimize:before {\n  content: \"\\F2D1\"; }\n\n.fa-window-restore:before {\n  content: \"\\F2D2\"; }\n\n.fa-times-rectangle:before,\n.fa-window-close:before {\n  content: \"\\F2D3\"; }\n\n.fa-times-rectangle-o:before,\n.fa-window-close-o:before {\n  content: \"\\F2D4\"; }\n\n.fa-bandcamp:before {\n  content: \"\\F2D5\"; }\n\n.fa-grav:before {\n  content: \"\\F2D6\"; }\n\n.fa-etsy:before {\n  content: \"\\F2D7\"; }\n\n.fa-imdb:before {\n  content: \"\\F2D8\"; }\n\n.fa-ravelry:before {\n  content: \"\\F2D9\"; }\n\n.fa-eercast:before {\n  content: \"\\F2DA\"; }\n\n.fa-microchip:before {\n  content: \"\\F2DB\"; }\n\n.fa-snowflake-o:before {\n  content: \"\\F2DC\"; }\n\n.fa-superpowers:before {\n  content: \"\\F2DD\"; }\n\n.fa-wpexplorer:before {\n  content: \"\\F2DE\"; }\n\n.fa-meetup:before {\n  content: \"\\F2E0\"; }\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0; }\n\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto; }\n", ""]);
+exports.push([module.i, "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\n */\n/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(" + __webpack_require__(54) + ");\n  src: url(" + __webpack_require__(53) + "?#iefix&v=4.7.0) format(\"embedded-opentype\"), url(" + __webpack_require__(86) + ") format(\"woff2\"), url(" + __webpack_require__(87) + ") format(\"woff\"), url(" + __webpack_require__(55) + ") format(\"truetype\"), url(" + __webpack_require__(52) + "#fontawesomeregular) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n.fa {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n/* makes the font 33% larger relative to the icon container */\n.fa-lg {\n  font-size: 1.33333333em;\n  line-height: 0.75em;\n  vertical-align: -15%; }\n\n.fa-2x {\n  font-size: 2em; }\n\n.fa-3x {\n  font-size: 3em; }\n\n.fa-4x {\n  font-size: 4em; }\n\n.fa-5x {\n  font-size: 5em; }\n\n.fa-fw {\n  width: 1.28571429em;\n  text-align: center; }\n\n.fa-ul {\n  padding-left: 0;\n  margin-left: 2.14285714em;\n  list-style-type: none; }\n\n.fa-ul > li {\n  position: relative; }\n\n.fa-li {\n  position: absolute;\n  left: -2.14285714em;\n  width: 2.14285714em;\n  top: 0.14285714em;\n  text-align: center; }\n\n.fa-li.fa-lg {\n  left: -1.85714286em; }\n\n.fa-border {\n  padding: .2em .25em .15em;\n  border: solid 0.08em #eeeeee;\n  border-radius: .1em; }\n\n.fa-pull-left {\n  float: left; }\n\n.fa-pull-right {\n  float: right; }\n\n.fa.fa-pull-left {\n  margin-right: .3em; }\n\n.fa.fa-pull-right {\n  margin-left: .3em; }\n\n/* Deprecated as of 4.4.0 */\n.pull-right {\n  float: right; }\n\n.pull-left {\n  float: left; }\n\n.fa.pull-left {\n  margin-right: .3em; }\n\n.fa.pull-right {\n  margin-left: .3em; }\n\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n  animation: fa-spin 2s infinite linear; }\n\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n  animation: fa-spin 1s infinite steps(8); }\n\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg); } }\n\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg); } }\n\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n  transform: rotate(90deg); }\n\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg); }\n\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n  transform: rotate(270deg); }\n\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n  transform: scale(-1, 1); }\n\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n  transform: scale(1, -1); }\n\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  -webkit-filter: none;\n  filter: none; }\n\n.fa-stack {\n  position: relative;\n  display: inline-block;\n  width: 2em;\n  height: 2em;\n  line-height: 2em;\n  vertical-align: middle; }\n\n.fa-stack-1x,\n.fa-stack-2x {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  text-align: center; }\n\n.fa-stack-1x {\n  line-height: inherit; }\n\n.fa-stack-2x {\n  font-size: 2em; }\n\n.fa-inverse {\n  color: #ffffff; }\n\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\n   readers do not read off random characters that represent icons */\n.fa-glass:before {\n  content: \"\\F000\"; }\n\n.fa-music:before {\n  content: \"\\F001\"; }\n\n.fa-search:before {\n  content: \"\\F002\"; }\n\n.fa-envelope-o:before {\n  content: \"\\F003\"; }\n\n.fa-heart:before {\n  content: \"\\F004\"; }\n\n.fa-star:before {\n  content: \"\\F005\"; }\n\n.fa-star-o:before {\n  content: \"\\F006\"; }\n\n.fa-user:before {\n  content: \"\\F007\"; }\n\n.fa-film:before {\n  content: \"\\F008\"; }\n\n.fa-th-large:before {\n  content: \"\\F009\"; }\n\n.fa-th:before {\n  content: \"\\F00A\"; }\n\n.fa-th-list:before {\n  content: \"\\F00B\"; }\n\n.fa-check:before {\n  content: \"\\F00C\"; }\n\n.fa-remove:before,\n.fa-close:before,\n.fa-times:before {\n  content: \"\\F00D\"; }\n\n.fa-search-plus:before {\n  content: \"\\F00E\"; }\n\n.fa-search-minus:before {\n  content: \"\\F010\"; }\n\n.fa-power-off:before {\n  content: \"\\F011\"; }\n\n.fa-signal:before {\n  content: \"\\F012\"; }\n\n.fa-gear:before,\n.fa-cog:before {\n  content: \"\\F013\"; }\n\n.fa-trash-o:before {\n  content: \"\\F014\"; }\n\n.fa-home:before {\n  content: \"\\F015\"; }\n\n.fa-file-o:before {\n  content: \"\\F016\"; }\n\n.fa-clock-o:before {\n  content: \"\\F017\"; }\n\n.fa-road:before {\n  content: \"\\F018\"; }\n\n.fa-download:before {\n  content: \"\\F019\"; }\n\n.fa-arrow-circle-o-down:before {\n  content: \"\\F01A\"; }\n\n.fa-arrow-circle-o-up:before {\n  content: \"\\F01B\"; }\n\n.fa-inbox:before {\n  content: \"\\F01C\"; }\n\n.fa-play-circle-o:before {\n  content: \"\\F01D\"; }\n\n.fa-rotate-right:before,\n.fa-repeat:before {\n  content: \"\\F01E\"; }\n\n.fa-refresh:before {\n  content: \"\\F021\"; }\n\n.fa-list-alt:before {\n  content: \"\\F022\"; }\n\n.fa-lock:before {\n  content: \"\\F023\"; }\n\n.fa-flag:before {\n  content: \"\\F024\"; }\n\n.fa-headphones:before {\n  content: \"\\F025\"; }\n\n.fa-volume-off:before {\n  content: \"\\F026\"; }\n\n.fa-volume-down:before {\n  content: \"\\F027\"; }\n\n.fa-volume-up:before {\n  content: \"\\F028\"; }\n\n.fa-qrcode:before {\n  content: \"\\F029\"; }\n\n.fa-barcode:before {\n  content: \"\\F02A\"; }\n\n.fa-tag:before {\n  content: \"\\F02B\"; }\n\n.fa-tags:before {\n  content: \"\\F02C\"; }\n\n.fa-book:before {\n  content: \"\\F02D\"; }\n\n.fa-bookmark:before {\n  content: \"\\F02E\"; }\n\n.fa-print:before {\n  content: \"\\F02F\"; }\n\n.fa-camera:before {\n  content: \"\\F030\"; }\n\n.fa-font:before {\n  content: \"\\F031\"; }\n\n.fa-bold:before {\n  content: \"\\F032\"; }\n\n.fa-italic:before {\n  content: \"\\F033\"; }\n\n.fa-text-height:before {\n  content: \"\\F034\"; }\n\n.fa-text-width:before {\n  content: \"\\F035\"; }\n\n.fa-align-left:before {\n  content: \"\\F036\"; }\n\n.fa-align-center:before {\n  content: \"\\F037\"; }\n\n.fa-align-right:before {\n  content: \"\\F038\"; }\n\n.fa-align-justify:before {\n  content: \"\\F039\"; }\n\n.fa-list:before {\n  content: \"\\F03A\"; }\n\n.fa-dedent:before,\n.fa-outdent:before {\n  content: \"\\F03B\"; }\n\n.fa-indent:before {\n  content: \"\\F03C\"; }\n\n.fa-video-camera:before {\n  content: \"\\F03D\"; }\n\n.fa-photo:before,\n.fa-image:before,\n.fa-picture-o:before {\n  content: \"\\F03E\"; }\n\n.fa-pencil:before {\n  content: \"\\F040\"; }\n\n.fa-map-marker:before {\n  content: \"\\F041\"; }\n\n.fa-adjust:before {\n  content: \"\\F042\"; }\n\n.fa-tint:before {\n  content: \"\\F043\"; }\n\n.fa-edit:before,\n.fa-pencil-square-o:before {\n  content: \"\\F044\"; }\n\n.fa-share-square-o:before {\n  content: \"\\F045\"; }\n\n.fa-check-square-o:before {\n  content: \"\\F046\"; }\n\n.fa-arrows:before {\n  content: \"\\F047\"; }\n\n.fa-step-backward:before {\n  content: \"\\F048\"; }\n\n.fa-fast-backward:before {\n  content: \"\\F049\"; }\n\n.fa-backward:before {\n  content: \"\\F04A\"; }\n\n.fa-play:before {\n  content: \"\\F04B\"; }\n\n.fa-pause:before {\n  content: \"\\F04C\"; }\n\n.fa-stop:before {\n  content: \"\\F04D\"; }\n\n.fa-forward:before {\n  content: \"\\F04E\"; }\n\n.fa-fast-forward:before {\n  content: \"\\F050\"; }\n\n.fa-step-forward:before {\n  content: \"\\F051\"; }\n\n.fa-eject:before {\n  content: \"\\F052\"; }\n\n.fa-chevron-left:before {\n  content: \"\\F053\"; }\n\n.fa-chevron-right:before {\n  content: \"\\F054\"; }\n\n.fa-plus-circle:before {\n  content: \"\\F055\"; }\n\n.fa-minus-circle:before {\n  content: \"\\F056\"; }\n\n.fa-times-circle:before {\n  content: \"\\F057\"; }\n\n.fa-check-circle:before {\n  content: \"\\F058\"; }\n\n.fa-question-circle:before {\n  content: \"\\F059\"; }\n\n.fa-info-circle:before {\n  content: \"\\F05A\"; }\n\n.fa-crosshairs:before {\n  content: \"\\F05B\"; }\n\n.fa-times-circle-o:before {\n  content: \"\\F05C\"; }\n\n.fa-check-circle-o:before {\n  content: \"\\F05D\"; }\n\n.fa-ban:before {\n  content: \"\\F05E\"; }\n\n.fa-arrow-left:before {\n  content: \"\\F060\"; }\n\n.fa-arrow-right:before {\n  content: \"\\F061\"; }\n\n.fa-arrow-up:before {\n  content: \"\\F062\"; }\n\n.fa-arrow-down:before {\n  content: \"\\F063\"; }\n\n.fa-mail-forward:before,\n.fa-share:before {\n  content: \"\\F064\"; }\n\n.fa-expand:before {\n  content: \"\\F065\"; }\n\n.fa-compress:before {\n  content: \"\\F066\"; }\n\n.fa-plus:before {\n  content: \"\\F067\"; }\n\n.fa-minus:before {\n  content: \"\\F068\"; }\n\n.fa-asterisk:before {\n  content: \"\\F069\"; }\n\n.fa-exclamation-circle:before {\n  content: \"\\F06A\"; }\n\n.fa-gift:before {\n  content: \"\\F06B\"; }\n\n.fa-leaf:before {\n  content: \"\\F06C\"; }\n\n.fa-fire:before {\n  content: \"\\F06D\"; }\n\n.fa-eye:before {\n  content: \"\\F06E\"; }\n\n.fa-eye-slash:before {\n  content: \"\\F070\"; }\n\n.fa-warning:before,\n.fa-exclamation-triangle:before {\n  content: \"\\F071\"; }\n\n.fa-plane:before {\n  content: \"\\F072\"; }\n\n.fa-calendar:before {\n  content: \"\\F073\"; }\n\n.fa-random:before {\n  content: \"\\F074\"; }\n\n.fa-comment:before {\n  content: \"\\F075\"; }\n\n.fa-magnet:before {\n  content: \"\\F076\"; }\n\n.fa-chevron-up:before {\n  content: \"\\F077\"; }\n\n.fa-chevron-down:before {\n  content: \"\\F078\"; }\n\n.fa-retweet:before {\n  content: \"\\F079\"; }\n\n.fa-shopping-cart:before {\n  content: \"\\F07A\"; }\n\n.fa-folder:before {\n  content: \"\\F07B\"; }\n\n.fa-folder-open:before {\n  content: \"\\F07C\"; }\n\n.fa-arrows-v:before {\n  content: \"\\F07D\"; }\n\n.fa-arrows-h:before {\n  content: \"\\F07E\"; }\n\n.fa-bar-chart-o:before,\n.fa-bar-chart:before {\n  content: \"\\F080\"; }\n\n.fa-twitter-square:before {\n  content: \"\\F081\"; }\n\n.fa-facebook-square:before {\n  content: \"\\F082\"; }\n\n.fa-camera-retro:before {\n  content: \"\\F083\"; }\n\n.fa-key:before {\n  content: \"\\F084\"; }\n\n.fa-gears:before,\n.fa-cogs:before {\n  content: \"\\F085\"; }\n\n.fa-comments:before {\n  content: \"\\F086\"; }\n\n.fa-thumbs-o-up:before {\n  content: \"\\F087\"; }\n\n.fa-thumbs-o-down:before {\n  content: \"\\F088\"; }\n\n.fa-star-half:before {\n  content: \"\\F089\"; }\n\n.fa-heart-o:before {\n  content: \"\\F08A\"; }\n\n.fa-sign-out:before {\n  content: \"\\F08B\"; }\n\n.fa-linkedin-square:before {\n  content: \"\\F08C\"; }\n\n.fa-thumb-tack:before {\n  content: \"\\F08D\"; }\n\n.fa-external-link:before {\n  content: \"\\F08E\"; }\n\n.fa-sign-in:before {\n  content: \"\\F090\"; }\n\n.fa-trophy:before {\n  content: \"\\F091\"; }\n\n.fa-github-square:before {\n  content: \"\\F092\"; }\n\n.fa-upload:before {\n  content: \"\\F093\"; }\n\n.fa-lemon-o:before {\n  content: \"\\F094\"; }\n\n.fa-phone:before {\n  content: \"\\F095\"; }\n\n.fa-square-o:before {\n  content: \"\\F096\"; }\n\n.fa-bookmark-o:before {\n  content: \"\\F097\"; }\n\n.fa-phone-square:before {\n  content: \"\\F098\"; }\n\n.fa-twitter:before {\n  content: \"\\F099\"; }\n\n.fa-facebook-f:before,\n.fa-facebook:before {\n  content: \"\\F09A\"; }\n\n.fa-github:before {\n  content: \"\\F09B\"; }\n\n.fa-unlock:before {\n  content: \"\\F09C\"; }\n\n.fa-credit-card:before {\n  content: \"\\F09D\"; }\n\n.fa-feed:before,\n.fa-rss:before {\n  content: \"\\F09E\"; }\n\n.fa-hdd-o:before {\n  content: \"\\F0A0\"; }\n\n.fa-bullhorn:before {\n  content: \"\\F0A1\"; }\n\n.fa-bell:before {\n  content: \"\\F0F3\"; }\n\n.fa-certificate:before {\n  content: \"\\F0A3\"; }\n\n.fa-hand-o-right:before {\n  content: \"\\F0A4\"; }\n\n.fa-hand-o-left:before {\n  content: \"\\F0A5\"; }\n\n.fa-hand-o-up:before {\n  content: \"\\F0A6\"; }\n\n.fa-hand-o-down:before {\n  content: \"\\F0A7\"; }\n\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\"; }\n\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\"; }\n\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\"; }\n\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\"; }\n\n.fa-globe:before {\n  content: \"\\F0AC\"; }\n\n.fa-wrench:before {\n  content: \"\\F0AD\"; }\n\n.fa-tasks:before {\n  content: \"\\F0AE\"; }\n\n.fa-filter:before {\n  content: \"\\F0B0\"; }\n\n.fa-briefcase:before {\n  content: \"\\F0B1\"; }\n\n.fa-arrows-alt:before {\n  content: \"\\F0B2\"; }\n\n.fa-group:before,\n.fa-users:before {\n  content: \"\\F0C0\"; }\n\n.fa-chain:before,\n.fa-link:before {\n  content: \"\\F0C1\"; }\n\n.fa-cloud:before {\n  content: \"\\F0C2\"; }\n\n.fa-flask:before {\n  content: \"\\F0C3\"; }\n\n.fa-cut:before,\n.fa-scissors:before {\n  content: \"\\F0C4\"; }\n\n.fa-copy:before,\n.fa-files-o:before {\n  content: \"\\F0C5\"; }\n\n.fa-paperclip:before {\n  content: \"\\F0C6\"; }\n\n.fa-save:before,\n.fa-floppy-o:before {\n  content: \"\\F0C7\"; }\n\n.fa-square:before {\n  content: \"\\F0C8\"; }\n\n.fa-navicon:before,\n.fa-reorder:before,\n.fa-bars:before {\n  content: \"\\F0C9\"; }\n\n.fa-list-ul:before {\n  content: \"\\F0CA\"; }\n\n.fa-list-ol:before {\n  content: \"\\F0CB\"; }\n\n.fa-strikethrough:before {\n  content: \"\\F0CC\"; }\n\n.fa-underline:before {\n  content: \"\\F0CD\"; }\n\n.fa-table:before {\n  content: \"\\F0CE\"; }\n\n.fa-magic:before {\n  content: \"\\F0D0\"; }\n\n.fa-truck:before {\n  content: \"\\F0D1\"; }\n\n.fa-pinterest:before {\n  content: \"\\F0D2\"; }\n\n.fa-pinterest-square:before {\n  content: \"\\F0D3\"; }\n\n.fa-google-plus-square:before {\n  content: \"\\F0D4\"; }\n\n.fa-google-plus:before {\n  content: \"\\F0D5\"; }\n\n.fa-money:before {\n  content: \"\\F0D6\"; }\n\n.fa-caret-down:before {\n  content: \"\\F0D7\"; }\n\n.fa-caret-up:before {\n  content: \"\\F0D8\"; }\n\n.fa-caret-left:before {\n  content: \"\\F0D9\"; }\n\n.fa-caret-right:before {\n  content: \"\\F0DA\"; }\n\n.fa-columns:before {\n  content: \"\\F0DB\"; }\n\n.fa-unsorted:before,\n.fa-sort:before {\n  content: \"\\F0DC\"; }\n\n.fa-sort-down:before,\n.fa-sort-desc:before {\n  content: \"\\F0DD\"; }\n\n.fa-sort-up:before,\n.fa-sort-asc:before {\n  content: \"\\F0DE\"; }\n\n.fa-envelope:before {\n  content: \"\\F0E0\"; }\n\n.fa-linkedin:before {\n  content: \"\\F0E1\"; }\n\n.fa-rotate-left:before,\n.fa-undo:before {\n  content: \"\\F0E2\"; }\n\n.fa-legal:before,\n.fa-gavel:before {\n  content: \"\\F0E3\"; }\n\n.fa-dashboard:before,\n.fa-tachometer:before {\n  content: \"\\F0E4\"; }\n\n.fa-comment-o:before {\n  content: \"\\F0E5\"; }\n\n.fa-comments-o:before {\n  content: \"\\F0E6\"; }\n\n.fa-flash:before,\n.fa-bolt:before {\n  content: \"\\F0E7\"; }\n\n.fa-sitemap:before {\n  content: \"\\F0E8\"; }\n\n.fa-umbrella:before {\n  content: \"\\F0E9\"; }\n\n.fa-paste:before,\n.fa-clipboard:before {\n  content: \"\\F0EA\"; }\n\n.fa-lightbulb-o:before {\n  content: \"\\F0EB\"; }\n\n.fa-exchange:before {\n  content: \"\\F0EC\"; }\n\n.fa-cloud-download:before {\n  content: \"\\F0ED\"; }\n\n.fa-cloud-upload:before {\n  content: \"\\F0EE\"; }\n\n.fa-user-md:before {\n  content: \"\\F0F0\"; }\n\n.fa-stethoscope:before {\n  content: \"\\F0F1\"; }\n\n.fa-suitcase:before {\n  content: \"\\F0F2\"; }\n\n.fa-bell-o:before {\n  content: \"\\F0A2\"; }\n\n.fa-coffee:before {\n  content: \"\\F0F4\"; }\n\n.fa-cutlery:before {\n  content: \"\\F0F5\"; }\n\n.fa-file-text-o:before {\n  content: \"\\F0F6\"; }\n\n.fa-building-o:before {\n  content: \"\\F0F7\"; }\n\n.fa-hospital-o:before {\n  content: \"\\F0F8\"; }\n\n.fa-ambulance:before {\n  content: \"\\F0F9\"; }\n\n.fa-medkit:before {\n  content: \"\\F0FA\"; }\n\n.fa-fighter-jet:before {\n  content: \"\\F0FB\"; }\n\n.fa-beer:before {\n  content: \"\\F0FC\"; }\n\n.fa-h-square:before {\n  content: \"\\F0FD\"; }\n\n.fa-plus-square:before {\n  content: \"\\F0FE\"; }\n\n.fa-angle-double-left:before {\n  content: \"\\F100\"; }\n\n.fa-angle-double-right:before {\n  content: \"\\F101\"; }\n\n.fa-angle-double-up:before {\n  content: \"\\F102\"; }\n\n.fa-angle-double-down:before {\n  content: \"\\F103\"; }\n\n.fa-angle-left:before {\n  content: \"\\F104\"; }\n\n.fa-angle-right:before {\n  content: \"\\F105\"; }\n\n.fa-angle-up:before {\n  content: \"\\F106\"; }\n\n.fa-angle-down:before {\n  content: \"\\F107\"; }\n\n.fa-desktop:before {\n  content: \"\\F108\"; }\n\n.fa-laptop:before {\n  content: \"\\F109\"; }\n\n.fa-tablet:before {\n  content: \"\\F10A\"; }\n\n.fa-mobile-phone:before,\n.fa-mobile:before {\n  content: \"\\F10B\"; }\n\n.fa-circle-o:before {\n  content: \"\\F10C\"; }\n\n.fa-quote-left:before {\n  content: \"\\F10D\"; }\n\n.fa-quote-right:before {\n  content: \"\\F10E\"; }\n\n.fa-spinner:before {\n  content: \"\\F110\"; }\n\n.fa-circle:before {\n  content: \"\\F111\"; }\n\n.fa-mail-reply:before,\n.fa-reply:before {\n  content: \"\\F112\"; }\n\n.fa-github-alt:before {\n  content: \"\\F113\"; }\n\n.fa-folder-o:before {\n  content: \"\\F114\"; }\n\n.fa-folder-open-o:before {\n  content: \"\\F115\"; }\n\n.fa-smile-o:before {\n  content: \"\\F118\"; }\n\n.fa-frown-o:before {\n  content: \"\\F119\"; }\n\n.fa-meh-o:before {\n  content: \"\\F11A\"; }\n\n.fa-gamepad:before {\n  content: \"\\F11B\"; }\n\n.fa-keyboard-o:before {\n  content: \"\\F11C\"; }\n\n.fa-flag-o:before {\n  content: \"\\F11D\"; }\n\n.fa-flag-checkered:before {\n  content: \"\\F11E\"; }\n\n.fa-terminal:before {\n  content: \"\\F120\"; }\n\n.fa-code:before {\n  content: \"\\F121\"; }\n\n.fa-mail-reply-all:before,\n.fa-reply-all:before {\n  content: \"\\F122\"; }\n\n.fa-star-half-empty:before,\n.fa-star-half-full:before,\n.fa-star-half-o:before {\n  content: \"\\F123\"; }\n\n.fa-location-arrow:before {\n  content: \"\\F124\"; }\n\n.fa-crop:before {\n  content: \"\\F125\"; }\n\n.fa-code-fork:before {\n  content: \"\\F126\"; }\n\n.fa-unlink:before,\n.fa-chain-broken:before {\n  content: \"\\F127\"; }\n\n.fa-question:before {\n  content: \"\\F128\"; }\n\n.fa-info:before {\n  content: \"\\F129\"; }\n\n.fa-exclamation:before {\n  content: \"\\F12A\"; }\n\n.fa-superscript:before {\n  content: \"\\F12B\"; }\n\n.fa-subscript:before {\n  content: \"\\F12C\"; }\n\n.fa-eraser:before {\n  content: \"\\F12D\"; }\n\n.fa-puzzle-piece:before {\n  content: \"\\F12E\"; }\n\n.fa-microphone:before {\n  content: \"\\F130\"; }\n\n.fa-microphone-slash:before {\n  content: \"\\F131\"; }\n\n.fa-shield:before {\n  content: \"\\F132\"; }\n\n.fa-calendar-o:before {\n  content: \"\\F133\"; }\n\n.fa-fire-extinguisher:before {\n  content: \"\\F134\"; }\n\n.fa-rocket:before {\n  content: \"\\F135\"; }\n\n.fa-maxcdn:before {\n  content: \"\\F136\"; }\n\n.fa-chevron-circle-left:before {\n  content: \"\\F137\"; }\n\n.fa-chevron-circle-right:before {\n  content: \"\\F138\"; }\n\n.fa-chevron-circle-up:before {\n  content: \"\\F139\"; }\n\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\"; }\n\n.fa-html5:before {\n  content: \"\\F13B\"; }\n\n.fa-css3:before {\n  content: \"\\F13C\"; }\n\n.fa-anchor:before {\n  content: \"\\F13D\"; }\n\n.fa-unlock-alt:before {\n  content: \"\\F13E\"; }\n\n.fa-bullseye:before {\n  content: \"\\F140\"; }\n\n.fa-ellipsis-h:before {\n  content: \"\\F141\"; }\n\n.fa-ellipsis-v:before {\n  content: \"\\F142\"; }\n\n.fa-rss-square:before {\n  content: \"\\F143\"; }\n\n.fa-play-circle:before {\n  content: \"\\F144\"; }\n\n.fa-ticket:before {\n  content: \"\\F145\"; }\n\n.fa-minus-square:before {\n  content: \"\\F146\"; }\n\n.fa-minus-square-o:before {\n  content: \"\\F147\"; }\n\n.fa-level-up:before {\n  content: \"\\F148\"; }\n\n.fa-level-down:before {\n  content: \"\\F149\"; }\n\n.fa-check-square:before {\n  content: \"\\F14A\"; }\n\n.fa-pencil-square:before {\n  content: \"\\F14B\"; }\n\n.fa-external-link-square:before {\n  content: \"\\F14C\"; }\n\n.fa-share-square:before {\n  content: \"\\F14D\"; }\n\n.fa-compass:before {\n  content: \"\\F14E\"; }\n\n.fa-toggle-down:before,\n.fa-caret-square-o-down:before {\n  content: \"\\F150\"; }\n\n.fa-toggle-up:before,\n.fa-caret-square-o-up:before {\n  content: \"\\F151\"; }\n\n.fa-toggle-right:before,\n.fa-caret-square-o-right:before {\n  content: \"\\F152\"; }\n\n.fa-euro:before,\n.fa-eur:before {\n  content: \"\\F153\"; }\n\n.fa-gbp:before {\n  content: \"\\F154\"; }\n\n.fa-dollar:before,\n.fa-usd:before {\n  content: \"\\F155\"; }\n\n.fa-rupee:before,\n.fa-inr:before {\n  content: \"\\F156\"; }\n\n.fa-cny:before,\n.fa-rmb:before,\n.fa-yen:before,\n.fa-jpy:before {\n  content: \"\\F157\"; }\n\n.fa-ruble:before,\n.fa-rouble:before,\n.fa-rub:before {\n  content: \"\\F158\"; }\n\n.fa-won:before,\n.fa-krw:before {\n  content: \"\\F159\"; }\n\n.fa-bitcoin:before,\n.fa-btc:before {\n  content: \"\\F15A\"; }\n\n.fa-file:before {\n  content: \"\\F15B\"; }\n\n.fa-file-text:before {\n  content: \"\\F15C\"; }\n\n.fa-sort-alpha-asc:before {\n  content: \"\\F15D\"; }\n\n.fa-sort-alpha-desc:before {\n  content: \"\\F15E\"; }\n\n.fa-sort-amount-asc:before {\n  content: \"\\F160\"; }\n\n.fa-sort-amount-desc:before {\n  content: \"\\F161\"; }\n\n.fa-sort-numeric-asc:before {\n  content: \"\\F162\"; }\n\n.fa-sort-numeric-desc:before {\n  content: \"\\F163\"; }\n\n.fa-thumbs-up:before {\n  content: \"\\F164\"; }\n\n.fa-thumbs-down:before {\n  content: \"\\F165\"; }\n\n.fa-youtube-square:before {\n  content: \"\\F166\"; }\n\n.fa-youtube:before {\n  content: \"\\F167\"; }\n\n.fa-xing:before {\n  content: \"\\F168\"; }\n\n.fa-xing-square:before {\n  content: \"\\F169\"; }\n\n.fa-youtube-play:before {\n  content: \"\\F16A\"; }\n\n.fa-dropbox:before {\n  content: \"\\F16B\"; }\n\n.fa-stack-overflow:before {\n  content: \"\\F16C\"; }\n\n.fa-instagram:before {\n  content: \"\\F16D\"; }\n\n.fa-flickr:before {\n  content: \"\\F16E\"; }\n\n.fa-adn:before {\n  content: \"\\F170\"; }\n\n.fa-bitbucket:before {\n  content: \"\\F171\"; }\n\n.fa-bitbucket-square:before {\n  content: \"\\F172\"; }\n\n.fa-tumblr:before {\n  content: \"\\F173\"; }\n\n.fa-tumblr-square:before {\n  content: \"\\F174\"; }\n\n.fa-long-arrow-down:before {\n  content: \"\\F175\"; }\n\n.fa-long-arrow-up:before {\n  content: \"\\F176\"; }\n\n.fa-long-arrow-left:before {\n  content: \"\\F177\"; }\n\n.fa-long-arrow-right:before {\n  content: \"\\F178\"; }\n\n.fa-apple:before {\n  content: \"\\F179\"; }\n\n.fa-windows:before {\n  content: \"\\F17A\"; }\n\n.fa-android:before {\n  content: \"\\F17B\"; }\n\n.fa-linux:before {\n  content: \"\\F17C\"; }\n\n.fa-dribbble:before {\n  content: \"\\F17D\"; }\n\n.fa-skype:before {\n  content: \"\\F17E\"; }\n\n.fa-foursquare:before {\n  content: \"\\F180\"; }\n\n.fa-trello:before {\n  content: \"\\F181\"; }\n\n.fa-female:before {\n  content: \"\\F182\"; }\n\n.fa-male:before {\n  content: \"\\F183\"; }\n\n.fa-gittip:before,\n.fa-gratipay:before {\n  content: \"\\F184\"; }\n\n.fa-sun-o:before {\n  content: \"\\F185\"; }\n\n.fa-moon-o:before {\n  content: \"\\F186\"; }\n\n.fa-archive:before {\n  content: \"\\F187\"; }\n\n.fa-bug:before {\n  content: \"\\F188\"; }\n\n.fa-vk:before {\n  content: \"\\F189\"; }\n\n.fa-weibo:before {\n  content: \"\\F18A\"; }\n\n.fa-renren:before {\n  content: \"\\F18B\"; }\n\n.fa-pagelines:before {\n  content: \"\\F18C\"; }\n\n.fa-stack-exchange:before {\n  content: \"\\F18D\"; }\n\n.fa-arrow-circle-o-right:before {\n  content: \"\\F18E\"; }\n\n.fa-arrow-circle-o-left:before {\n  content: \"\\F190\"; }\n\n.fa-toggle-left:before,\n.fa-caret-square-o-left:before {\n  content: \"\\F191\"; }\n\n.fa-dot-circle-o:before {\n  content: \"\\F192\"; }\n\n.fa-wheelchair:before {\n  content: \"\\F193\"; }\n\n.fa-vimeo-square:before {\n  content: \"\\F194\"; }\n\n.fa-turkish-lira:before,\n.fa-try:before {\n  content: \"\\F195\"; }\n\n.fa-plus-square-o:before {\n  content: \"\\F196\"; }\n\n.fa-space-shuttle:before {\n  content: \"\\F197\"; }\n\n.fa-slack:before {\n  content: \"\\F198\"; }\n\n.fa-envelope-square:before {\n  content: \"\\F199\"; }\n\n.fa-wordpress:before {\n  content: \"\\F19A\"; }\n\n.fa-openid:before {\n  content: \"\\F19B\"; }\n\n.fa-institution:before,\n.fa-bank:before,\n.fa-university:before {\n  content: \"\\F19C\"; }\n\n.fa-mortar-board:before,\n.fa-graduation-cap:before {\n  content: \"\\F19D\"; }\n\n.fa-yahoo:before {\n  content: \"\\F19E\"; }\n\n.fa-google:before {\n  content: \"\\F1A0\"; }\n\n.fa-reddit:before {\n  content: \"\\F1A1\"; }\n\n.fa-reddit-square:before {\n  content: \"\\F1A2\"; }\n\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\"; }\n\n.fa-stumbleupon:before {\n  content: \"\\F1A4\"; }\n\n.fa-delicious:before {\n  content: \"\\F1A5\"; }\n\n.fa-digg:before {\n  content: \"\\F1A6\"; }\n\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\"; }\n\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\"; }\n\n.fa-drupal:before {\n  content: \"\\F1A9\"; }\n\n.fa-joomla:before {\n  content: \"\\F1AA\"; }\n\n.fa-language:before {\n  content: \"\\F1AB\"; }\n\n.fa-fax:before {\n  content: \"\\F1AC\"; }\n\n.fa-building:before {\n  content: \"\\F1AD\"; }\n\n.fa-child:before {\n  content: \"\\F1AE\"; }\n\n.fa-paw:before {\n  content: \"\\F1B0\"; }\n\n.fa-spoon:before {\n  content: \"\\F1B1\"; }\n\n.fa-cube:before {\n  content: \"\\F1B2\"; }\n\n.fa-cubes:before {\n  content: \"\\F1B3\"; }\n\n.fa-behance:before {\n  content: \"\\F1B4\"; }\n\n.fa-behance-square:before {\n  content: \"\\F1B5\"; }\n\n.fa-steam:before {\n  content: \"\\F1B6\"; }\n\n.fa-steam-square:before {\n  content: \"\\F1B7\"; }\n\n.fa-recycle:before {\n  content: \"\\F1B8\"; }\n\n.fa-automobile:before,\n.fa-car:before {\n  content: \"\\F1B9\"; }\n\n.fa-cab:before,\n.fa-taxi:before {\n  content: \"\\F1BA\"; }\n\n.fa-tree:before {\n  content: \"\\F1BB\"; }\n\n.fa-spotify:before {\n  content: \"\\F1BC\"; }\n\n.fa-deviantart:before {\n  content: \"\\F1BD\"; }\n\n.fa-soundcloud:before {\n  content: \"\\F1BE\"; }\n\n.fa-database:before {\n  content: \"\\F1C0\"; }\n\n.fa-file-pdf-o:before {\n  content: \"\\F1C1\"; }\n\n.fa-file-word-o:before {\n  content: \"\\F1C2\"; }\n\n.fa-file-excel-o:before {\n  content: \"\\F1C3\"; }\n\n.fa-file-powerpoint-o:before {\n  content: \"\\F1C4\"; }\n\n.fa-file-photo-o:before,\n.fa-file-picture-o:before,\n.fa-file-image-o:before {\n  content: \"\\F1C5\"; }\n\n.fa-file-zip-o:before,\n.fa-file-archive-o:before {\n  content: \"\\F1C6\"; }\n\n.fa-file-sound-o:before,\n.fa-file-audio-o:before {\n  content: \"\\F1C7\"; }\n\n.fa-file-movie-o:before,\n.fa-file-video-o:before {\n  content: \"\\F1C8\"; }\n\n.fa-file-code-o:before {\n  content: \"\\F1C9\"; }\n\n.fa-vine:before {\n  content: \"\\F1CA\"; }\n\n.fa-codepen:before {\n  content: \"\\F1CB\"; }\n\n.fa-jsfiddle:before {\n  content: \"\\F1CC\"; }\n\n.fa-life-bouy:before,\n.fa-life-buoy:before,\n.fa-life-saver:before,\n.fa-support:before,\n.fa-life-ring:before {\n  content: \"\\F1CD\"; }\n\n.fa-circle-o-notch:before {\n  content: \"\\F1CE\"; }\n\n.fa-ra:before,\n.fa-resistance:before,\n.fa-rebel:before {\n  content: \"\\F1D0\"; }\n\n.fa-ge:before,\n.fa-empire:before {\n  content: \"\\F1D1\"; }\n\n.fa-git-square:before {\n  content: \"\\F1D2\"; }\n\n.fa-git:before {\n  content: \"\\F1D3\"; }\n\n.fa-y-combinator-square:before,\n.fa-yc-square:before,\n.fa-hacker-news:before {\n  content: \"\\F1D4\"; }\n\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\"; }\n\n.fa-qq:before {\n  content: \"\\F1D6\"; }\n\n.fa-wechat:before,\n.fa-weixin:before {\n  content: \"\\F1D7\"; }\n\n.fa-send:before,\n.fa-paper-plane:before {\n  content: \"\\F1D8\"; }\n\n.fa-send-o:before,\n.fa-paper-plane-o:before {\n  content: \"\\F1D9\"; }\n\n.fa-history:before {\n  content: \"\\F1DA\"; }\n\n.fa-circle-thin:before {\n  content: \"\\F1DB\"; }\n\n.fa-header:before {\n  content: \"\\F1DC\"; }\n\n.fa-paragraph:before {\n  content: \"\\F1DD\"; }\n\n.fa-sliders:before {\n  content: \"\\F1DE\"; }\n\n.fa-share-alt:before {\n  content: \"\\F1E0\"; }\n\n.fa-share-alt-square:before {\n  content: \"\\F1E1\"; }\n\n.fa-bomb:before {\n  content: \"\\F1E2\"; }\n\n.fa-soccer-ball-o:before,\n.fa-futbol-o:before {\n  content: \"\\F1E3\"; }\n\n.fa-tty:before {\n  content: \"\\F1E4\"; }\n\n.fa-binoculars:before {\n  content: \"\\F1E5\"; }\n\n.fa-plug:before {\n  content: \"\\F1E6\"; }\n\n.fa-slideshare:before {\n  content: \"\\F1E7\"; }\n\n.fa-twitch:before {\n  content: \"\\F1E8\"; }\n\n.fa-yelp:before {\n  content: \"\\F1E9\"; }\n\n.fa-newspaper-o:before {\n  content: \"\\F1EA\"; }\n\n.fa-wifi:before {\n  content: \"\\F1EB\"; }\n\n.fa-calculator:before {\n  content: \"\\F1EC\"; }\n\n.fa-paypal:before {\n  content: \"\\F1ED\"; }\n\n.fa-google-wallet:before {\n  content: \"\\F1EE\"; }\n\n.fa-cc-visa:before {\n  content: \"\\F1F0\"; }\n\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\"; }\n\n.fa-cc-discover:before {\n  content: \"\\F1F2\"; }\n\n.fa-cc-amex:before {\n  content: \"\\F1F3\"; }\n\n.fa-cc-paypal:before {\n  content: \"\\F1F4\"; }\n\n.fa-cc-stripe:before {\n  content: \"\\F1F5\"; }\n\n.fa-bell-slash:before {\n  content: \"\\F1F6\"; }\n\n.fa-bell-slash-o:before {\n  content: \"\\F1F7\"; }\n\n.fa-trash:before {\n  content: \"\\F1F8\"; }\n\n.fa-copyright:before {\n  content: \"\\F1F9\"; }\n\n.fa-at:before {\n  content: \"\\F1FA\"; }\n\n.fa-eyedropper:before {\n  content: \"\\F1FB\"; }\n\n.fa-paint-brush:before {\n  content: \"\\F1FC\"; }\n\n.fa-birthday-cake:before {\n  content: \"\\F1FD\"; }\n\n.fa-area-chart:before {\n  content: \"\\F1FE\"; }\n\n.fa-pie-chart:before {\n  content: \"\\F200\"; }\n\n.fa-line-chart:before {\n  content: \"\\F201\"; }\n\n.fa-lastfm:before {\n  content: \"\\F202\"; }\n\n.fa-lastfm-square:before {\n  content: \"\\F203\"; }\n\n.fa-toggle-off:before {\n  content: \"\\F204\"; }\n\n.fa-toggle-on:before {\n  content: \"\\F205\"; }\n\n.fa-bicycle:before {\n  content: \"\\F206\"; }\n\n.fa-bus:before {\n  content: \"\\F207\"; }\n\n.fa-ioxhost:before {\n  content: \"\\F208\"; }\n\n.fa-angellist:before {\n  content: \"\\F209\"; }\n\n.fa-cc:before {\n  content: \"\\F20A\"; }\n\n.fa-shekel:before,\n.fa-sheqel:before,\n.fa-ils:before {\n  content: \"\\F20B\"; }\n\n.fa-meanpath:before {\n  content: \"\\F20C\"; }\n\n.fa-buysellads:before {\n  content: \"\\F20D\"; }\n\n.fa-connectdevelop:before {\n  content: \"\\F20E\"; }\n\n.fa-dashcube:before {\n  content: \"\\F210\"; }\n\n.fa-forumbee:before {\n  content: \"\\F211\"; }\n\n.fa-leanpub:before {\n  content: \"\\F212\"; }\n\n.fa-sellsy:before {\n  content: \"\\F213\"; }\n\n.fa-shirtsinbulk:before {\n  content: \"\\F214\"; }\n\n.fa-simplybuilt:before {\n  content: \"\\F215\"; }\n\n.fa-skyatlas:before {\n  content: \"\\F216\"; }\n\n.fa-cart-plus:before {\n  content: \"\\F217\"; }\n\n.fa-cart-arrow-down:before {\n  content: \"\\F218\"; }\n\n.fa-diamond:before {\n  content: \"\\F219\"; }\n\n.fa-ship:before {\n  content: \"\\F21A\"; }\n\n.fa-user-secret:before {\n  content: \"\\F21B\"; }\n\n.fa-motorcycle:before {\n  content: \"\\F21C\"; }\n\n.fa-street-view:before {\n  content: \"\\F21D\"; }\n\n.fa-heartbeat:before {\n  content: \"\\F21E\"; }\n\n.fa-venus:before {\n  content: \"\\F221\"; }\n\n.fa-mars:before {\n  content: \"\\F222\"; }\n\n.fa-mercury:before {\n  content: \"\\F223\"; }\n\n.fa-intersex:before,\n.fa-transgender:before {\n  content: \"\\F224\"; }\n\n.fa-transgender-alt:before {\n  content: \"\\F225\"; }\n\n.fa-venus-double:before {\n  content: \"\\F226\"; }\n\n.fa-mars-double:before {\n  content: \"\\F227\"; }\n\n.fa-venus-mars:before {\n  content: \"\\F228\"; }\n\n.fa-mars-stroke:before {\n  content: \"\\F229\"; }\n\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\"; }\n\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\"; }\n\n.fa-neuter:before {\n  content: \"\\F22C\"; }\n\n.fa-genderless:before {\n  content: \"\\F22D\"; }\n\n.fa-facebook-official:before {\n  content: \"\\F230\"; }\n\n.fa-pinterest-p:before {\n  content: \"\\F231\"; }\n\n.fa-whatsapp:before {\n  content: \"\\F232\"; }\n\n.fa-server:before {\n  content: \"\\F233\"; }\n\n.fa-user-plus:before {\n  content: \"\\F234\"; }\n\n.fa-user-times:before {\n  content: \"\\F235\"; }\n\n.fa-hotel:before,\n.fa-bed:before {\n  content: \"\\F236\"; }\n\n.fa-viacoin:before {\n  content: \"\\F237\"; }\n\n.fa-train:before {\n  content: \"\\F238\"; }\n\n.fa-subway:before {\n  content: \"\\F239\"; }\n\n.fa-medium:before {\n  content: \"\\F23A\"; }\n\n.fa-yc:before,\n.fa-y-combinator:before {\n  content: \"\\F23B\"; }\n\n.fa-optin-monster:before {\n  content: \"\\F23C\"; }\n\n.fa-opencart:before {\n  content: \"\\F23D\"; }\n\n.fa-expeditedssl:before {\n  content: \"\\F23E\"; }\n\n.fa-battery-4:before,\n.fa-battery:before,\n.fa-battery-full:before {\n  content: \"\\F240\"; }\n\n.fa-battery-3:before,\n.fa-battery-three-quarters:before {\n  content: \"\\F241\"; }\n\n.fa-battery-2:before,\n.fa-battery-half:before {\n  content: \"\\F242\"; }\n\n.fa-battery-1:before,\n.fa-battery-quarter:before {\n  content: \"\\F243\"; }\n\n.fa-battery-0:before,\n.fa-battery-empty:before {\n  content: \"\\F244\"; }\n\n.fa-mouse-pointer:before {\n  content: \"\\F245\"; }\n\n.fa-i-cursor:before {\n  content: \"\\F246\"; }\n\n.fa-object-group:before {\n  content: \"\\F247\"; }\n\n.fa-object-ungroup:before {\n  content: \"\\F248\"; }\n\n.fa-sticky-note:before {\n  content: \"\\F249\"; }\n\n.fa-sticky-note-o:before {\n  content: \"\\F24A\"; }\n\n.fa-cc-jcb:before {\n  content: \"\\F24B\"; }\n\n.fa-cc-diners-club:before {\n  content: \"\\F24C\"; }\n\n.fa-clone:before {\n  content: \"\\F24D\"; }\n\n.fa-balance-scale:before {\n  content: \"\\F24E\"; }\n\n.fa-hourglass-o:before {\n  content: \"\\F250\"; }\n\n.fa-hourglass-1:before,\n.fa-hourglass-start:before {\n  content: \"\\F251\"; }\n\n.fa-hourglass-2:before,\n.fa-hourglass-half:before {\n  content: \"\\F252\"; }\n\n.fa-hourglass-3:before,\n.fa-hourglass-end:before {\n  content: \"\\F253\"; }\n\n.fa-hourglass:before {\n  content: \"\\F254\"; }\n\n.fa-hand-grab-o:before,\n.fa-hand-rock-o:before {\n  content: \"\\F255\"; }\n\n.fa-hand-stop-o:before,\n.fa-hand-paper-o:before {\n  content: \"\\F256\"; }\n\n.fa-hand-scissors-o:before {\n  content: \"\\F257\"; }\n\n.fa-hand-lizard-o:before {\n  content: \"\\F258\"; }\n\n.fa-hand-spock-o:before {\n  content: \"\\F259\"; }\n\n.fa-hand-pointer-o:before {\n  content: \"\\F25A\"; }\n\n.fa-hand-peace-o:before {\n  content: \"\\F25B\"; }\n\n.fa-trademark:before {\n  content: \"\\F25C\"; }\n\n.fa-registered:before {\n  content: \"\\F25D\"; }\n\n.fa-creative-commons:before {\n  content: \"\\F25E\"; }\n\n.fa-gg:before {\n  content: \"\\F260\"; }\n\n.fa-gg-circle:before {\n  content: \"\\F261\"; }\n\n.fa-tripadvisor:before {\n  content: \"\\F262\"; }\n\n.fa-odnoklassniki:before {\n  content: \"\\F263\"; }\n\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\"; }\n\n.fa-get-pocket:before {\n  content: \"\\F265\"; }\n\n.fa-wikipedia-w:before {\n  content: \"\\F266\"; }\n\n.fa-safari:before {\n  content: \"\\F267\"; }\n\n.fa-chrome:before {\n  content: \"\\F268\"; }\n\n.fa-firefox:before {\n  content: \"\\F269\"; }\n\n.fa-opera:before {\n  content: \"\\F26A\"; }\n\n.fa-internet-explorer:before {\n  content: \"\\F26B\"; }\n\n.fa-tv:before,\n.fa-television:before {\n  content: \"\\F26C\"; }\n\n.fa-contao:before {\n  content: \"\\F26D\"; }\n\n.fa-500px:before {\n  content: \"\\F26E\"; }\n\n.fa-amazon:before {\n  content: \"\\F270\"; }\n\n.fa-calendar-plus-o:before {\n  content: \"\\F271\"; }\n\n.fa-calendar-minus-o:before {\n  content: \"\\F272\"; }\n\n.fa-calendar-times-o:before {\n  content: \"\\F273\"; }\n\n.fa-calendar-check-o:before {\n  content: \"\\F274\"; }\n\n.fa-industry:before {\n  content: \"\\F275\"; }\n\n.fa-map-pin:before {\n  content: \"\\F276\"; }\n\n.fa-map-signs:before {\n  content: \"\\F277\"; }\n\n.fa-map-o:before {\n  content: \"\\F278\"; }\n\n.fa-map:before {\n  content: \"\\F279\"; }\n\n.fa-commenting:before {\n  content: \"\\F27A\"; }\n\n.fa-commenting-o:before {\n  content: \"\\F27B\"; }\n\n.fa-houzz:before {\n  content: \"\\F27C\"; }\n\n.fa-vimeo:before {\n  content: \"\\F27D\"; }\n\n.fa-black-tie:before {\n  content: \"\\F27E\"; }\n\n.fa-fonticons:before {\n  content: \"\\F280\"; }\n\n.fa-reddit-alien:before {\n  content: \"\\F281\"; }\n\n.fa-edge:before {\n  content: \"\\F282\"; }\n\n.fa-credit-card-alt:before {\n  content: \"\\F283\"; }\n\n.fa-codiepie:before {\n  content: \"\\F284\"; }\n\n.fa-modx:before {\n  content: \"\\F285\"; }\n\n.fa-fort-awesome:before {\n  content: \"\\F286\"; }\n\n.fa-usb:before {\n  content: \"\\F287\"; }\n\n.fa-product-hunt:before {\n  content: \"\\F288\"; }\n\n.fa-mixcloud:before {\n  content: \"\\F289\"; }\n\n.fa-scribd:before {\n  content: \"\\F28A\"; }\n\n.fa-pause-circle:before {\n  content: \"\\F28B\"; }\n\n.fa-pause-circle-o:before {\n  content: \"\\F28C\"; }\n\n.fa-stop-circle:before {\n  content: \"\\F28D\"; }\n\n.fa-stop-circle-o:before {\n  content: \"\\F28E\"; }\n\n.fa-shopping-bag:before {\n  content: \"\\F290\"; }\n\n.fa-shopping-basket:before {\n  content: \"\\F291\"; }\n\n.fa-hashtag:before {\n  content: \"\\F292\"; }\n\n.fa-bluetooth:before {\n  content: \"\\F293\"; }\n\n.fa-bluetooth-b:before {\n  content: \"\\F294\"; }\n\n.fa-percent:before {\n  content: \"\\F295\"; }\n\n.fa-gitlab:before {\n  content: \"\\F296\"; }\n\n.fa-wpbeginner:before {\n  content: \"\\F297\"; }\n\n.fa-wpforms:before {\n  content: \"\\F298\"; }\n\n.fa-envira:before {\n  content: \"\\F299\"; }\n\n.fa-universal-access:before {\n  content: \"\\F29A\"; }\n\n.fa-wheelchair-alt:before {\n  content: \"\\F29B\"; }\n\n.fa-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.fa-blind:before {\n  content: \"\\F29D\"; }\n\n.fa-audio-description:before {\n  content: \"\\F29E\"; }\n\n.fa-volume-control-phone:before {\n  content: \"\\F2A0\"; }\n\n.fa-braille:before {\n  content: \"\\F2A1\"; }\n\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\"; }\n\n.fa-asl-interpreting:before,\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\"; }\n\n.fa-deafness:before,\n.fa-hard-of-hearing:before,\n.fa-deaf:before {\n  content: \"\\F2A4\"; }\n\n.fa-glide:before {\n  content: \"\\F2A5\"; }\n\n.fa-glide-g:before {\n  content: \"\\F2A6\"; }\n\n.fa-signing:before,\n.fa-sign-language:before {\n  content: \"\\F2A7\"; }\n\n.fa-low-vision:before {\n  content: \"\\F2A8\"; }\n\n.fa-viadeo:before {\n  content: \"\\F2A9\"; }\n\n.fa-viadeo-square:before {\n  content: \"\\F2AA\"; }\n\n.fa-snapchat:before {\n  content: \"\\F2AB\"; }\n\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\"; }\n\n.fa-snapchat-square:before {\n  content: \"\\F2AD\"; }\n\n.fa-pied-piper:before {\n  content: \"\\F2AE\"; }\n\n.fa-first-order:before {\n  content: \"\\F2B0\"; }\n\n.fa-yoast:before {\n  content: \"\\F2B1\"; }\n\n.fa-themeisle:before {\n  content: \"\\F2B2\"; }\n\n.fa-google-plus-circle:before,\n.fa-google-plus-official:before {\n  content: \"\\F2B3\"; }\n\n.fa-fa:before,\n.fa-font-awesome:before {\n  content: \"\\F2B4\"; }\n\n.fa-handshake-o:before {\n  content: \"\\F2B5\"; }\n\n.fa-envelope-open:before {\n  content: \"\\F2B6\"; }\n\n.fa-envelope-open-o:before {\n  content: \"\\F2B7\"; }\n\n.fa-linode:before {\n  content: \"\\F2B8\"; }\n\n.fa-address-book:before {\n  content: \"\\F2B9\"; }\n\n.fa-address-book-o:before {\n  content: \"\\F2BA\"; }\n\n.fa-vcard:before,\n.fa-address-card:before {\n  content: \"\\F2BB\"; }\n\n.fa-vcard-o:before,\n.fa-address-card-o:before {\n  content: \"\\F2BC\"; }\n\n.fa-user-circle:before {\n  content: \"\\F2BD\"; }\n\n.fa-user-circle-o:before {\n  content: \"\\F2BE\"; }\n\n.fa-user-o:before {\n  content: \"\\F2C0\"; }\n\n.fa-id-badge:before {\n  content: \"\\F2C1\"; }\n\n.fa-drivers-license:before,\n.fa-id-card:before {\n  content: \"\\F2C2\"; }\n\n.fa-drivers-license-o:before,\n.fa-id-card-o:before {\n  content: \"\\F2C3\"; }\n\n.fa-quora:before {\n  content: \"\\F2C4\"; }\n\n.fa-free-code-camp:before {\n  content: \"\\F2C5\"; }\n\n.fa-telegram:before {\n  content: \"\\F2C6\"; }\n\n.fa-thermometer-4:before,\n.fa-thermometer:before,\n.fa-thermometer-full:before {\n  content: \"\\F2C7\"; }\n\n.fa-thermometer-3:before,\n.fa-thermometer-three-quarters:before {\n  content: \"\\F2C8\"; }\n\n.fa-thermometer-2:before,\n.fa-thermometer-half:before {\n  content: \"\\F2C9\"; }\n\n.fa-thermometer-1:before,\n.fa-thermometer-quarter:before {\n  content: \"\\F2CA\"; }\n\n.fa-thermometer-0:before,\n.fa-thermometer-empty:before {\n  content: \"\\F2CB\"; }\n\n.fa-shower:before {\n  content: \"\\F2CC\"; }\n\n.fa-bathtub:before,\n.fa-s15:before,\n.fa-bath:before {\n  content: \"\\F2CD\"; }\n\n.fa-podcast:before {\n  content: \"\\F2CE\"; }\n\n.fa-window-maximize:before {\n  content: \"\\F2D0\"; }\n\n.fa-window-minimize:before {\n  content: \"\\F2D1\"; }\n\n.fa-window-restore:before {\n  content: \"\\F2D2\"; }\n\n.fa-times-rectangle:before,\n.fa-window-close:before {\n  content: \"\\F2D3\"; }\n\n.fa-times-rectangle-o:before,\n.fa-window-close-o:before {\n  content: \"\\F2D4\"; }\n\n.fa-bandcamp:before {\n  content: \"\\F2D5\"; }\n\n.fa-grav:before {\n  content: \"\\F2D6\"; }\n\n.fa-etsy:before {\n  content: \"\\F2D7\"; }\n\n.fa-imdb:before {\n  content: \"\\F2D8\"; }\n\n.fa-ravelry:before {\n  content: \"\\F2D9\"; }\n\n.fa-eercast:before {\n  content: \"\\F2DA\"; }\n\n.fa-microchip:before {\n  content: \"\\F2DB\"; }\n\n.fa-snowflake-o:before {\n  content: \"\\F2DC\"; }\n\n.fa-superpowers:before {\n  content: \"\\F2DD\"; }\n\n.fa-wpexplorer:before {\n  content: \"\\F2DE\"; }\n\n.fa-meetup:before {\n  content: \"\\F2E0\"; }\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0; }\n\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)();
+exports = module.exports = __webpack_require__(3)();
 // imports
 
 
@@ -52102,16 +55564,10 @@ exports.push([module.i, ".header {\n  font-family: 'Francois One', sans-serif; }
 
 
 /***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "36d50c1381fda7c71d12b6643cbe1ee0.svg";
-
-/***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "674f50d287a8c48dc19ba404d20fe713.eot";
+module.exports = __webpack_require__.p + "36d50c1381fda7c71d12b6643cbe1ee0.svg";
 
 /***/ }),
 /* 53 */
@@ -52123,184 +55579,190 @@ module.exports = __webpack_require__.p + "674f50d287a8c48dc19ba404d20fe713.eot";
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "b06871f281fee6b241d60582ae9369b9.ttf";
+module.exports = __webpack_require__.p + "674f50d287a8c48dc19ba404d20fe713.eot";
 
 /***/ }),
 /* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b06871f281fee6b241d60582ae9369b9.ttf";
+
+/***/ }),
+/* 56 */
 /***/ (function(module, exports) {
 
 module.exports = "<footer class=\"footer p-5\">\n\t<div class=\"row\">\n\t\t<div class=\"col-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<p ui-sref=\"info({document: 'acerca_de'})\">Acerca de</p>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<p ui-sref=\"info({document: 'terminos'})\">Términos y condiciones</p>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<p ui-sref=\"info({document: 'contacto'})\">Contacto</p>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<p>Todos los derechos reservados</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-6 socials text-right\">\n\t\t\t<div class=\"row d-block\">\n\t\t\t\t<a>TodoConDelivery</a><i class=\"fa fa-facebook-official ml-2\" aria-hidden=\"true\"></i>\n\t\t\t</div>\n\t\t\t<div class=\"row d-block\">\n\t\t\t\t<a>@todoConDelivery</a><i class=\"fa fa-twitter ml-2\" aria-hidden=\"true\"></i>\n\t\t\t</div>\n\t\t\t<div class=\"row d-block\">\n\t\t\t\t<a>@todoCondelivery</a><i class=\"fa fa-instagram ml-2\" aria-hidden=\"true\"></i>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</footer>";
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = "<div class=\"fixed-top\">\n  <nav class=\"navbar navbar-toggleable-md navbar-light bg-faded header\">\n  <button class=\"navbar-toggler navbar-toggler-right mt-4 mr-3\" type=\"button\" data-toggle=\"collapse\" data-target=\"#contenido\" aria-controls=\"contenido\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <i class=\"fa fa-plus\" aria-hidden=\"true\"></i>\n   </button>\n   <a  class=\"navbar-brand\" ui-sref=\"main\">\n    <img src=\"" + __webpack_require__(0) + "\" width=\"200\" height=\"100\">\n   </a>\n   <div class=\"collapse navbar-collapse col-lg-4\" id=\"contenido\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link hidden-xs\" ui-sref=\"main\">Inicio<span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\" data-toggle=\"collapse\" data-target=\"#mas\">Explorar Categorías</a>\n      </li>\n    </ul>\n  </div>\n  <form class=\"form-inline my-2 my-lg-0 col-lg-6\">\n    <div class=\"input-group col-lg-6\">\n      <input class=\"form-control\" uib-typeahead=\"nombre.nombre for nombre in $ctrl.bd | filter:$ctrl.buscar | limitTo:8\" type=\"text\" ng-model=\"$ctrl.buscar\" placeholder=\"Buscar...\">\n      <button ui-sref=\"search({search: $ctrl.buscar})\" class=\"btn btn-outline-danger input-group-addon\" type=\"submit\">\n        <i class=\"fa fa-search\" aria-hidden=\"true\"></i>\n      </button>\n    </div>\n    <button class=\"btn btn-link col-lg-3\" data-toggle=\"collapse\" data-target=\"#support\">Soporte</button>\n    <button ng-if=\"!$ctrl.session\" class=\"btn btn-link col-lg-3\" data-toggle=\"collapse\" data-target=\"#login\" id=\"btnlogin\">Iniciar sesion</button>\n    <button ng-if=\"$ctrl.session\" class=\"btn btn-link col-lg-3 profile\"><a href=\"/profile\">Perfil</a></button>\n  </form>\n</nav>\n<support></support>\n<mas></mas>\n</div>\n<login></login>";
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"info container p-5 mt-5\">\n\t<div ng-bind-html=\"$ctrl.document[0].contenido\">\n\t\t\n\t</div>\n</div>";
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = "<div class=\"list-group maspedidos galeria\">\n\t<li class=\"\"></li>\n\t<li class=\"p-1\">\n\t\t<img class=\"container\" src=\"" + __webpack_require__(1) + "\">\n\t</li>\n\t<li class=\"\"></li>\n</div>\n";
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 module.exports = "<nav id=\"login\" class=\"collapse login container col-lg-5 p-5\">\n  <div class=\"g-signin2\" data-onsuccess=\"onSignIn\"></div>\n  <h3 class=\"mt-5\">Ingresa a tu cuenta</h3>\n  <form name=\"Form\">\n  \t<input class=\"d-block form-control mt-2 mb-2\" type=\"email\" name=\"email\" ng-model=\"$ctrl.email\" placeholder=\"Email\" required>\n  \t<input class=\"d-block form-control mb-2 mt-2\" type=\"password\" ng-model=\"$ctrl.password\" name=\"password\" placeholder=\"Contraseña\" required>\n  \t<button class=\"btn btn-secondary mt-2 mb-2\" ng-click=\"$ctrl.sendQuery()\" ng-disabled=\"!Form.email.$valid\">Entrar</button>\n  \t<a href=\"#\" ng-click=\"$ctrl.forgetPassword(); $ctrl.closeLogin();\">Olvidé mi contraseña</a>\n  </form>\n  <p class=\"mb-5 mt-5\">No tienes cuenta?  <a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal\" ng-click=\"$ctrl.closeLogin()\">Regístrate</a></p>\n</nav>\n\n<div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\n  <div class=\"modal-dialog\">\n  \t<div class=\"modal-content\">\n  \t\t<signup></signup>\n  \t</div>\n  </div>\n</div>";
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = "<ul class=\"list-group maspedidos\">\n  <li class=\"list-group-item p-3\">\n    <h3>Los más pedidos</h3>\n  </li>\n  <li class=\"list-group-item\"> \n    <div class=\"col-lg-9\">\n      <img height=\"30\" width=\"30\" src=\"" + __webpack_require__(1) + "\"> \n    Pollo a la plancha \n    </div>\n    <div class=\"col-lg-3\">\n      <button class=\"ml-2 btn btn-success\">Ordenar</button>\n    </div>\n  </li>\n  <li class=\"list-group-item\"> \n    <div class=\"col-lg-9\">\n      <img height=\"30\" width=\"30\" src=\"" + __webpack_require__(1) + "\"> \n    Pollo a al horno \n    </div>\n    <div class=\"col-lg-3\">\n      <button class=\"ml-2 btn btn-success\">Ordenar</button>\n    </div>\n  </li>\n    <li class=\"list-group-item\"> \n    <div class=\"col-lg-9\">\n      <img height=\"30\" width=\"30\" src=\"" + __webpack_require__(1) + "\"> \n    Pollo frito\n    </div>\n    <div class=\"col-lg-3\">\n      <button class=\"ml-2 btn btn-success\">Ordenar</button>\n    </div>\n  </li>\n  <li class=\"list-group-item\"> \n    <div class=\"col-lg-9\">\n      <img height=\"30\" width=\"30\" src=\"" + __webpack_require__(1) + "\"> \n    Pollo a la salsa de soja\n    </div>\n    <div class=\"col-lg-3\">\n      <button class=\"ml-2 btn btn-success\">Ordenar</button>\n    </div>\n  </li>\n</ul>";
 
 /***/ }),
-/* 61 */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n\t<promociones></promociones>\n</div>\n<div class=\"row container-fluid panel\">\n\t<ul class=\"mt-5 container col-lg-2\">\n\t\t<li class=\"list-group-item filtros\">FILTROS</li>\n\t\t<li class=\"list-group-item subs\"><strong>Subcategorias</strong></li>\n\t\t<li class=\"list-group-item\">\n\t\t<div class=\"radio\">\n  \t\t\t<label><input class=\"mr-2\" type=\"radio\" name=\"categories\" ng-click=\"$ctrl.reload();\">Todas</label>\n\t\t</div>\n\t\t</li>\n\t\t<li class=\"list-group-item\" ng-repeat=\"li in $ctrl.panelOptions\" ng-click=\"$ctrl.changeSubcategory(li.codigo)\">\n\t\t<div class=\"radio\">\n  \t\t\t<label><input id=\"{{li.codigo}}\" class=\"mr-2\" type=\"radio\" name=\"categories\">{{li.nombre}}</label>\n\t\t</div>\n\t\t</li>\n\t</ul>\n\t<shops list=\"$ctrl.products\" class=\"col-lg-8\"></shops>\n\t<pasos class=\"col-lg-2 panel\"></pasos>\n</div>\n";
-
-/***/ }),
 /* 62 */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"mas\" class=\"collapse col-12\">\n\t<div class=\"row\">\n\t\t<div class=\"dropdown col-2\" ng-repeat=\"cat in $ctrl.categories\">\n\t\t\t<button class=\"text-left container col-9 mt-2 mb-2 btn btn-primary  dropdown-toogle\" id=\"drop.{{cat.codigo}}\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{cat.nombre || \"Error: No existen Categorias\"}} <i class=\"fa fa-caret-down\"></i></button>\n\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n\t\t\t\t<a class=\"dropdown-item\" ng-repeat=\"val in $ctrl.subcategories\" ng-if=\"cat.codigo === val.categoria\" ui-sref=\"main.subcat({subcat: val.codigo})\" ng-click=\"$ctrl.click(val.codigo)\">{{val.nombre}}</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>";
+module.exports = "<div>\n<promociones></promociones>\n</div>\n<div class=\"row container-fluid panel\">\n<div class=\"col-lg-1 panel\"></div>\n<ul class=\"mt-3 container col-lg-2\">\n\t<li class=\"list-group-item filtros\">FILTROS</li>\n\t<li class=\"list-group-item subs\"><strong>Subcategorias</strong></li>\n\t<li class=\"list-group-item\">\n\t\t<div class=\"radio\">\n\t\t\t<label><input class=\"mr-2\" type=\"radio\" name=\"categories\" ng-click=\"$ctrl.reload();\">Todas</label>\n\t\t</div>\n\t</li>\n\t<li class=\"list-group-item\" ng-repeat=\"li in $ctrl.panelOptions\" ng-click=\"$ctrl.changeSubcategory(li.codigo)\">\n\t\t<div class=\"radio\">\n\t\t\t<label><input id=\"{{li.codigo}}\" class=\"mr-2\" type=\"radio\" name=\"categories\">{{li.nombre}}</label>\n\t\t</div>\n\t</li>\n</ul>\n<shops list=\"$ctrl.products\" class=\"col-lg-7\"></shops>\n<div class=\"col-lg-2\"></div>\n</div>";
 
 /***/ }),
 /* 63 */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"mt-5 container\">\n  <li class=\"list-group-item\" ng-repeat=\"li in $ctrl.options\"><i class=\"fa {{li.icon}} mr-1\"></i>{{li.nombre}}</li>\n</ul>";
+module.exports = "<div id=\"mas\" class=\"collapse col-12\">\n\t<div class=\"row\">\n\t\t<div class=\"dropdown col-2\" ng-repeat=\"cat in $ctrl.categories\">\n\t\t\t<button class=\"text-left container col-9 mt-2 mb-2 btn btn-primary  dropdown-toogle\" id=\"drop.{{cat.codigo}}\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{cat.nombre || \"Error: No existen Categorias\"}} <i class=\"fa fa-caret-down\"></i></button>\n\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n\t\t\t\t<a class=\"dropdown-item\" ng-repeat=\"val in $ctrl.subcategories\" ng-if=\"cat.codigo === val.categoria\" ui-sref=\"main.subcat({subcat: val.codigo})\" ng-click=\"$ctrl.click(val.codigo)\">{{val.nombre}}</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>";
 
 /***/ }),
 /* 64 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mt-5 mb-5 container\">\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">1</h4><a class=\"col-9\">Registrate</a></li>\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">2</h4><a class=\"col-9\">Ordena</a></li>\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">3</h4><a class=\"col-9\">Recibe</a></li>\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">4</h4><a class=\"col-9\">Disfruta</a></li>\n</div>";
+module.exports = "<ul class=\"mt-5 container\">\n  <li class=\"list-group-item\" ng-repeat=\"li in $ctrl.options\"><i class=\"fa {{li.icon}} mr-1\"></i>{{li.nombre}}</li>\n</ul>";
 
 /***/ }),
 /* 65 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-6 col-lg-3 mb-4 item\" ui-sref=\"product({code: pro.codigoProducto})\">\n\t\t<small ng-if=\"pro.nombreEstablecimiento\">En <strong>{{pro.nombreEstablecimiento}}</strong></small>\n\t\t<img height=\"100\" src=\"{{pro.foto}}\">\n\t\t<small><strong>{{pro.nombre}}</strong></small><br>\n\t\t<small><strong>{{pro.precio}}Bs.</strong></small>\n\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.calificacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ningún artículo para esta categoría</small>\n</div>";
+module.exports = "<div class=\"mt-5 mb-5 container\">\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">1</h4><a class=\"col-9\">Registrate</a></li>\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">2</h4><a class=\"col-9\">Ordena</a></li>\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">3</h4><a class=\"col-9\">Recibe</a></li>\n  <li class=\"list-group-item row\"> <h4 class=\"col-1\">4</h4><a class=\"col-9\">Disfruta</a></li>\n</div>";
 
 /***/ }),
 /* 66 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid promociones hidden-sm-down\" style=\"background: url('../../assets/images/pizza.png')\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-1\"></div>\n\t\t<div class=\"col-lg-5\">\n\t\t\t<gallery></gallery>\n\t\t</div>\n\t\t<div class=\"col-lg-5\">\n\t\t\t<toplist></toplist>\n\t\t</div>\n\t\t<div class=\"col-lg-1\"></div>\n\t</div>\n</div>\n";
+module.exports = "<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-6 col-lg-3 mb-4 item\" ui-sref=\"product({code: pro.codigoProducto})\">\n\t\t<small ng-if=\"pro.nombreEstablecimiento\">En <strong>{{pro.nombreEstablecimiento}}</strong></small>\n\t\t<img height=\"100\" src=\"{{pro.foto}}\">\n\t\t<small><strong>{{pro.nombre}}</strong></small><br>\n\t\t<small><strong>{{pro.precio}}Bs.</strong></small>\n\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.calificacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ningún artículo para esta categoría</small>\n</div>";
 
 /***/ }),
 /* 67 */
 /***/ (function(module, exports) {
 
-module.exports = "<nav id=\"support\" class=\"collapse text-right\">\n  <button class=\"btn btn-link d-inline-block\" ng-click=\"$ctrl.info('preguntas_frecuentes')\">Preguntas frecuentes</button>\n  <button class=\"btn btn-link d-inline-block\" ui-sref=\"sign-shop\">Registrar un establecimiento</button>\n  <button class=\"btn btn-link d-inline-block\" ng-click=\"$ctrl.info('acerca_de')\">Acerca de</button>\n  <button class=\"btn btn-link d-inline-block\">Comunicarse con soporte</button>\n  <button class=\"btn btn-link d-inline-block\" ng-click=\"$ctrl.info('terminos')\">Términos y condiciones</button>\n</nav>";
+module.exports = "<div class=\"container-fluid promociones hidden-sm-down\" style=\"background: url('../../assets/images/pizza.png')\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-1\"></div>\n\t\t<div class=\"col-lg-5\">\n\t\t\t<gallery></gallery>\n\t\t</div>\n\t\t<div class=\"col-lg-5\">\n\t\t\t<toplist></toplist>\n\t\t</div>\n\t\t<div class=\"col-lg-1\"></div>\n\t</div>\n</div>\n";
 
 /***/ }),
 /* 68 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"calificar col-lg-5 container mt-5 mb-5\">\n\t<h3 class=\"text-center\">Califica tu compra</h3>\n\t<h5>Como te fue en la compra de tu producto?</h5>\n\t<form>\n\t\t<select ng-model=\"$ctrl.estadoCalificacion\" class=\"form-control\">\n\t\t\t<option class=\"completada\" value=\"exitosa\">Recibi la orden y estoy satisfecho</option>\n\t\t\t<option class=\"cancelada\" value=\"cancelada\">Decidi cancelar la orden</option>\n\t\t</select>\n\t\t<h5>Cual puntuacion le das a tu experiencia en esta compra?</h5>\n\t\t<select ng-model=\"$ctrl.calificacion\" class=\"form-control\">\n\t\t\t<option value=\"5\">5/5</option>\n\t\t\t<option value=\"4\">4/5</option>\n\t\t\t<option value=\"3\">3/5</option>\n\t\t\t<option value=\"2\">2/5</option>\n\t\t\t<option value=\"1\">1/5</option>\n\t\t</select>\n\t\t<label for=\"comentarios\">Comentarios:</label>\n\t\t<input ng-model=\"$ctrl.comentarios\" class=\"form-control\" type=\"text\" name=\"comentarios\">\n\t\t<button ng-click=\"$ctrl.enviar()\" class=\"btn btn-success mt-3 mb-5\">Enviar Calificacion</button>\n\t</form>\n</div>";
+module.exports = "<nav id=\"support\" class=\"collapse text-right\">\n  <button class=\"btn btn-link d-inline-block\" ng-click=\"$ctrl.info('preguntas_frecuentes')\">Preguntas frecuentes</button>\n  <button class=\"btn btn-link d-inline-block\" ui-sref=\"sign-shop\">Registrar un establecimiento</button>\n  <button class=\"btn btn-link d-inline-block\" ng-click=\"$ctrl.info('acerca_de')\">Acerca de</button>\n  <button class=\"btn btn-link d-inline-block\">Comunicarse con soporte</button>\n  <button class=\"btn btn-link d-inline-block\" ng-click=\"$ctrl.info('terminos')\">Términos y condiciones</button>\n</nav>";
 
 /***/ }),
 /* 69 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-error text-center\">\n    <img  class=\"d-block col-5 container\" src=\"" + __webpack_require__(0) + "\">\n\t<h1>Correo electronico y/o contraseña inválidos</h1>\n\t<h2 ng-click=\"$ctrl.signUp()\">Intentar otra vez</h2>\n\t<h5>También se puede tratar de: No has activado tu cuenta desde el correo electrónico que te enviamos.</h5>\n</div>";
+module.exports = "<div class=\"calificar col-lg-5 container mt-5 mb-5\">\n\t<h3 class=\"text-center\">Califica tu compra</h3>\n\t<h5>Como te fue en la compra de tu producto?</h5>\n\t<form>\n\t\t<select ng-model=\"$ctrl.estadoCalificacion\" class=\"form-control\">\n\t\t\t<option class=\"completada\" value=\"exitosa\">Recibi la orden y estoy satisfecho</option>\n\t\t\t<option class=\"cancelada\" value=\"cancelada\">Decidi cancelar la orden</option>\n\t\t</select>\n\t\t<h5>Cual puntuacion le das a tu experiencia en esta compra?</h5>\n\t\t<select ng-model=\"$ctrl.calificacion\" class=\"form-control\">\n\t\t\t<option value=\"5\">5/5</option>\n\t\t\t<option value=\"4\">4/5</option>\n\t\t\t<option value=\"3\">3/5</option>\n\t\t\t<option value=\"2\">2/5</option>\n\t\t\t<option value=\"1\">1/5</option>\n\t\t</select>\n\t\t<label for=\"comentarios\">Comentarios:</label>\n\t\t<input ng-model=\"$ctrl.comentarios\" class=\"form-control\" type=\"text\" name=\"comentarios\">\n\t\t<button ng-click=\"$ctrl.enviar()\" class=\"btn btn-success mt-3 mb-5\">Enviar Calificacion</button>\n\t</form>\n</div>";
 
 /***/ }),
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"nuevo-exito text-center\" style=\"background-color: #e91e63\">\n\t<img  class=\"d-block col-5 container\" src=\"" + __webpack_require__(0) + "\">\n\t<h1>Ha ocurrido un error</h1>\n\t<h2>Algo ha salido mal, intenta nuevamente en unos minutos.</h2>\n\t<p>Detalles del Error: {{$ctrl.error || 'No existen detalles proporcionados'}}</p>\n</div>";
+module.exports = "<div class=\"login-error text-center\">\n    <img  class=\"d-block col-5 container\" src=\"" + __webpack_require__(0) + "\">\n\t<h1>Correo electronico y/o contraseña inválidos</h1>\n\t<h2 ng-click=\"$ctrl.signUp()\">Intentar otra vez</h2>\n\t<h5>También se puede tratar de: No has activado tu cuenta desde el correo electrónico que te enviamos.</h5>\n</div>";
 
 /***/ }),
 /* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = "<div class=\"nuevo-exito text-center\" style=\"background-color: #e91e63\">\n\t<img  class=\"d-block col-5 container\" src=\"" + __webpack_require__(0) + "\">\n\t<h1>Ha ocurrido un error</h1>\n\t<h2>Algo ha salido mal, intenta nuevamente en unos minutos.</h2>\n\t<p>Detalles del Error: {{$ctrl.error || 'No existen detalles proporcionados'}}</p>\n</div>";
+
+/***/ }),
+/* 72 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"registro p-5\">\n\t<h1 class=\"text-center\">Registrarse como gestor de tiendas</h1>\n\t<form name=\"Form\" class=\"container\">\n\t\t<div class=\"form-group col-lg-5 container p-2\">\n\t\t\t<div>\n\t\t\t\t<label for=\"nombre\">Nombre del encargado</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.nombre\" type=\"text\" name=\"nombre\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"apellido\">Apellido del encargado</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.apellido\" type=\"text\" name=\"apellido\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"cargo\">Cargo que ocupa en la empresa</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.cargo\" type=\"text\" name=\"cargo\">\n\t\t\t</div>\n\t\t\t<div id=\"has\">\n\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t<input class=\"form-control form-control-success form-control-danger mb-3\" ng-model=\"$ctrl.email\" type=\"email\" name=\"email\" placeholder=\"ejemplo@ejemplo.com\" ng-blur=\"$ctrl.check()\"required>\n\t\t\t\t<div ng-if=\"$ctrl.exist === false\" class=\"form-control-feedback\">\n\t\t\t\t\t<strong>{{$ctrl.email}}</strong> está disponible!\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"$ctrl.exist === true\" class=\"form-control-feedback\">\n\t\t\t\t\t<strong>Este correo ya está en uso.</strong>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"password\">Contraseña</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.password\" type=\"password\" name=\"password\" placeholder=\"123Ejemplo\" required pattern=\"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"!Form.password.$valid\">Revisa el formato: Debe incluir mayúsculas, minúsculas y números</small>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"password\">Repite tu contraseña</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.password2\" type=\"password\" name=\"password2\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"Form.password.$viewValue !== Form.password2.$viewValue\">Las contraseñas no coinciden</small>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"number\">Telefono</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.telefono\" type=\"number\" name=\"number\">\n\t\t\t</div>\n\t\t\t<button class=\"btn mt-3 btn-success\" ng-disabled=\"!Form.email.$valid || !Form.password.$valid || !Form.nombre.$touched || $ctrl.exist === true\" ng-click=\"$ctrl.sendForm()\">Registrarse</button>\n\t\t\t<small class=\"mb-2 d-block\">Al registrarme acepto <a href=\"#\">los términos y condiciones de la página.</a></small>\n\t\t\t<small class=\"mb-2 d-block\">Todo establecimiento debe recibir la aprobación y control de calidad de los administradores de esta página.</a></small>\n\t\t</div>\n\t</form>\n</div>";
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = "<div class=\"nuevo-exito text-center\">\n\t<img  class=\"d-block col-5 container\" src=\"" + __webpack_require__(0) + "\">\n\t<h1>Hemos enviado un correo el cual debes confirmar</h1>\n\t<h2>Revisa tu bandeja de entrada y haz click en el link adjunto para confirmar tu cuenta</h2>\n</div>";
 
 /***/ }),
-/* 73 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"registro p-5\">\n\t<h1 class=\"text-center\">Registrarse como usuario</h1>\n\t<form class=\"container\" name=\"Form\">\n\t\t<div class=\"form-group col-lg-5 container p-2\">\n\t\t\t<div>\n\t\t\t\t<label for=\"nombre\">Nombre</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.nombre\" type=\"text\" name=\"nombre\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"apellido\">Apellido</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.apellido\" type=\"text\" name=\"apellido\">\n\t\t\t</div>\t\n\t\t\t<div id=\"has\">\n\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t<input class=\"form-control form-control-success form-control-danger mb-3\" ng-model=\"$ctrl.email\" type=\"email\" name=\"email\" placeholder=\"ejemplo@ejemplo.com\" ng-blur=\"$ctrl.check()\"required>\n\t\t\t\t<div ng-if=\"$ctrl.exist === false\" class=\"form-control-feedback\">\n\t\t\t\t\t<strong>{{$ctrl.email}}</strong> está disponible!\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"$ctrl.exist === true\" class=\"form-control-feedback\">\n\t\t\t\t\t<strong>Este correo ya está en uso.</strong>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"password\">Contraseña</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.password\" type=\"password\" name=\"password\" placeholder=\"123Ejemplo\" required pattern=\"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"!Form.password.$valid\">Revisa el formato: Debe incluir mayúsculas, minúsculas y números</small>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"password\">Repite tu contraseña</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.password2\" type=\"password\" name=\"password2\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"Form.password.$viewValue !== Form.password2.$viewValue\">Las contraseñas no coinciden</small>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"number\">Telefono</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.telefono\" type=\"number\" name=\"number\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"direccion1\">Direccion</label>\n\t\t\t\t<input type=\"text\" ng-model=\"$ctrl.direccion\" class=\"form-control mb-3\" name=\"direccion1\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"fecha_nacimiento\">Fecha de Nacimiento</label>\n\t\t\t\t<input ng-model=\"$ctrl.fecha\"  class=\"form-control mb-3\" type=\"date\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"NIT\">NIT</label>\n\t\t\t\t<input ng-model=\"$ctrl.nit\" class=\"form-control\" type=\"text\" placeholder=\"NIT\">\n\t\t\t\t<input ng-model=\"$ctrl.apellidoNIT\" class=\"form-control\" type=\"text\" placeholder=\"Apellido del NIT\">\n\t\t\t</div>\n\t\t\t<button class=\"btn mt-3 btn-success mb-3\" ng-disabled=\"!Form.email.$valid || !Form.password.$valid || !Form.nombre.$touched || $ctrl.exist === true\" ng-click=\"$ctrl.sendForm()\">Registrarse</button>\n\t\t\t<small class=\"mb-2 d-block\">Al registrarme acepto los <a ui-sref=\"info({document: 'terminos'})\">términos y condiciones </a>.</small>\n\t\t</div>\n\t</form>\n</div>";
-
-/***/ }),
 /* 74 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"forget\">\n\t<div>\n\t\t<div class=\"form-group mt-5 mb-5\">\n\t\t\t<form name=\"Form\" class=\"container p-3\">\n\t\t\t\t<h4 class=\"mt-5 text-center\">Ingresa tu correo</h4>\n\t\t\t\t<input ng-model=\"$ctrl.email\" class=\"form-control\" type=\"email\" name=\"email\" placeholder=\"Email\" required>\n\t\t\t\t<button class=\"form-control container btn btn-success mt-2 mb-5 col-lg-5\" ng-disabled=\"!Form.email.$valid\" ng-click=\"$ctrl.sendEmail()\">Enviar</button>\n\t\t\t</form>\n\t\t</div>\n\t</div>\n</div>";
+module.exports = "<div class=\"registro p-5\">\n\t<h1 class=\"text-center\">Registrarse como usuario</h1>\n\t<form class=\"container\" name=\"Form\">\n\t\t<div class=\"form-group col-lg-5 container p-2\">\n\t\t\t<div>\n\t\t\t\t<label for=\"nombre\">Nombre</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.nombre\" type=\"text\" name=\"nombre\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"apellido\">Apellido</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.apellido\" type=\"text\" name=\"apellido\">\n\t\t\t</div>\n\t\t\t<div id=\"has\">\n\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t<input class=\"form-control form-control-success form-control-danger mb-3\" ng-model=\"$ctrl.email\" type=\"email\" name=\"email\" placeholder=\"ejemplo@ejemplo.com\" ng-blur=\"$ctrl.check()\"required>\n\t\t\t\t<div ng-if=\"$ctrl.exist === false\" class=\"form-control-feedback\">\n\t\t\t\t\t<strong>{{$ctrl.email}}</strong> está disponible!\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"$ctrl.exist === true\" class=\"form-control-feedback\">\n\t\t\t\t\t<strong>Este correo ya está en uso.</strong>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"password\">Contraseña</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.password\" type=\"password\" name=\"password\" placeholder=\"123Ejemplo\" required pattern=\"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"!Form.password.$valid\">Revisa el formato: Debe incluir mayúsculas, minúsculas y números</small>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"password\">Repite tu contraseña</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.password2\" type=\"password\" name=\"password2\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"Form.password.$viewValue !== Form.password2.$viewValue\">Las contraseñas no coinciden</small>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"number\">Telefono</label>\n\t\t\t\t<input class=\"form-control mb-3\" ng-model=\"$ctrl.telefono\" type=\"number\" name=\"number\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"direccion1\">Direccion</label>\n\t\t\t\t<input type=\"text\" ng-model=\"$ctrl.direccion\" class=\"form-control mb-3\" name=\"direccion1\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label>Selecciona tu ubicación en el mapa</label>\n\t\t\t\t<div map-lazy-load=\"https://maps.google.com/maps/api/js\"\n\t\t\t\t\tmap-lazy-load-params=\"{{$ctrl.googleMapsUrl}}\">\n\t\t\t\t\t<ng-map ng-click=\"$ctrl.changePos()\" center=\"current-position\" zoom=\"14\">\n\t\t\t\t\t<marker position=\"{{$ctrl.pos || 'current-position'}}\"></marker>\n\t\t\t\t\t</ng-map>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t\n\t\t\t<div class=\"mt-3\">\n\t\t\t\t<label for=\"fecha_nacimiento\">Fecha de Nacimiento</label>\n\t\t\t\t<input ng-model=\"$ctrl.fecha\"  class=\"form-control mb-3\" type=\"date\">\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<label for=\"NIT\">NIT</label>\n\t\t\t\t<input ng-model=\"$ctrl.nit\" class=\"form-control\" type=\"text\" placeholder=\"NIT\">\n\t\t\t\t<input ng-model=\"$ctrl.apellidoNIT\" class=\"form-control\" type=\"text\" placeholder=\"Apellido del NIT\">\n\t\t\t</div>\n\t\t\t<button class=\"btn mt-3 btn-success mb-3\" ng-disabled=\"!Form.email.$valid || !Form.password.$valid || !Form.nombre.$touched || $ctrl.exist === true\" ng-click=\"$ctrl.sendForm()\">Registrarse</button>\n\t\t\t<small class=\"mb-2 d-block\">Al registrarme acepto los <a ui-sref=\"info({document: 'terminos'})\">términos y condiciones </a>.</small>\n\t\t</div>\n\t</form>\n</div>";
 
 /***/ }),
 /* 75 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"perfil p-3\">\n\t<div class=\"row mt-5 mb-5\">\n\t\t<div class=\"col-lg-3\">\n\t\t\t<ul class=\"mt-5 container\">\n\t\t\t  <li class=\"list-group-item\" ng-repeat=\"li in $ctrl.panelOptions\" ng-click=\"$ctrl.confYouSee = li.nombre\"><i class=\"fa {{li.icon}} mr-1\"></i>{{li.nombre}}</li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<div class=\"col-lg-8\">\n\t\t\t<button id=\"closeSession\" class=\"btn btn-danger\" ng-click=\"$ctrl.closeSession()\">Cerrar sesion</button>\n\t\t\t<div ng-if=\"$ctrl.confYouSee === 'Mis compras'\" class=\"col-lg-12 mb-5\">\n\t\t\t\t<h2>Hola {{$ctrl.usuario[0].nombre}}</h2>\n\t\t\t\t<div>\n\t\t\t\t\tHistorial de pedidos\n\t\t\t\t\t<div class=\"compras\">\n\t\t\t\t\t\t<table class=\"table\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t\t<th>Fecha</th>\n\t\t\t\t\t\t\t\t<th>Estado</th>\n\t\t\t\t\t\t\t\t<th>Calificar</th>\n\t\t\t\t\t\t\t\t<th>Acción</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr ng-class=\"{'p-exito': h.calificado === 1, 'p-warning': h.calificado === 0}\" ng-repeat=\"h in $ctrl.history\">\n\t\t\t\t\t\t\t\t<td>{{h.nombreProducto}}</td>\n\t\t\t\t\t\t\t\t<td>{{h.fechaPedido}}</td>\n\t\t\t\t\t\t\t\t<td>{{h.estado}}</td>\n\t\t\t\t\t\t\t\t<td title=\"Calificar\" ng-if=\"h.calificado === 0\"><i class=\"fa fa-arrow-right text-danger\" ui-sref=\"calificar({code: h.codigoOrden})\"></i></td>\n\t\t\t\t\t\t\t\t<td title=\"Calificar\" ng-if=\"h.calificado !== 0\"><i class=\"fa fa-check text-success\"></i></td>\n\t\t\t\t\t\t\t\t<td><a href=\"#\">Reordenar</a></td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t</table>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-lg-7\" ng-if=\"$ctrl.confYouSee === 'Modificar Datos personales'\">\n\t\t\t\t<form ng-class=\"$ctrl.form\" name=\"Form\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"nombre\">Nombre:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].nombre\" type=\"text\" name=\"nombre\">\n\t\t\t\t\t\t<label for=\"apellido\">Apellido:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].apellido\" type=\"text\" name=\"apellido\">\n\t\t\t\t\t\t<label for=\"email\">Email:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].email\" type=\"email\" name=\"email\">\n\t\t\t\t\t\t<label for=\"fecha\">Fecha de Nacimiento:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].fecha_nacimiento\" type=\"date\" name=\"fecha\">\n\t\t\t\t\t\t<label for=\"nit\">NIT:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].nit\" type=\"text\" name=\"nit\">\n\t\t\t\t\t\t<label for=\"nitApellido\">Apellido del NIT:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].nitApellido\" type=\"text\" name=\"nitApellido\">\n\t\t\t\t\t\t<label for=\"telefono\">Telefono:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].telefono\" type=\"text\" name=\"telefono\"><br>\n\t\t\t\t\t\t<a ui-sref=\"forget\">Modificar Contraseña</a><br>\n\t\t\t\t\t\t<button class=\"btn btn-success mt-3\" ng-click=\"$ctrl.updateData()\">Actualizar Datos</button>\n\t\t\t\t\t\t<br>\n\t\t\t\t\t\t<small class=\"text-success\">{{$ctrl.actualizados}}</small>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t\t<div class=\"col-lg-12\" ng-if=\"$ctrl.confYouSee === 'Direcciones de envio'\">\n\t\t\t\t<form>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 1:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir1\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 2:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir2\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 3:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir3\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 4:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir4\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 5:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir5\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
+module.exports = "<div class=\"forget\">\n\t<div>\n\t\t<div class=\"form-group mt-5 mb-5\">\n\t\t\t<form name=\"Form\" class=\"container p-3\">\n\t\t\t\t<h4 class=\"mt-5 text-center\">Ingresa tu correo</h4>\n\t\t\t\t<input ng-model=\"$ctrl.email\" class=\"form-control\" type=\"email\" name=\"email\" placeholder=\"Email\" required>\n\t\t\t\t<button class=\"form-control container btn btn-success mt-2 mb-5 col-lg-5\" ng-disabled=\"!Form.email.$valid\" ng-click=\"$ctrl.sendEmail()\">Enviar</button>\n\t\t\t</form>\n\t\t</div>\n\t</div>\n</div>";
 
 /***/ }),
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"registro\">\n\t<div class=\"text-center row home\">\n\n\t<div class=\"modal-header\">\n\t\t<button id=\"cerrar-modal\" type=\"button\" class=\"hidden\" data-dismiss=\"modal\">.</button>\n        <h4 class=\"modal-title text-center\">¿Qué tipo de cuenta deseas crear?</h4>\n    </div>\n    <div class=\"modal-body\">\n    \t<div class=\"row\">\n    \t\t<div class=\"col-6 p-2\">\n\t    \t\t<a ui-sref=\"sign-user\" ng-click=\"$ctrl.click()\">\n\t\t  \t\t\t<button class=\"btn\">Usuario</button>\n\t\t\t\t</a>\n\t  \t\t</div>\n\t\t\t  <div class=\"col-6 p-2\">\n\t\t\t\t<a ui-sref=\"sign-shop\" ng-click=\"$ctrl.click()\">\n\t\t\t\t  <button class=\"btn btn-success\">Tienda</button>\n\t\t\t\t</a>\n\t\t\t  </div>\n\t\t\t  \n        </div>\n      \n    </div>\n\t</div>\n</div>";
+module.exports = "<div class=\"perfil p-3\">\n\t<div class=\"row mt-5 mb-5\">\n\t\t<div class=\"col-lg-3\">\n\t\t\t<ul class=\"mt-5 container\">\n\t\t\t  <li class=\"list-group-item\" ng-repeat=\"li in $ctrl.panelOptions\" ng-click=\"$ctrl.confYouSee = li.nombre\"><i class=\"fa {{li.icon}} mr-1\"></i>{{li.nombre}}</li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<div class=\"col-lg-8\">\n\t\t\t<button id=\"closeSession\" class=\"btn btn-danger\" ng-click=\"$ctrl.closeSession()\">Cerrar sesion</button>\n\t\t\t<div ng-if=\"$ctrl.confYouSee === 'Mis compras'\" class=\"col-lg-12 mb-5\">\n\t\t\t\t<h2>Hola {{$ctrl.usuario[0].nombre}}</h2>\n\t\t\t\t<div>\n\t\t\t\t\tHistorial de pedidos\n\t\t\t\t\t<div class=\"compras\">\n\t\t\t\t\t\t<table class=\"table\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t\t<th>Fecha</th>\n\t\t\t\t\t\t\t\t<th>Estado</th>\n\t\t\t\t\t\t\t\t<th>Calificar</th>\n\t\t\t\t\t\t\t\t<th>Acción</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr ng-class=\"{'p-exito': h.calificado === 1, 'p-warning': h.calificado === 0}\" ng-repeat=\"h in $ctrl.history\">\n\t\t\t\t\t\t\t\t<td>{{h.nombreProducto}}</td>\n\t\t\t\t\t\t\t\t<td>{{h.fechaPedido}}</td>\n\t\t\t\t\t\t\t\t<td>{{h.estado}}</td>\n\t\t\t\t\t\t\t\t<td title=\"Calificar\" ng-if=\"h.calificado === 0\"><i class=\"fa fa-arrow-right text-danger\" ui-sref=\"calificar({code: h.codigoOrden})\"></i></td>\n\t\t\t\t\t\t\t\t<td title=\"Calificar\" ng-if=\"h.calificado !== 0\"><i class=\"fa fa-check text-success\"></i></td>\n\t\t\t\t\t\t\t\t<td><a href=\"#\">Reordenar</a></td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t</table>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-lg-7\" ng-if=\"$ctrl.confYouSee === 'Modificar Datos personales'\">\n\t\t\t\t<form ng-class=\"$ctrl.form\" name=\"Form\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"nombre\">Nombre:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].nombre\" type=\"text\" name=\"nombre\">\n\t\t\t\t\t\t<label for=\"apellido\">Apellido:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].apellido\" type=\"text\" name=\"apellido\">\n\t\t\t\t\t\t<label for=\"email\">Email:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].email\" type=\"email\" name=\"email\">\n\t\t\t\t\t\t<label for=\"fecha\">Fecha de Nacimiento:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].fecha_nacimiento\" type=\"date\" name=\"fecha\">\n\t\t\t\t\t\t<label for=\"nit\">NIT:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].nit\" type=\"text\" name=\"nit\">\n\t\t\t\t\t\t<label for=\"nitApellido\">Apellido del NIT:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].nitApellido\" type=\"text\" name=\"nitApellido\">\n\t\t\t\t\t\t<label for=\"telefono\">Telefono:</label>\n\t\t\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.usuario[0].telefono\" type=\"text\" name=\"telefono\"><br>\n\t\t\t\t\t\t<a ui-sref=\"forget\">Modificar Contraseña</a><br>\n\t\t\t\t\t\t<button class=\"btn btn-success mt-3\" ng-click=\"$ctrl.updateData()\">Actualizar Datos</button>\n\t\t\t\t\t\t<br>\n\t\t\t\t\t\t<small class=\"text-success\">{{$ctrl.actualizados}}</small>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t\t<div class=\"col-lg-12\" ng-if=\"$ctrl.confYouSee === 'Direcciones de envio'\">\n\t\t\t\t<form>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 1:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir1\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 2:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir2\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 3:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir3\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 4:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir4\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t\t<label for=\"dir1\">Direccion 5:</label>\n\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"dir5\"><button class=\"btn btn-success\">Guardar</button><br>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
 
 /***/ }),
 /* 77 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"setPassword col-5 container\">\n\t<div class=\"mt-5 mb-5\">\n\t\t<form name=\"Form\" class=\"\">\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=\"tipo\">Selecciona el tipo de usuario que eres:</label>\n\t\t\t\t<select name=\"tipo\" class=\"form-control\"  ng-model=\"$ctrl.tipo\">\n\t\t\t\t\t<option value=\"0\">Usuario común o administrador de tiendas</option>\n\t\t\t\t\t<option value=\"1\">Administrador general de esta página web.</option>\n\t\t\t\t</select>\n\t\t\t\t<label for=\"password\">Nueva contraseña</label>\n\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.password\" type=\"password\" name=\"password\" placeholder=\"123Ejemplo\" required pattern=\"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"!Form.password.$valid\">Revisa el formato: Debe incluir mayúsculas, minúsculas y números</small>\n\t\t\t\t<label for=\"password2\">Repite tu contraseña</label>\n\t\t\t\t<input class=\"form-control\" type=\"password\" ng-model=\"$ctrl.password2\" name=\"password2\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"Form.password.$viewValue != Form.password2.$viewValue\">Revisa: Las contraseñas no coinciden</small>\n\t\t\t\t<button class=\"btn mt-3 btn-success mb-3 d-block\" ng-disabled=\"!Form.password.$valid || Form.password.$viewValue != Form.password2.$viewValue\" ng-click=\"$ctrl.sendForm()\">Enviar</button>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>";
+module.exports = "<div class=\"registro\">\n\t<div class=\"text-center row home\">\n\n\t<div class=\"modal-header\">\n\t\t<button id=\"cerrar-modal\" type=\"button\" class=\"hidden\" data-dismiss=\"modal\">.</button>\n        <h4 class=\"modal-title text-center\">¿Qué tipo de cuenta deseas crear?</h4>\n    </div>\n    <div class=\"modal-body\">\n    \t<div class=\"row\">\n    \t\t<div class=\"col-6 p-2\">\n\t    \t\t<a ui-sref=\"sign-user\" ng-click=\"$ctrl.click()\">\n\t\t  \t\t\t<button class=\"btn\">Usuario</button>\n\t\t\t\t</a>\n\t  \t\t</div>\n\t\t\t  <div class=\"col-6 p-2\">\n\t\t\t\t<a ui-sref=\"sign-shop\" ng-click=\"$ctrl.click()\">\n\t\t\t\t  <button class=\"btn btn-success\">Tienda</button>\n\t\t\t\t</a>\n\t\t\t  </div>\n\t\t\t  \n        </div>\n      \n    </div>\n\t</div>\n</div>";
 
 /***/ }),
 /* 78 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"order container col-5 p-5 mt-5 mb-5\">\n\t<h2 class=\"text-center\">Detalles de orden</h2>\n\t<div>\n\t\t<form>\n\t\t\t<img src=\"{{$ctrl.orderData[0].foto}}\">\n\t\t</form>\n\t\t<p class=\"text-center\">{{$ctrl.orderData[0].nombre}}</p>\n\t</div>\n\t<div ng-if=\"$ctrl.orderData[0].inventario === 1\">\n\t\t<p>Quedan {{$ctrl.orderData[0].disponible}} disponible(s)</p>\n\t\t<p>Cantidad</p>\n\t\t<input type=\"number\" class=\"form-control\" name=\"cantidad\" ng-model=\"$ctrl.cantidad\" value=\"1\" max=\"{{$ctrl.orderData[0].disponible}}\">\n\t</div>\n\t<p>Direccion de entrega:</p>\n\t<div class=\"direcciones d-block\">\n\t\t<select ng-if=\"$ctrl.session[0].direccion1.length > 0\" class=\"form-control\" ng-model=\"$ctrl.direccion\" name=\"direccion\">\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion1.length > 0\" value=\"{{$ctrl.session[0].direccion1}}\">{{$ctrl.session[0].direccion1}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion2.length > 0\" value=\"{{$ctrl.session[0].direccion2}}\">{{$ctrl.session[0].direccion2}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion3.length > 0\" value=\"{{$ctrl.session[0].direccion3}}\">{{$ctrl.session[0].direccion3}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion4.length > 0\" value=\"{{$ctrl.session[0].direccion4}}\">{{$ctrl.session[0].direccion4}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion5.length > 0\" value=\"{{$ctrl.session[0].direccion5}}\">{{$ctrl.session[0].direccion5}}</option>\n\t\t</select>\n\t\t<a class=\"d-block\" href=\"\" ui-sref=\"profile\">Modificar direcciones de envio</a>\n\t\t<label class=\"mt-3\" for=\"fecha\">Fecha de pedido:</label>\n\t\t<input type=\"text\" class=\"form-control\" ng-model=\"$ctrl.fechaPedido\" name=\"fecha\" disabled>\n\t\t<label for=\"hora\">Hora de Pedido:</label>\n\t\t<input type=\"text\" class=\"form-control mb-3\" ng-model=\"$ctrl.horaPedido\" name=\"hora\" disabled>\n\t</div>\n\t<button class=\"btn btn-success\" data-toggle=\"modal\" data-target=\"#confirmAsk\">Enviar pedido</button>\n</div>\n<div id=\"confirmAsk\" class=\"modal fade\" role=\"dialog\">\n  <div class=\"modal-dialog\">\n  \t<div class=\"modal-content confirmAsk p-5\">\n  \t\t<button id=\"cerre\" type=\"button\" class=\"close invisible\" data-dismiss=\"modal\"></button>\n  \t\t<p class=\"text-center\">Estas seguro que quieres enviar esta orden?</p>\n  \t\t<button class=\"btn btn-success mb-1\" ng-click=\"$ctrl.sendForm()\">Confirmar</button>\n  \t</div>\n  </div>\n</div>\n";
+module.exports = "<div class=\"setPassword col-5 container\">\n\t<div class=\"mt-5 mb-5\">\n\t\t<form name=\"Form\" class=\"\">\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=\"tipo\">Selecciona el tipo de usuario que eres:</label>\n\t\t\t\t<select name=\"tipo\" class=\"form-control\"  ng-model=\"$ctrl.tipo\">\n\t\t\t\t\t<option value=\"0\">Usuario común o administrador de tiendas</option>\n\t\t\t\t\t<option value=\"1\">Administrador general de esta página web.</option>\n\t\t\t\t</select>\n\t\t\t\t<label for=\"password\">Nueva contraseña</label>\n\t\t\t\t<input class=\"form-control\" ng-model=\"$ctrl.password\" type=\"password\" name=\"password\" placeholder=\"123Ejemplo\" required pattern=\"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"!Form.password.$valid\">Revisa el formato: Debe incluir mayúsculas, minúsculas y números</small>\n\t\t\t\t<label for=\"password2\">Repite tu contraseña</label>\n\t\t\t\t<input class=\"form-control\" type=\"password\" ng-model=\"$ctrl.password2\" name=\"password2\">\n\t\t\t\t<small style=\"color: #e81204\" ng-if=\"Form.password.$viewValue != Form.password2.$viewValue\">Revisa: Las contraseñas no coinciden</small>\n\t\t\t\t<button class=\"btn mt-3 btn-success mb-3 d-block\" ng-disabled=\"!Form.password.$valid || Form.password.$viewValue != Form.password2.$viewValue\" ng-click=\"$ctrl.sendForm()\">Enviar</button>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>";
 
 /***/ }),
 /* 79 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"detalles\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-5\">\n\t\t\t<img src=\"{{$ctrl.result[0].foto}}\">\n\t\t</div>\n\t\t<div class=\"col-lg-7\">\n\t\t\t<h1 class=\"col-lg-12\">{{$ctrl.result[0].nombre}}</h1>\n\t\t\t<div class=\"col-lg-5\">\n\t\t\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"$ctrl.result[0].calificacion\"></input-stars>\t\n\t\t\t\t<p class=\"price\">{{$ctrl.result[0].precio}}$</p>\n\t\t\t\t<button ng-click=\"$ctrl.order();\" class=\"btn btn-success\">Ordenar</button>\n\t\t\t\t<p class=\"mt-5\"><strong>Descripción:</strong></p>\n\t\t\t\t<p>{{$ctrl.result[0].descripcion}}</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
+module.exports = "<div class=\"order container col-5 p-5 mt-5 mb-5\">\n\t<h2 class=\"text-center\">Detalles de orden</h2>\n\t<div>\n\t\t<form>\n\t\t\t<img src=\"{{$ctrl.orderData[0].foto}}\">\n\t\t</form>\n\t\t<p class=\"text-center\">{{$ctrl.orderData[0].nombre}}</p>\n\t</div>\n\t<div ng-if=\"$ctrl.orderData[0].inventario === 1\">\n\t\t<p>Quedan {{$ctrl.orderData[0].disponible}} disponible(s)</p>\n\t\t<p>Cantidad</p>\n\t\t<input type=\"number\" class=\"form-control\" name=\"cantidad\" ng-model=\"$ctrl.cantidad\" value=\"1\" max=\"{{$ctrl.orderData[0].disponible}}\">\n\t</div>\n\t<p>Direccion de entrega:</p>\n\t<div class=\"direcciones d-block\">\n\t\t<select ng-if=\"$ctrl.session[0].direccion1.length > 0\" class=\"form-control\" ng-model=\"$ctrl.direccion\" name=\"direccion\">\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion1.length > 0\" value=\"{{$ctrl.session[0].direccion1}}\">{{$ctrl.session[0].direccion1}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion2.length > 0\" value=\"{{$ctrl.session[0].direccion2}}\">{{$ctrl.session[0].direccion2}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion3.length > 0\" value=\"{{$ctrl.session[0].direccion3}}\">{{$ctrl.session[0].direccion3}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion4.length > 0\" value=\"{{$ctrl.session[0].direccion4}}\">{{$ctrl.session[0].direccion4}}</option>\n\t\t\t<option ng-if=\"$ctrl.session[0].direccion5.length > 0\" value=\"{{$ctrl.session[0].direccion5}}\">{{$ctrl.session[0].direccion5}}</option>\n\t\t</select>\n\t\t<a class=\"d-block\" href=\"\" ui-sref=\"profile\">Modificar direcciones de envio</a>\n\t\t<label class=\"mt-3\" for=\"fecha\">Fecha de pedido:</label>\n\t\t<input type=\"text\" class=\"form-control\" ng-model=\"$ctrl.fechaPedido\" name=\"fecha\" disabled>\n\t\t<label for=\"hora\">Hora de Pedido:</label>\n\t\t<input type=\"text\" class=\"form-control mb-3\" ng-model=\"$ctrl.horaPedido\" name=\"hora\" disabled>\n\t</div>\n\t<button class=\"btn btn-success\" data-toggle=\"modal\" data-target=\"#confirmAsk\">Enviar pedido</button>\n</div>\n<div id=\"confirmAsk\" class=\"modal fade\" role=\"dialog\">\n  <div class=\"modal-dialog\">\n  \t<div class=\"modal-content confirmAsk p-5\">\n  \t\t<button id=\"cerre\" type=\"button\" class=\"close invisible\" data-dismiss=\"modal\"></button>\n  \t\t<p class=\"text-center\">Estas seguro que quieres enviar esta orden?</p>\n  \t\t<button class=\"btn btn-success mb-1\" ng-click=\"$ctrl.sendForm()\">Confirmar</button>\n  \t</div>\n  </div>\n</div>\n";
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"search col-10 container p-5\">\n\t<div class=\"title-main mt-5 mb-5\">\n\t\t<p>Resultados para la búsqueda en tiendas y productos: {{$ctrl.search || 'No ha hecho ninguna búsqueda'}}</p>\n\t</div>\n\t<div class=\"mt-5 mb-5\">\n\t\t<productos list=\"$ctrl.results\"></productos>\n\t</div>\n</div>";
+module.exports = "<div class=\"detalles\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-5\">\n\t\t\t<img src=\"{{$ctrl.result[0].foto}}\">\n\t\t</div>\n\t\t<div class=\"col-lg-7\">\n\t\t\t<h1 class=\"col-lg-12\">{{$ctrl.result[0].nombre}}</h1>\n\t\t\t<div class=\"col-lg-5\">\n\t\t\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"$ctrl.result[0].calificacion\"></input-stars>\t\n\t\t\t\t<p class=\"price\">{{$ctrl.result[0].precio}}$</p>\n\t\t\t\t<button ng-click=\"$ctrl.order();\" class=\"btn btn-success\">Ordenar</button>\n\t\t\t\t<p class=\"mt-5\"><strong>Descripción:</strong></p>\n\t\t\t\t<p>{{$ctrl.result[0].descripcion}}</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
 
 /***/ }),
 /* 81 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"search col-10 container p-5\">\n\t<div class=\"title-main mt-5 mb-5\">\n\t\t<p>Resultados para la búsqueda en tiendas y productos: {{$ctrl.search || 'No ha hecho ninguna búsqueda'}}</p>\n\t</div>\n\t<div class=\"mt-5 mb-5\">\n\t\t<productos list=\"$ctrl.results\"></productos>\n\t</div>\n</div>";
+
+/***/ }),
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = "<div class=\"success\">\n\t<div class=\"nuevo-exito text-center\">\n\t<img  class=\"d-block col-5 container\" src=\"" + __webpack_require__(0) + "\">\n\t<h1>{{$ctrl.title}}</h1>\n\t<h2>{{$ctrl.subtitle}}</h1>\n</div>\n</div>";
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"detalles\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-3 mt-5 mb-5 p-5\">\n\t\t\t<img src=\"{{$ctrl.result[0].logo}}\">\n\t\t\t<div class=\"card mt-3 mb-3\">\n\t\t\t\t<p class=\"text-center bg-primary text-white p-2\"><strong>Dirección:</strong></p>\n\t\t\t\t<p class=\"text-center\"><small>{{$ctrl.result[0].direccion}}</small></p>\n\t\t\t</div>\n\t\t\t<div class=\"card\">\n\t\t\t\t<table class=\"table table-sm\">\n\t\t\t\t\t<thead class=\"bg-success text-white p-2\">\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<th>Teléfono</th>\n\t\t\t\t\t\t\t<th>Apertura</th>\n\t\t\t\t\t\t\t<th>Cierre</th>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</thead>\n\t\t\t\t\t<tbody>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><small>{{$ctrl.result[0].telefono}}</small></td>\n\t\t\t\t\t\t\t<td><small>{{$ctrl.result[0].horario_apertura}}</small></td>\n\t\t\t\t\t\t\t<td><small>{{$ctrl.result[0].horario_cierre}}</small></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div class=\"mt-3 panel\">\n\t\t\t\t<li class=\"list-group-item text-center bg-info p-2 text-white\">Categorías por establecimiento</li>\n\t\t\t\t<li class=\"list-group-item\">\n\t\t\t\t\t<div class=\"radio\">\n\t\t\t\t\t\t<label><input class=\"mr-2\" type=\"radio\" name=\"categories\" ng-click=\"$ctrl.reload();\">Todas</label>\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"list-group-item\" ng-repeat=\"list in $ctrl.categories\" ng-click=\"$ctrl.changeSubcategory(li.codigo)\">\n\t\t\t\t\t<div class=\"radio\">\n\t\t\t\t\t\t<label><input id=\"{{list.codigo}}\" class=\"mr-2\" type=\"radio\" name=\"categories\">{{list.nombre}}</label>\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-lg-8\">\n\t\t\t<h1 class=\"col-lg-12 mt-5\">{{$ctrl.result[0].nombre}}</h1>\n\t\t\t<div class=\"col-lg-12\">\n\t\t\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"$ctrl.result[0].calificacion\"></input-stars>\n\t\t\t\t<div>\n\t\t\t\t\t<p class=\"descripcion\">{{$ctrl.result[0].descripcion}}</p>\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"$ctrl.products[0].empty.length\" class=\"mt-3\">\n\t\t\t\t\t<h4>{{$ctrl.products[0].empty}}</h4>\n\t\t\t\t</div>\n\t\t\t\t<div ng-if=\"!$ctrl.products[0].empty.length\">\n\t\t\t\t<productos list=\"$ctrl.products\"></productos>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n</div>";
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports) {
 
-module.exports = "<p ng-if=\"$ctrl.list.length > 0\" class=\"d-block mt-2 dir-productos\">\n<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-6 col-lg-3 mb-4 mt-3 item\" ui-sref=\"shop({code: pro.id})\">\n\t\t<img height=\"100\" src=\"{{pro.logo}}\">\n\t\t<small><strong>{{pro.nombre}}</strong></small>\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.reputacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ninguna tienda para esta categoría</small>\n</div>";
+module.exports = "<p ng-if=\"$ctrl.list.length > 0\" class=\"d-block mt-2 dir-productos\">\n<div class=\"row productos p-3\">\n\t<div  ng-if=\"$ctrl.list\" ng-repeat=\"pro in $ctrl.list\" class=\"col-6 col-lg-4 mb-4 mt-3 item\" ui-sref=\"shop({code: pro.id})\">\n\t\t<img height=\"120\" src=\"{{pro.logo}}\">\n\t\t<small class=\"text-center\"><strong>{{pro.nombre}}</strong></small>\n\t\t<input-stars max=\"5\" ng-attr-readonly=\"true\" ng-model=\"pro.reputacion\"></input-stars>\n\t</div>\n\t<small ng-if=\"$ctrl.list.length == 0\">No existe ninguna tienda para esta categoría</small>\n</div>";
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52335,7 +55797,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__app_components_tiendas_shopDetail__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__app_components_search_search__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__app_components_perfil_calificar__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_angular_ui_router__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_angular_ui_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31_angular_ui_router__);
@@ -52345,13 +55807,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_angular_sanitize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33_angular_sanitize__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_angular_ui_bootstrap__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_angular_ui_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_34_angular_ui_bootstrap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__routes__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_36_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_font_awesome_css_font_awesome_css__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_font_awesome_css_font_awesome_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_37_font_awesome_css_font_awesome_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__styles_index_scss__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__styles_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_38__styles_index_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ngmap__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ngmap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_35_ngmap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__routes__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_37_bootstrap_dist_css_bootstrap_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_font_awesome_css_font_awesome_css__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_font_awesome_css_font_awesome_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_38_font_awesome_css_font_awesome_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__styles_index_scss__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__styles_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_39__styles_index_scss__);
 // General
 
 
@@ -52403,6 +55867,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
 const app = 'app';
 /* harmony export (immutable) */ __webpack_exports__["app"] = app;
 
@@ -52411,16 +55877,16 @@ const app = 'app';
 
 
 
-__WEBPACK_IMPORTED_MODULE_30_angular___default.a.module(app, ['ui.router', 'angular-input-stars', __webpack_require__(5), 'ngSanitize', 'ui.bootstrap']).service('API', __WEBPACK_IMPORTED_MODULE_22__app_services_API__["a" /* API */]).config(__WEBPACK_IMPORTED_MODULE_35__routes__["a" /* default */]).component('todoheader', __WEBPACK_IMPORTED_MODULE_0__app_components_header__["a" /* header */]).component('todofooter', __WEBPACK_IMPORTED_MODULE_1__app_components_footer__["a" /* footer */]).component('app', __WEBPACK_IMPORTED_MODULE_2__app_components_main_main__["a" /* main */]).component('promociones', __WEBPACK_IMPORTED_MODULE_3__app_components_main_promo__["a" /* promo */]).component('gallery', __WEBPACK_IMPORTED_MODULE_11__app_components_main_gallery__["a" /* gallery */]).component('productos', __WEBPACK_IMPORTED_MODULE_8__app_components_main_product__["a" /* product */]).component('pasos', __WEBPACK_IMPORTED_MODULE_9__app_components_main_steps__["a" /* steps */]).component('toplist', __WEBPACK_IMPORTED_MODULE_4__app_components_main_toplist__["a" /* top */]).component('support', __WEBPACK_IMPORTED_MODULE_6__app_components_main_support__["a" /* support */]).component('login', __WEBPACK_IMPORTED_MODULE_5__app_components_main_login__["a" /* login */]).component('panel', __WEBPACK_IMPORTED_MODULE_7__app_components_main_panel__["a" /* panel */]).component('mas', __WEBPACK_IMPORTED_MODULE_10__app_components_main_mas__["a" /* mas */]).component('signup', __WEBPACK_IMPORTED_MODULE_12__app_components_perfil_signUp__["a" /* signUp */]).component('signUpUser', __WEBPACK_IMPORTED_MODULE_13__app_components_perfil_signup_user__["a" /* signUpUser */]).component('signUpShop', __WEBPACK_IMPORTED_MODULE_14__app_components_perfil_signup_shop__["a" /* signUpShop */]).component('signUpSuccess', __WEBPACK_IMPORTED_MODULE_15__app_components_perfil_signup_success__["a" /* signUpSuccess */]).component('error', __WEBPACK_IMPORTED_MODULE_16__app_components_perfil_error__["a" /* error */]).component('success', __WEBPACK_IMPORTED_MODULE_17__app_components_success__["a" /* success */]).component('loginFailed', __WEBPACK_IMPORTED_MODULE_18__app_components_perfil_login_failed__["a" /* loginFailed */]).component('profile', __WEBPACK_IMPORTED_MODULE_19__app_components_perfil_profile__["a" /* profile */]).component('forget', __WEBPACK_IMPORTED_MODULE_20__app_components_perfil_forgetPassword__["a" /* forget */]).component('info', __WEBPACK_IMPORTED_MODULE_23__app_components_info_info__["a" /* info */]).component('productDetail', __WEBPACK_IMPORTED_MODULE_25__app_components_productos_productDetail__["a" /* productDetail */]).component('setPassword', __WEBPACK_IMPORTED_MODULE_21__app_components_perfil_setPassword__["a" /* setPassword */]).component('order', __WEBPACK_IMPORTED_MODULE_24__app_components_productos_order__["a" /* order */]).component('shops', __WEBPACK_IMPORTED_MODULE_26__app_components_tiendas_tiendas__["a" /* shops */]).component('shopDetail', __WEBPACK_IMPORTED_MODULE_27__app_components_tiendas_shopDetail__["a" /* shopDetail */]).component('search', __WEBPACK_IMPORTED_MODULE_28__app_components_search_search__["a" /* search */]).component('calificar', __WEBPACK_IMPORTED_MODULE_29__app_components_perfil_calificar__["a" /* calificar */]);
+__WEBPACK_IMPORTED_MODULE_30_angular___default.a.module(app, ['ui.router', 'ngMap', 'angular-input-stars', __webpack_require__(5), 'ngSanitize', 'ui.bootstrap']).service('API', __WEBPACK_IMPORTED_MODULE_22__app_services_API__["a" /* API */]).config(__WEBPACK_IMPORTED_MODULE_36__routes__["a" /* default */]).component('todoheader', __WEBPACK_IMPORTED_MODULE_0__app_components_header__["a" /* header */]).component('todofooter', __WEBPACK_IMPORTED_MODULE_1__app_components_footer__["a" /* footer */]).component('app', __WEBPACK_IMPORTED_MODULE_2__app_components_main_main__["a" /* main */]).component('promociones', __WEBPACK_IMPORTED_MODULE_3__app_components_main_promo__["a" /* promo */]).component('gallery', __WEBPACK_IMPORTED_MODULE_11__app_components_main_gallery__["a" /* gallery */]).component('productos', __WEBPACK_IMPORTED_MODULE_8__app_components_main_product__["a" /* product */]).component('pasos', __WEBPACK_IMPORTED_MODULE_9__app_components_main_steps__["a" /* steps */]).component('toplist', __WEBPACK_IMPORTED_MODULE_4__app_components_main_toplist__["a" /* top */]).component('support', __WEBPACK_IMPORTED_MODULE_6__app_components_main_support__["a" /* support */]).component('login', __WEBPACK_IMPORTED_MODULE_5__app_components_main_login__["a" /* login */]).component('panel', __WEBPACK_IMPORTED_MODULE_7__app_components_main_panel__["a" /* panel */]).component('mas', __WEBPACK_IMPORTED_MODULE_10__app_components_main_mas__["a" /* mas */]).component('signup', __WEBPACK_IMPORTED_MODULE_12__app_components_perfil_signUp__["a" /* signUp */]).component('signUpUser', __WEBPACK_IMPORTED_MODULE_13__app_components_perfil_signup_user__["a" /* signUpUser */]).component('signUpShop', __WEBPACK_IMPORTED_MODULE_14__app_components_perfil_signup_shop__["a" /* signUpShop */]).component('signUpSuccess', __WEBPACK_IMPORTED_MODULE_15__app_components_perfil_signup_success__["a" /* signUpSuccess */]).component('error', __WEBPACK_IMPORTED_MODULE_16__app_components_perfil_error__["a" /* error */]).component('success', __WEBPACK_IMPORTED_MODULE_17__app_components_success__["a" /* success */]).component('loginFailed', __WEBPACK_IMPORTED_MODULE_18__app_components_perfil_login_failed__["a" /* loginFailed */]).component('profile', __WEBPACK_IMPORTED_MODULE_19__app_components_perfil_profile__["a" /* profile */]).component('forget', __WEBPACK_IMPORTED_MODULE_20__app_components_perfil_forgetPassword__["a" /* forget */]).component('info', __WEBPACK_IMPORTED_MODULE_23__app_components_info_info__["a" /* info */]).component('productDetail', __WEBPACK_IMPORTED_MODULE_25__app_components_productos_productDetail__["a" /* productDetail */]).component('setPassword', __WEBPACK_IMPORTED_MODULE_21__app_components_perfil_setPassword__["a" /* setPassword */]).component('order', __WEBPACK_IMPORTED_MODULE_24__app_components_productos_order__["a" /* order */]).component('shops', __WEBPACK_IMPORTED_MODULE_26__app_components_tiendas_tiendas__["a" /* shops */]).component('shopDetail', __WEBPACK_IMPORTED_MODULE_27__app_components_tiendas_shopDetail__["a" /* shopDetail */]).component('search', __WEBPACK_IMPORTED_MODULE_28__app_components_search_search__["a" /* search */]).component('calificar', __WEBPACK_IMPORTED_MODULE_29__app_components_perfil_calificar__["a" /* calificar */]);
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "af7ae505a9eed503f8b8e6982036873e.woff2";
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fee66e712a8a08eef5805a46892932ad.woff";

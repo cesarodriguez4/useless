@@ -15,5 +15,8 @@
     "morgan": "~1.0.0",
     "serve-favicon": "^2.4.2",
     "static-favicon": "~1.0.0"
+  },
+  "devDependencies": {
+    "angular-google-maps": "^2.4.1"
   }
 }
