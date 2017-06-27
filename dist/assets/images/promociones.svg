@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500mm"
+   height="350mm"
+   viewBox="0 0 1771.6535 1240.1575"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="promociones.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="868.15749"
+     inkscape:cy="596.99155"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,187.79528)">
+    <rect
+       style="fill:#333366;fill-opacity:1;stroke:#888a85;stroke-width:0.53129625;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4136"
+       width="1771.7246"
+       height="1256.5985"
+       x="2.0875678"
+       y="-184.04887"
+       rx="0"
+       ry="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4138"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-412.00006,-83.79528)"><flowRegion
+         id="flowRegion4140"><rect
+           id="rect4142"
+           width="1834.437"
+           height="517.19806"
+           x="412.14224"
+           y="270.41104"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto" /></flowRegion><flowPara
+         id="flowPara4150"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:180px;line-height:127.99999714%;font-family:KacstDigital;-inkscape-font-specification:'KacstDigital Medium';text-align:center;text-anchor:middle;fill:#ffffff">Las mejores promociones</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4154"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Roboto;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Roboto;font-stretch:normal;font-variant:normal;"><flowRegion
+         id="flowRegion4156"><rect
+           id="rect4158"
+           width="1490.9851"
+           height="315.1676"
+           x="-246.47722"
+           y="436.07605"
+           style="-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
+         id="flowPara4160"></flowPara></flowRoot>    <image
+       sodipodi:absref="/home/cesar/Documentos/node/appdelivery-front/src/assets/images/logo.png"
+       xlink:href="logo.png"
+       width="579.59821"
+       height="254.6256"
+       preserveAspectRatio="none"
+       id="image4291"
+       x="1089.9661"
+       y="674.53156" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4296"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4298"><rect
+           id="rect4300"
+           width="2202.1326"
+           height="1555.6349"
+           x="-303.04578"
+           y="-105.36572" /></flowRegion><flowPara
+         id="flowPara4302"></flowPara></flowRoot>  </g>
+</svg>
