@@ -8997,7 +8997,7 @@ const login = {
     };
     this.sendQuery = () => {
       const obj = { email: this.email, password: this.password };
-      const query = 'http://todocondelivery.herokuapp.com/users/login';
+      const query = 'http://api.todocondelivery.com/users/login';
       API.sendData(query, obj).then(result => {
         this.result = result.data;
         if (result.data.error) {
@@ -9283,7 +9283,7 @@ const forget = {
   template: __webpack_require__(80),
   controller(API, $state) {
     this.sendEmail = () => {
-      API.sendData('https://todocondelivery.herokuapp.com/resetPassword', { email: this.email }).then(result => {
+      API.sendData('http://api.todocondelivery.com/resetPassword', { email: this.email }).then(result => {
         this.result = result.data;
         if (result.data.error) {
           $state.go('error', { error: result.data.error });
@@ -9390,7 +9390,7 @@ const profile = {
         ['direccion' + number]: value,
         email: this.usuario[0].email
       };
-      API.sendDataPut('https://todocondelivery.herokuapp.com/users/modify', obj);
+      API.sendDataPut('http://api.todocondelivery.com/users/modify', obj);
     };
 
     this.updateData = () => {
@@ -9404,7 +9404,7 @@ const profile = {
         apellidoNIT: this.usuario[0].apellidoNIT,
         tipo: 0
       };
-      API.sendDataPut('https://todocondelivery.herokuapp.com/users/modify', obj);
+      API.sendDataPut('http://api.todocondelivery.com/users/modify', obj);
       this.actualizados = 'Datos actualizados correctamente.';
     };
 
@@ -9431,7 +9431,7 @@ const setPassword = {
     this.token = $stateParams.t;
     this.email = $stateParams.u;
     this.sendForm = () => {
-      const route = `https://todocondelivery.herokuapp.com/applyReset/${this.token}/${this.email}/${this.password}/${this.tipo}`;
+      const route = `http://api.todocondelivery.com/applyReset/${this.token}/${this.email}/${this.password}/${this.tipo}`;
       $window.location = route;
     };
   }
@@ -9463,7 +9463,7 @@ const signUpShop = {
   template: __webpack_require__(77), controller(API, $state, $document) {
     this.exist = '';
     this.sendForm = () => {
-      const serv = 'https://todocondelivery.herokuapp.com/users/new';
+      const serv = 'http://api.todocondelivery.com/users/new';
       const form = {};
 
       form.nombre = this.nombre;
@@ -9482,7 +9482,7 @@ const signUpShop = {
     };
 
     this.check = () => {
-      const exist = 'https://todocondelivery.herokuapp.com/users/exist';
+      const exist = 'http://api.todocondelivery.com/users/exist';
       API.sendData(exist, { email: this.email, tipo: 1 }).then(result => {
         this.exist = result.data;
         if (result.data === true) {
@@ -9520,7 +9520,7 @@ const signUpUser = {
     this.exist = '';
     this.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAsZ9WXVAEy7ccnZi4PICT3t2BCEqdBBKg';
     this.sendForm = () => {
-      const serv = 'https://todocondelivery.herokuapp.com/users/new';
+      const serv = 'http://api.todocondelivery.com/users/new';
       const form = {};
 
       form.nombre = this.nombre;
@@ -9549,7 +9549,7 @@ const signUpUser = {
     };
 
     this.check = () => {
-      const exist = 'https://todocondelivery.herokuapp.com/users/exist';
+      const exist = 'http://api.todocondelivery.com/users/exist';
       API.sendData(exist, { email: this.email, tipo: 0 }).then(result => {
         this.exist = result.data;
         if (result.data === true) {
@@ -9820,37 +9820,37 @@ class API {
     this.$http = $http;
   }
   getUser(id) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/users/get/${id}`);
+    return this.$http.get(`http://api.todocondelivery.com/users/get/${id}`);
   }
   getMasPedidos() {
-    return this.$http.get('https://todocondelivery.herokuapp.com/maspedidos');
+    return this.$http.get('http://api.todocondelivery.com/maspedidos');
   }
   getPromotions() {
-    return this.$http.get('https://todocondelivery.herokuapp.com/promociones');
+    return this.$http.get('http://api.todocondelivery.com/promociones');
   }
   getWallpaper() {
-    return this.$http.get('https://todocondelivery.herokuapp.com/wallpaper');
+    return this.$http.get('http://api.todocondelivery.com/wallpaper');
   }
   getCategories() {
-    return this.$http.get('https://todocondelivery.herokuapp.com/categories');
+    return this.$http.get('http://api.todocondelivery.com/categories');
   }
   getSubcategories(sub) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/sub-categories/${sub}`);
+    return this.$http.get(`http://api.todocondelivery.com/sub-categories/${sub}`);
   }
   getAllSubcategories() {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/subcategories`);
+    return this.$http.get(`http://api.todocondelivery.com/subcategories`);
   }
   getShopCategories(cat) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/products/${cat}`);
+    return this.$http.get(`http://api.todocondelivery.com/products/${cat}`);
   }
   getProductsByCategory(cat) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/products/${cat}`);
+    return this.$http.get(`http://api.todocondelivery.com/products/${cat}`);
   }
   getProduct(code) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/products/bycode/${code}`);
+    return this.$http.get(`http://api.todocondelivery.com/products/bycode/${code}`);
   }
   getAllProducts() {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/products/fetch/all`);
+    return this.$http.get(`http://api.todocondelivery.com/products/fetch/all`);
   }
   sendData(route, obj) {
     return this.$http.post(route, obj);
@@ -9862,55 +9862,55 @@ class API {
     return this.$http.get(route);
   }
   sendToCounter(obj) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/orders/count`, obj);
+    return this.$http.post(`http://api.todocondelivery.com/orders/count`, obj);
   }
   getDocumentContent(doc) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/documents/${doc}`);
+    return this.$http.get(`http://api.todocondelivery.com/documents/${doc}`);
   }
   sendRecoveryEmail(email) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/resetPassword`, { email });
+    return this.$http.post(`http://api.todocondelivery.com/resetPassword`, { email });
   }
   sendChat(obj) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/chat`, obj);
+    return this.$http.post(`http://api.todocondelivery.com/chat`, obj);
   }
   sendOrder(obj) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/order/new`, obj);
+    return this.$http.post(`http://api.todocondelivery.com/order/new`, obj);
   }
   getShopsByCategory(cat) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/establecimientos`, { categoria: cat });
+    return this.$http.post(`http://api.todocondelivery.com/establecimientos`, { categoria: cat });
   }
   getShopsBySubcategory(cat) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/shop-subcategory/${cat}`);
+    return this.$http.get(`http://api.todocondelivery.com/shop-subcategory/${cat}`);
   }
   getShopByCode(code) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/establecimientos/byCode/${code}`);
+    return this.$http.get(`http://api.todocondelivery.com/establecimientos/byCode/${code}`);
   }
   getProductsByCodeShop(est) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/products/byCatEst/${est}`);
+    return this.$http.get(`http://api.todocondelivery.com/products/byCatEst/${est}`);
   }
   searchByName(search) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/search`, search);
+    return this.$http.post(`http://api.todocondelivery.com/search`, search);
   }
   getShopHistory(code, token) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/orders/user/${code}?token=${token}`);
+    return this.$http.get(`http://api.todocondelivery.com/orders/user/${code}?token=${token}`);
   }
   getOrderComments(id) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/orders/comments/${id}`);
+    return this.$http.get(`http://api.todocondelivery.com/orders/comments/${id}`);
   }
   califica(obj) {
-    return this.$http.put(`https://todocondelivery.herokuapp.com/califica`, obj);
+    return this.$http.put(`http://api.todocondelivery.com/califica`, obj);
   }
   getShopCategoryByCode(code) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/shop-category/byCode/${code}`);
+    return this.$http.get(`http://api.todocondelivery.com/shop-category/byCode/${code}`);
   }
   reorder(id) {
-    return this.$http.get(`https://todocondelivery.herokuapp.com/reorder/${id}`);
+    return this.$http.get(`http://api.todocondelivery.com/reorder/${id}`);
   }
   countItem(array) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/countItem`, { array });
+    return this.$http.post(`http://api.todocondelivery.com/countItem`, { array });
   }
   setStars(obj) {
-    return this.$http.post(`https://todocondelivery.herokuapp.com/setStars`, obj);
+    return this.$http.post(`http://api.todocondelivery.com/setStars`, obj);
   }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = API;
